@@ -896,6 +896,11 @@ body .cursor__effect {
   transform: translate(80%, -50%);
   transition: transform 0.4s ease-out;
 }
+@media (max-width: 600px) {
+  body .cursor__effect {
+    display: none;
+  }
+}
 body .cursor__effect .cursor__txt {
   text-align: left;
   font-size: 1.2rem;
@@ -903,6 +908,11 @@ body .cursor__effect .cursor__txt {
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
   border-bottom-left-radius: 10px;
+}
+@media (max-width: 600px) {
+  body .cursor__effect .cursor__txt {
+    display: none;
+  }
 }
 body main {
   height: auto;

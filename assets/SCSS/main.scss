@@ -206,6 +206,9 @@ body {
     border-style: solid;
     transform: translate(80%, -50%);
     transition: transform 0.4s ease-out;
+    @include mixins.breakpoint(medium) {
+      display: none;
+    }
     & .cursor__txt {
       @extend %reset-marg-pad, %typo-special;
       text-align: left;
@@ -214,6 +217,9 @@ body {
       text-shadow: variables.$special-shadow-txt;
       backdrop-filter: blur(5px);
       border-bottom-left-radius: 10px;
+      @include mixins.breakpoint(medium) {
+        display: none;
+      }
     }
   }
   & main {
