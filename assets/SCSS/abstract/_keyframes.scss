@@ -1,0 +1,38 @@
+@keyframes revealUi {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bannerLineAnim {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: 40%;
+  }
+}
+@keyframes bipSymbole {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes viewProLink {
+  from {
+    opacity: 0.8;
+   transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+

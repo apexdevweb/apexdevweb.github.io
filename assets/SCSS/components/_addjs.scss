@@ -1,0 +1,51 @@
+@use "placeholders";
+@use "variables";
+@use "mixins";
+.dl__sub__ctnr {
+  @extend %globale-size;
+  display: none;
+  & .dl__item {
+    @extend %typo-gradient, %reset-marg-pad, %typo-subtitle;
+    font-size: variables.$typo-size-medium;
+    text-align: center;
+    height: auto;
+    width: 15ch;
+    list-style-type: none;
+    @include mixins.breakpoint(medium) {
+      font-size: variables.$typo-size-small;
+      width: 15ch;
+    }
+    @include mixins.breakpoint(large) {
+      font-size: variables.$typo-size-small;
+      width: 15ch;
+    }
+    & a {
+      cursor: pointer;
+      &:hover {
+        transition: 1s ease;
+        transform-origin: "bottom";
+        background-color: #fff;
+        color: #000;
+      }
+    }
+  }
+}
+.view__dl {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  @include mixins.breakpoint(medium) {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  @include mixins.breakpoint(large) {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+

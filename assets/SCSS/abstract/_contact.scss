@@ -1,0 +1,188 @@
+@use "../components/placeholders";
+@use "../components/variables";
+@use "../components/mixins";
+@use "keyframes";
+.sect__delta {
+  @extend %globale-size, %reset-marg-pad, %displayed-column-evenly;
+  & .selected__choice__ctnr {
+    @extend %displayed-row-center-evenly;
+    height: auto;
+    min-width: 30%;
+    margin-top: 0;
+    margin-bottom: 50px;
+    & .choice__el {
+      @extend %typo-standar;
+      font-size: variables.$typo-size-medium;
+      color: #fff;
+      text-align: center;
+      text-shadow: 0px 0px 5px #000;
+    }
+    & .checked__el {
+      font-size: variables.$typo-size-medium;
+      color: rgb(139, 230, 41);
+      filter: drop-shadow(0px 0px 4px #000);
+      margin: 0;
+      padding: 0;
+    }
+  }
+  & .choice__sub__ctnr {
+    @extend %globale-size, %displayed-row-center-evenly;
+    margin-top: 0;
+    margin-bottom: 50px;
+    padding: 5px;
+    & .sector__ctnr {
+      @extend %typo-standar;
+      padding: 8px;
+      height: auto;
+      width: auto;
+      font-size: variables.$typo-size-small;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      background: linear-gradient(#000, #000) padding-box,
+        radial-gradient(
+            circle at 15% 50%,
+            #a0d9f2,
+            #cbd6ff,
+            #fde4d5,
+            #faf0e4,
+            #f8f9f0,
+            #ffffff
+          )
+          border-box;
+      color: #fff;
+    }
+  }
+}
+
+.sect__eco {
+  @extend %globale-size, %reset-marg-pad, %displayed-column-center;
+  & .contact__form {
+    @extend %globale-size, %displayed-column-center;
+    & .main__input__ctnr {
+      @extend %globale-size, %displayed-row-center-evenly;
+      @include mixins.breakpoint(medium) {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+      }
+      & .submain__input__ctnr {
+        @extend %displayed-column-center;
+        min-height: 25vh;
+        width: auto;
+        & .sector__details {
+          @extend %globale-size, %displayed-column-center;
+          margin: auto;
+          padding: 5px;
+          border-radius: 10px;
+          border: 3px solid #fff;
+          box-shadow: 0px 0px 5px rgb(92, 92, 92);
+          & .sector__details--title {
+            @extend %globale-size, %typo-subtitle;
+            text-align: left;
+            font-size: variables.$typo-size-medium;
+            text-shadow: variables.$special-shadow-txt;
+            color: rgba(255, 255, 255, 0.5);
+            @include mixins.breakpoint(medium) {
+              text-align: center;
+            }
+          }
+          & .sector__details--txt {
+            @extend %typo-standar;
+            font-size: variables.$typo-size-small;
+            text-shadow: variables.$special-shadow-txt;
+            color: rgba(255, 255, 255, 0.5);
+            width: 30ch;
+            @include mixins.breakpoint(medium) {
+              text-align: center;
+            }
+          }
+          & .sector__footer {
+            @extend %globale-size, %typo-subtitle;
+            text-align: center;
+            color: #fff;
+            text-shadow: 0px 0px 3px #000;
+            visibility: hidden;
+            & #sector__checked:checked + .confirmed__sector {
+              color: rgb(139, 230, 41);
+              transition: color 0.3s ease;
+            }
+          }
+        }
+        & input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+          @extend %typo-standar;
+          margin: 10px;
+          padding: 5px;
+          height: 4vh;
+          min-width: 15vw;
+          border-radius: 10px;
+          border: 3px solid transparent;
+          background: linear-gradient(#000, #000) padding-box,
+            radial-gradient(
+                circle at 15% 50%,
+                #a0d9f2,
+                #cbd6ff,
+                #fde4d5,
+                #faf0e4,
+                #f8f9f0,
+                #ffffff
+              )
+              border-box;
+          color: #fff;
+        }
+        & .name__sub__ctnr,
+        .mail__sub__ctnr {
+          @include mixins.breakpoint(medium) {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        & textarea {
+          min-height: 15vh;
+          @include mixins.breakpoint(medium) {
+            resize: vertical;
+            width: 70%;
+          }
+        }
+      }
+    }
+
+    & .g-recaptcha {
+      margin: 25px;
+    }
+    & .validate__ctnr {
+      @extend %displayed-column-center;
+      min-height: 20vh;
+      width: 100%;
+      background-color: #000;
+      overflow: hidden;
+      & .validate__btn {
+        @extend %typo-subtitle;
+        height: 4vh;
+        width: auto;
+        font-size: variables.$typo-size-small;
+        background: radial-gradient(
+          circle at 15% 50%,
+          #a0d9f2,
+          #cbd6ff,
+          #fde4d5,
+          #faf0e4,
+          #f8f9f0,
+          #ffffff
+        );
+        border: none;
+        border-radius: 10px;
+        transition: 0.8s ease-in-out;
+        &:hover {
+          cursor: pointer;
+          @extend %typo-gradient;
+        }
+      }
+    }
+  }
+}

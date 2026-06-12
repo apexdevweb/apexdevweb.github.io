@@ -1,0 +1,99 @@
+@use "mixins";
+.top {
+  &__angle--A,
+  &__angle--B,
+  &__angle--C {
+    opacity: 0;
+    height: 2vh;
+    width: 5%;
+    border-style: solid;
+    border-color: #fff;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    filter: drop-shadow(0px 0px 5px #fff);
+    @include mixins.breakpoint(medium) {
+      width: 25%;
+    }
+    @include mixins.breakpoint(large) {
+      width: 12%;
+    }
+  }
+  &__angle--A {
+    margin-left: 10vw;
+    @include mixins.breakpoint(medium) {
+      margin-left: 45vw;
+    }
+    @include mixins.breakpoint(large) {
+      margin-left: 20vw;
+    }
+  }
+  &__angle--B {
+    margin-left: 8vw;
+    @include mixins.breakpoint(medium) {
+      margin-left: 35vw;
+    }
+    @include mixins.breakpoint(large) {
+      margin-left: 15vw;
+    }
+  }
+  &__angle--C {
+    margin-left: 6vw;
+    @include mixins.breakpoint(medium) {
+      margin-left: 25vw;
+    }
+    @include mixins.breakpoint(large) {
+      margin-left: 10vw;
+    }
+  }
+}
+.bottom {
+  &__angle--A,
+  &__angle--B,
+  &__angle--C {
+    opacity: 0;
+    height: 2vh;
+    width: 5%;
+    border-style: solid;
+    border-color: #fff;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-top-width: 0;
+    border-right-width: 0;
+    filter: drop-shadow(0px 0px 5px #fff);
+    @include mixins.breakpoint(medium) {
+      width: 25%;
+    }
+    @include mixins.breakpoint(large) {
+      width: 12%;
+    }
+  }
+  &__angle--A {
+    margin-right: 10vw;
+    @include mixins.breakpoint(medium) {
+      margin-right: 45vw;
+    }
+    @include mixins.breakpoint(large) {
+      margin-right: 20vw;
+    }
+  }
+  &__angle--B {
+    margin-right: 8vw;
+    @include mixins.breakpoint(medium) {
+      margin-right: 35vw;
+    }
+    @include mixins.breakpoint(large) {
+      margin-right: 15vw;
+    }
+  }
+  &__angle--C {
+    margin-right: 6vw;
+    @include mixins.breakpoint(medium) {
+      margin-right: 25vw;
+    }
+    @include mixins.breakpoint(large) {
+      margin-right: 10vw;
+    }
+  }
+}

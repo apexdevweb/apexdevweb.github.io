@@ -1,0 +1,18 @@
+@use "../components/mixins";
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* derrière ton contenu */
+  // pointer-events: none; /* pour que le canvas ne gêne pas les clics */
+  background-color: #000;
+  background-size: 100%;
+  @include mixins.breakpoint(medium) {
+    background-size: cover;
+  } 
+  @include mixins.breakpoint(large) {
+    background-size: cover;
+  } 
+}

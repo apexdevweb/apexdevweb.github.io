@@ -1,0 +1,106 @@
+%globale-size {
+  height: auto;
+  width: 100%;
+}
+%reset-marg-pad {
+  margin: 0;
+  padding: 0;
+}
+%displayed-column-center {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+%displayed-column-evenly {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+%displayed-column-start {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+%displayed-row-evenly {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+%displayed-row-evenly-wrap {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+%displayed-row-center {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+%displayed-row-center-evenly {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+%displayed-row-wrap {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+%displayed-row-end {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+// placeholders pour les typo //
+%typo-special {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  letter-spacing: 3px;
+}
+%typo-subtitle {
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+  
+}
+%typo-standar {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+%typo-code {
+  font-family: "Google Sans Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+%typo-gradient {
+  color: transparent;
+  background: radial-gradient(
+    circle at 15% 50%,
+    #a0d9f2,
+    #cbd6ff,
+    #fde4d5,
+    #faf0e4,
+    #f8f9f0,
+    #ffffff
+  );
+  background-clip: text;
+}
+// placeholders pour les typo fin //
