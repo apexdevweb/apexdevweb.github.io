@@ -1,4 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
+
 let tlB = gsap.timeline();
 const slider = document.querySelector(".content");
 tlB.from(slider, {
@@ -14,9 +15,9 @@ tlB.from(slider, {
   },
   scrollTrigger: {
     trigger: ".content",
-    start: "center center",
+    start: "top center",
     end: "bottom bottom",
-    scrub: 3,
+    scrub: 2,
     // markers: true,
   },
   ease: "power2.inOut",

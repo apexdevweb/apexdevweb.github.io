@@ -1,0 +1,28 @@
+@use "../components/variables";
+@use "../components/placeholders";
+@use "../components/mixins";
+@use "../abstract/lineSVG";
+
+main {
+  & .sect-prima {
+    position: relative;
+    @extend %reset-marg-pad, %displayed-row-evenly;
+    min-height: 90vh;
+    width: 100%;
+    &__inner{
+      overflow: visible;
+    }
+    &__wireframepict {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-width: 1200px;
+      max-width: 1440px;
+      height: 650px;
+      box-shadow: inset 0px 0px 25px 35px #000;
+      overflow: hidden;
+      z-index: 0;
+    }
+  }
+}

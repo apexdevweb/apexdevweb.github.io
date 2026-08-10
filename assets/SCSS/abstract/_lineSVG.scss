@@ -1,0 +1,47 @@
+.line-container {
+  position: relative;
+  width: 100%;
+  // aspect-ratio: 1402 / 857; // verrouille le ratio -> plus de déformation possible
+  height: 650px;
+  overflow: visible;
+  z-index: 99;
+}
+
+.tree-svg {
+  position: absolute;
+  left: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 99;
+  filter: drop-shadow(0px 0px 5px #fff);
+}
+
+.tt-origin-point {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border: 2px dashed #fff;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.742);
+  mix-blend-mode: difference;
+}
+
+.tt-bubble {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  padding: 8px 14px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  background: #111;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+}

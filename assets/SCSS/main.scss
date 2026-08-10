@@ -2,14 +2,13 @@
 @use "components/mixins";
 @use "components/variables";
 @use "components/placeholders";
-@use "abstract/transition";
+@use "components/transition";
+@use "components/keyframes";
 @use "abstract/canvas";
-@use "abstract/keyframes";
-@use "components/barre";
-@use "components/addjs";
-@use "abstract/morphing";
-@use "abstract/contact";
-
+@use "abstract/barre";
+@use "abstract/addjs";
+@use "layout/contact";
+@use "layout/sectionPrima";
 body {
   margin: 0;
   padding: 0;
@@ -140,6 +139,7 @@ body {
         }
       }
       & a {
+        width: 5vw;
         margin-left: 1vw;
         @extend %typo-standar, %displayed-row-center-evenly;
         font-size: variables.$typo-size-small;
@@ -149,6 +149,7 @@ body {
         opacity: 0;
         animation: revealUi 2s ease 1.8s 1 normal forwards;
         @include mixins.breakpoint(medium) {
+          width: 20vw;
           font-size: variables.$typo-litle-device-small;
         }
       }

@@ -1,6 +1,6 @@
-@use "placeholders";
-@use "variables";
-@use "mixins";
+@use "../components/placeholders";
+@use "../components/variables";
+@use "../components/mixins";
 .dl__sub__ctnr {
   @extend %globale-size;
   display: none;

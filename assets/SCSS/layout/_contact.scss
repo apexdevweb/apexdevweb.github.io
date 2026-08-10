@@ -1,7 +1,7 @@
 @use "../components/placeholders";
 @use "../components/variables";
 @use "../components/mixins";
-@use "keyframes";
+@use "../components/keyframes";
 .sect__delta {
   @extend %globale-size, %reset-marg-pad, %displayed-column-evenly;
   & .selected__choice__ctnr {
