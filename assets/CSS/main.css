@@ -3,17 +3,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap");
 body main .main___ruler--ctnr, body main .main___ruler--ctnr .ruler, body main .sect__alpha,
 body main .sect__beta,
-body main .sect__ceta, body main .sect__beta .project__wrapper, body main .sect__ceta .description__ctnr, body main .sect__ceta .description__ctnr .description__title__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .budget__standard__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .budget__standard__ctnr .standar__item, body main .sect__ceta .description__ctnr .budget__ctnr .slider__wrapper, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__title__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__list__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__foot, body main .sect__ceta .description__ctnr .dl__ctnr .dl__sub__ctnr, body main .sect__ceta .description__ctnr .model__container, body .main__footer .footer__sub__ctnr, .sect__delta, .sect__delta .choice__sub__ctnr, .sect__eco, .sect__eco .contact__form, .sect__eco .contact__form .main__input__ctnr, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details .sector__details--title, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details .sector__footer, .dl__sub__ctnr {
+body main .sect__ceta, body main .sect__beta .project__wrapper, body main .sect__ceta .description__ctnr, body main .sect__ceta .description__ctnr .description__title__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr .budget__standard__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr .budget__standard__ctnr .standar__item, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__title__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__list__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__foot, body main .sect__ceta .description__ctnr .dl__ctnr .dl__sub__ctnr, body main .sect__ceta .description__ctnr .model__container, body .main__footer .footer__sub__ctnr, .sect__delta, .sect__delta .choice__sub__ctnr, .sect__eco, .sect__eco .contact__form, .sect__eco .contact__form .main__input__ctnr, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details .sector__details--title, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details .sector__footer, .dl__sub__ctnr {
   height: auto;
   width: 100%;
 }
 
-body .access__container .primary__title__ctnr, body .access__container .primary__title__ctnr .primary__title, body .access__container .primary__title__ctnr .secondary__title, body .access__container .access__sub__ctnr .access__link, body header .uxui__container, body header .tools__wrapper, body header .tools__wrapper .tools__txt__container, body .cursor__effect .cursor__txt, body main .sect__beta .project__wrapper .project__item__ctnr .project__item__title, body main .sect__beta .project__wrapper .project__item__ctnr .project__link, body main .sect__ceta .description__ctnr .description__title__ctnr .description__title, body main .sect__ceta .description__ctnr .description__title__ctnr .description__sub__title, body main .sect__ceta .description__ctnr .description__txt, body main .sect__ceta .description__ctnr .budget__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .budget__standard__ctnr .standar__item, body main .sect__ceta .description__ctnr .budget__ctnr .slider__wrapper .slider__container, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .choice__cost__ctnr .fast__choice__txt, body main .sect__ceta .description__ctnr .dl__ctnr .free__pack, body main .sect__ceta .description__ctnr .dl__ctnr .dl__sub__ctnr, body main .sect__ceta .description__ctnr .model__title, body main .sect__ceta .description__ctnr .model__container, body .main__footer .footer__sub__ctnr .copy__tag, main .sect-prima, .sect__delta, .sect__eco, .dl__sub__ctnr .dl__item {
+body .access__container .primary__title__ctnr, body .access__container .primary__title__ctnr .primary__title, body .access__container .primary__title__ctnr .secondary__title, body .access__container .access__sub__ctnr .access__link, body header .uxui__container, body header .tools__wrapper, body header .tools__wrapper .tools__txt__container, body .cursor__effect .cursor__txt, body main .sect__beta .project__wrapper .project__item__ctnr .project__item__title, body main .sect__beta .project__wrapper .project__item__ctnr .project__link, body main .sect__ceta .description__ctnr .description__title__ctnr .description__title, body main .sect__ceta .description__ctnr .description__title__ctnr .description__sub__title, body main .sect__ceta .description__ctnr .description__txt, body main .sect__ceta .description__ctnr .budget__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr .budget__standard__ctnr .standar__item, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .choice__cost__ctnr .fast__choice__txt, body main .sect__ceta .description__ctnr .dl__ctnr .free__pack, body main .sect__ceta .description__ctnr .dl__ctnr .dl__sub__ctnr, body main .sect__ceta .description__ctnr .model__title, body main .sect__ceta .description__ctnr .model__container, body .main__footer .footer__sub__ctnr .copy__tag, main .sect-prima, .sect__delta, .sect__eco, .dl__sub__ctnr .dl__item {
   margin: 0;
   padding: 0;
 }
 
-body .cursor__effect, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .choice__cost__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__foot, .sect__eco, .sect__eco .contact__form, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details, .sect__eco .contact__form .validate__ctnr {
+body .cursor__effect, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .slider-wrapper .card, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .choice__cost__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__foot, .tt-origin-point, .sect__eco, .sect__eco .contact__form, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details, .sect__eco .contact__form .validate__ctnr {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -22,21 +22,21 @@ body .cursor__effect, body main .sect__ceta .description__ctnr .budget__ctnr .fa
 
 body .access__container, body .access__container .primary__title__ctnr, body .access__container .access__sub__ctnr, body main .sect__alpha,
 body main .sect__beta,
-body main .sect__ceta, body main .sect__beta .project__wrapper .project__item__ctnr, body main .sect__ceta .description__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .budget__standard__ctnr, body main .sect__ceta .description__ctnr .dl__ctnr, body .main__footer, .sect__delta {
+body main .sect__ceta, body main .sect__beta .project__wrapper .project__item__ctnr, body main .sect__ceta .description__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr .budget__standard__ctnr, body main .sect__ceta .description__ctnr .dl__ctnr, body .main__footer, .sect__delta {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: space-evenly;
 }
 
-body main .sect__ceta .description__ctnr .description__title__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__list__ctnr {
+body main .sect__ceta .description__ctnr .description__title__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__list__ctnr {
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
   justify-content: space-evenly;
 }
 
-body header, body main .sect__ceta .description__ctnr .model__container, main .sect-prima {
+body header, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr, body main .sect__ceta .description__ctnr .model__container, main .sect-prima {
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
@@ -50,7 +50,7 @@ body main .sect__ceta .description__ctnr .description__sub__ctnr {
   justify-content: flex-start;
 }
 
-body header .uxui__container a, body main .main___ruler--ctnr, body main .main___ruler--ctnr .ruler, body main .main___ruler--ctnr .ruler .mask, body main .main___ruler--ctnr .ruler .lines, body main .sect__ceta .description__ctnr .budget__ctnr .slider__wrapper .slider__container, body main .sect__ceta .description__ctnr .budget__ctnr .slider__wrapper .slider__container .slider__el, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr, .sect__delta .selected__choice__ctnr, .sect__delta .choice__sub__ctnr, .sect__eco .contact__form .main__input__ctnr {
+body header .uxui__container a, body main .main___ruler--ctnr, body main .main___ruler--ctnr .ruler, body main .main___ruler--ctnr .ruler .mask, body main .main___ruler--ctnr .ruler .lines, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr, .sect__delta .selected__choice__ctnr, .sect__delta .choice__sub__ctnr, .sect__eco .contact__form .main__input__ctnr {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -79,19 +79,11 @@ body .access__container .primary__title__ctnr .primary__title, body main .sect__
   letter-spacing: 2px;
 }
 
-body .access__container .primary__title__ctnr .secondary__title, body .access__container .access__sub__ctnr .access__link, body header .uxui__container, body header .uxui__container .title__uixui, body header .uxui__container a, body header .tools__wrapper .tools__txt__container, body main .sect__alpha .service__title, body main .sect__beta .project__title, body main .sect__beta .project__wrapper .project__item__ctnr .project__link, body main .sect__ceta .description__ctnr .description__title__ctnr .description__title, body main .sect__ceta .description__ctnr .description__title__ctnr .description__sub__title, body main .sect__ceta .description__ctnr .description__txt, body main .sect__ceta .description__ctnr .budget__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .choice__cost__ctnr .fast__choice__txt, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__title__ctnr .choice__first__title, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__foot .choice__btn, body main .sect__ceta .description__ctnr .dl__ctnr .free__pack, body .main__footer .footer__sub__ctnr .copy__tag, .sect__delta .selected__choice__ctnr .choice__el, .sect__delta .choice__sub__ctnr .sector__ctnr, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details .sector__details--txt, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr input[type=text],
+body .access__container .primary__title__ctnr .secondary__title, body .access__container .access__sub__ctnr .access__link, body header .uxui__container, body header .uxui__container .title__uixui, body header .uxui__container a, body header .tools__wrapper .tools__txt__container, body main .sect__alpha .service__title, body main .sect__beta .project__title, body main .sect__beta .project__wrapper .project__item__ctnr .project__link, body main .sect__ceta .description__ctnr .description__title__ctnr .description__title, body main .sect__ceta .description__ctnr .description__title__ctnr .description__sub__title, body main .sect__ceta .description__ctnr .description__txt, body main .sect__ceta .description__ctnr .budget__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .choice__cost__ctnr .fast__choice__txt, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__title__ctnr .choice__first__title, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__foot .choice__btn, body main .sect__ceta .description__ctnr .dl__ctnr .free__pack, body .main__footer .footer__sub__ctnr .copy__tag, .tt-origin-point, .tt-bubble, .sect__delta .selected__choice__ctnr .choice__el, .sect__delta .choice__sub__ctnr .sector__ctnr, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details .sector__details--txt, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr input[type=text],
 .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr input[type=email],
 .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr input[type=tel],
 .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr textarea {
   font-family: "Zalando Sans Expanded", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: 2px;
-}
-
-body main .sect__ceta .description__ctnr .budget__ctnr .slider__wrapper .slider__container .slider__el .slider__txt {
-  font-family: "Google Sans Code", monospace;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -489,12 +481,17 @@ canvas {
 
 .line-container {
   position: relative;
+  margin-right: 50px;
   width: 100%;
   height: 650px;
   overflow: visible;
   z-index: 99;
 }
-
+@media (max-width: 600px) {
+  .line-container {
+    position: absolute;
+  }
+}
 .tree-svg {
   position: absolute;
   left: 0;
@@ -507,6 +504,8 @@ canvas {
 }
 
 .tt-origin-point {
+  text-align: center;
+  font-size: 1.2rem;
   position: absolute;
   width: 220px;
   height: 220px;
@@ -515,8 +514,14 @@ canvas {
   z-index: 2;
   opacity: 0;
   backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.742);
+  background-color: rgba(0, 0, 0, 0.662);
   mix-blend-mode: difference;
+  color: #ffffff !important;
+}
+.tt-origin-point__txt {
+  line-height: 1.3;
+  color: #fff;
+  display: block;
 }
 
 .tt-bubble {
@@ -534,15 +539,68 @@ canvas {
   opacity: 0;
 }
 
+.title-frame {
+  position: relative;
+  height: 199px;
+  width: 100%;
+  overflow: hidden;
+}
+.title-frame__svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  filter: drop-shadow(0px 0px 5px #fff);
+}
+.title-frame__text {
+  position: absolute;
+  top: 38%;
+  left: 20%;
+  width: 60%;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+  opacity: 0;
+}
+
 main .sect-prima {
   position: relative;
   min-height: 90vh;
   width: 100%;
 }
+@media (max-width: 600px) {
+  main .sect-prima {
+    display: flex;
+    flex-flow: column nowrap;
+    place-items: center;
+    place-content: center space-evenly;
+  }
+}
 main .sect-prima__inner {
   overflow: visible;
 }
+main .sect-prima__wireframectnr {
+  position: relative;
+  width: 100%;
+  min-width: 1200px;
+  max-width: 1440px;
+  height: 650px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+@media (max-width: 600px) {
+  main .sect-prima__wireframectnr {
+    min-width: 375px;
+    max-width: 600px;
+    height: 350px;
+    overflow: hidden;
+  }
+}
 main .sect-prima__wireframepict {
+  opacity: 0;
   position: relative;
   margin: 0;
   padding: 0;
@@ -550,16 +608,24 @@ main .sect-prima__wireframepict {
   min-width: 1200px;
   max-width: 1440px;
   height: 650px;
-  box-shadow: inset 0px 0px 25px 35px #000;
   overflow: hidden;
   z-index: 0;
+  animation: revealUi 2s ease 1.5s 1 normal forwards;
 }
-
+@media (max-width: 600px) {
+  main .sect-prima__wireframepict {
+    min-width: 375px;
+    max-width: 200px;
+    height: 350px;
+    overflow: hidden;
+  }
+}
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  background-color: #000;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -1089,7 +1155,35 @@ body main .sect__ceta .description__ctnr .description__sub__ctnr .description__i
 body main .sect__ceta .description__ctnr .budget__ctnr {
   background: none;
 }
-body main .sect__ceta .description__ctnr .budget__ctnr .budget__title {
+body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .slider-wrapper {
+  margin-left: 0;
+  height: 55vh;
+  width: 15%;
+  transform: matrix3d(0.99, 0.16, 0, -0.0001, -0.16, 0.7029, 0.71, -0.001, 0, -0.71, 0.71, 0, 0, 0, 0, 1);
+  -webkit-transform: matrix3d(0.99, 0.16, 0, -0.0001, -0.16, 0.7029, 0.71, -0.001, 0, -0.71, 0.71, 0, 0, 0, 0, 1);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .slider-wrapper .card {
+  margin: 20px;
+  height: 15vh;
+  width: 10vw;
+  border-radius: 15px;
+  background: url("../image/slide_texture.webp") no-repeat 50% 50%;
+  background-size: 100%;
+  transition: 0.4s ease;
+}
+body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .slider-wrapper .card:hover {
+  filter: grayscale(100%) drop-shadow(0px 0px 5px #fff);
+}
+body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .slider-wrapper .card__title {
+  font-size: 1.2rem;
+  text-shadow: 0px 0px 8px #000;
+}
+body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr {
+  max-width: 60%;
+}
+body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr .budget__title {
   text-align: left;
   color: #fff;
   font-size: 2rem;
@@ -1097,16 +1191,16 @@ body main .sect__ceta .description__ctnr .budget__ctnr .budget__title {
   width: 100%;
 }
 @media (max-width: 600px) {
-  body main .sect__ceta .description__ctnr .budget__ctnr .budget__title {
+  body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr .budget__title {
     font-size: 1.1rem;
   }
 }
 @media (max-width: 600px) {
-  body main .sect__ceta .description__ctnr .budget__ctnr .budget__standard__ctnr {
+  body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr .budget__standard__ctnr {
     padding-left: 0;
   }
 }
-body main .sect__ceta .description__ctnr .budget__ctnr .budget__standard__ctnr .standar__item {
+body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr .budget__standard__ctnr .standar__item {
   list-style-type: none;
   color: #fff;
   font-size: 1.2rem;
@@ -1114,88 +1208,14 @@ body main .sect__ceta .description__ctnr .budget__ctnr .budget__standard__ctnr .
   text-shadow: 0px 0px 3px #000;
 }
 @media (max-width: 600px) {
-  body main .sect__ceta .description__ctnr .budget__ctnr .budget__standard__ctnr .standar__item {
+  body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr .budget__standard__ctnr .standar__item {
     font-size: 1.1rem;
   }
 }
 @media (min-width: 600px) and (max-width: 1024px) {
-  body main .sect__ceta .description__ctnr .budget__ctnr .budget__standard__ctnr .standar__item {
+  body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr .budget__standard__ctnr .standar__item {
     font-size: 1.1rem;
   }
-}
-body main .sect__ceta .description__ctnr .budget__ctnr .slider__wrapper {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: flex-end;
-  justify-content: flex-end;
-  overflow: hidden;
-}
-body main .sect__ceta .description__ctnr .budget__ctnr .slider__wrapper .slider__container {
-  height: auto;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-body main .sect__ceta .description__ctnr .budget__ctnr .slider__wrapper .slider__container:hover .slider__el:not(:hover) {
-  transform: scale(0.8);
-}
-body main .sect__ceta .description__ctnr .budget__ctnr .slider__wrapper .slider__container .slider__el {
-  padding: 3px;
-  height: 15vh;
-  width: auto;
-  flex-shrink: 0;
-  border-radius: 10px;
-  background-color: #000;
-  border: 3px solid transparent;
-  background: linear-gradient(#000, #000) padding-box, radial-gradient(circle at 15% 50%, #a0d9f2, #cbd6ff, #fde4d5, #faf0e4, #f8f9f0, #ffffff) border-box;
-  transition: 0.4s ease-in-out;
-  overflow: hidden;
-}
-body main .sect__ceta .description__ctnr .budget__ctnr .slider__wrapper .slider__container .slider__el:hover {
-  transform: scale(1.1);
-}
-body main .sect__ceta .description__ctnr .budget__ctnr .slider__wrapper .slider__container .slider__el.scaling__slide {
-  height: 25vh;
-  width: 35vw;
-}
-body main .sect__ceta .description__ctnr .budget__ctnr .slider__wrapper .slider__container .slider__el .slider__txt {
-  width: 15ch;
-  text-align: center;
-}
-body main .sect__ceta .description__ctnr .budget__ctnr .slider__wrapper .slider__container .slider__el .slider__txt.translate__txt {
-  transition: transform 0.7s ease-in-out;
-  transform: translateY(-70px);
-  font-size: 3rem;
-}
-body main .sect__ceta .description__ctnr .budget__ctnr .slider__wrapper .slider__container .slider__el .slider__caption {
-  position: relative;
-  display: none;
-  text-align: left;
-  width: 15ch;
-}
-body main .sect__ceta .description__ctnr .budget__ctnr .slider__wrapper .slider__container .slider__el .slider__caption.slider__caption--view {
-  display: block;
-}
-body main .sect__ceta .description__ctnr .budget__ctnr .slider__wrapper .slider__container .slider__el .slider__el--separate {
-  height: 10vh;
-  width: 2px;
-  background-color: #fff;
-  border-radius: 5px;
-  visibility: hidden;
-}
-body main .sect__ceta .description__ctnr .budget__ctnr .slider__wrapper .slider__container .slider__el .slider__el--separate.translate__separate {
-  visibility: visible;
-  transition: transform 0.7s ease 0.7s;
-  transform: translateX(-220px);
-}
-body main .sect__ceta .description__ctnr .budget__ctnr .slider__wrapper .slider__container .slider__el .slider__img {
-  visibility: hidden;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-}
-body main .sect__ceta .description__ctnr .budget__ctnr .slider__wrapper .slider__container .slider__el .slider__img.morph__img {
-  height: 10vh;
-  width: auto;
-  visibility: visible;
 }
 body main .sect__ceta .description__ctnr .budget__ctnr .rdv__link--item {
   margin: auto;

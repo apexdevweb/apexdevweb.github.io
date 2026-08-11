@@ -1,64 +1,37 @@
-const sliderCtnr = document.querySelector(".slider__container");
-sliderCtnr.innerHTML += sliderCtnr.innerHTML;
-const sliderEl = document.querySelectorAll(".slider__el");
+gsap.registerPlugin(ScrollTrigger, SplitText);
+const sliderContainer = document.querySelector(".slider-wrapper");
+const cursorSlider = document.querySelector(".cursor__effect");
+const cursorSliderTxt = document.querySelector(".cursor__txt");
+const titleArray = [
+  "HTML5",
+  "CSS3",
+  "SASS",
+  "JAVASCRIPT",
+  "PHP",
+  "MYSQL",
+  "PYTHON",
+  "RUST",
+];
+for (let i = 0; i < 8; i++) {
+  const cardsEl = document.createElement("div");
+  const cardsTitle = document.createElement("h2");
 
-let tlSlide = gsap.timeline({
-  repeat: -1,
-  defaults: { ease: "none" },
-});
-tlSlide.to(sliderCtnr, {
-  xPercent: -50,
-  duration: 15,
-});
-sliderCtnr.addEventListener("mouseenter", () => tlSlide.pause());
-sliderCtnr.addEventListener("mouseleave", () => tlSlide.play());
-sliderEl.forEach((slideFig) => {
-  slideFig.addEventListener("click", () => {
-    const sliderTxt = slideFig.querySelector(".slider__txt");
-    const sliderCapt = slideFig.querySelector(".slider__caption");
-    let splitSlide = new SplitText(sliderCapt, {
-      type: "lines, words",
-    });
-    const sliderSepar = slideFig.querySelector(".slider__el--separate");
-    const sliderImg = slideFig.querySelector(".slider__img");
+  cardsEl.setAttribute("class", "card");
+  cardsTitle.setAttribute("class", "card__title");
 
-    if (slideFig.classList.contains("scaling__slide")) {
-      slideFig.classList.remove("scaling__slide");
-      if (sliderTxt) {
-        sliderTxt.classList.remove("translate__txt");
-      }
-      if (sliderCapt) {
-        sliderCapt.classList.remove("slider__caption--view");
-      }
-      if (sliderSepar) {
-        sliderSepar.classList.remove("translate__separate");
-      }
-      if (sliderImg) {
-        sliderImg.classList.remove("morph__img");
-      }
+  cardsTitle.textContent = titleArray[i];
+
+  cardsEl.appendChild(cardsTitle);
+  sliderContainer.appendChild(cardsEl);
+
+  cardsEl.addEventListener("click", () => {
+  
+    if (cursorSliderTxt.textContent === titleArray[i]) {
+      cursorSliderTxt.style.fontSize = "1.2rem";
+      cursorSliderTxt.textContent = "";
     } else {
-      slideFig.classList.add("scaling__slide");
-      if (sliderTxt) {
-        sliderTxt.classList.add("translate__txt");
-      }
-      if (sliderCapt) {
-        sliderCapt.classList.add("slider__caption--view");
-        gsap.from(splitSlide.words, {
-          y: 20,
-          transformOrigin: "bottom",
-          scaleY: 0,
-          duration: 0.5,
-          opacity: 0,
-          stagger: 0.1,
-          ease: "power2.inOut",
-        });
-      }
-      if (sliderSepar) {
-        sliderSepar.classList.add("translate__separate");
-      }
-      if (sliderImg) {
-        sliderImg.classList.add("morph__img");
-      }
+      cursorSliderTxt.style.fontSize = "3rem";
+      cursorSliderTxt.textContent = titleArray[i];
     }
   });
-});
+}

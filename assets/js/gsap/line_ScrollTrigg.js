@@ -25,12 +25,12 @@ gsap.registerPlugin(ScrollTrigger);
     scrollTrigger: {
       trigger: sectionPrima,
       start: "top top",
-      end: "+=900",
-      scrub: 2,
+      end: "+=500",
+      scrub: 3,
       pin: true,
       pinSpacing: true,
       anticipatePin: 1,
-      markers: true,
+      // markers: true,
     },
   });
 

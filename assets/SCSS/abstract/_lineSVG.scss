@@ -1,10 +1,19 @@
+@use "../components/variables";
+@use "../components/placeholders";
+@use "../components/mixins";
 .line-container {
   position: relative;
+  margin-right: 50px;
   width: 100%;
   // aspect-ratio: 1402 / 857; // verrouille le ratio -> plus de déformation possible
   height: 650px;
   overflow: visible;
   z-index: 99;
+  @include mixins.breakpoint(medium) {
+    position: absolute;
+  }
+  @include mixins.breakpoint(large) {
+  }
 }
 
 .tree-svg {
@@ -19,6 +28,9 @@
 }
 
 .tt-origin-point {
+  @extend %typo-standar, %displayed-column-center;
+  text-align: center;
+  font-size: variables.$typo-size-small;
   position: absolute;
   width: 220px;
   height: 220px;
@@ -27,11 +39,18 @@
   z-index: 2;
   opacity: 0;
   backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.742);
+  background-color: rgba(0, 0, 0, 0.662);
   mix-blend-mode: difference;
+  color: #ffffff !important;
+  &__txt {
+    line-height: 1.3;
+    color: #fff;
+    display: block;
+  }
 }
 
 .tt-bubble {
+  @extend %typo-standar;
   position: absolute;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -44,4 +63,32 @@
   font-weight: 600;
   white-space: nowrap;
   opacity: 0;
+}
+//encadrement de titre //
+.title-frame {
+  position: relative;
+  height: 199px;
+  width: 100%;
+  // aspect-ratio: 800 / 200;
+  overflow: hidden;
+  &__svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    filter: drop-shadow(0px 0px 5px #fff);
+  }
+  &__text {
+    position: absolute;
+    top: 38%;
+    left: 20%;
+    width: 60%;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+    opacity: 0;
+  }
 }

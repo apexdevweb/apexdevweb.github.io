@@ -38,7 +38,7 @@ gsap.from(splitB.chars, {
   stagger: 0.1,
   scrollTrigger: {
     trigger: serviceTitle,
-    start: "top center",
+    start: "center top",
     end: "bottom bottom",
     scrub: 5,
     // markers: true,
@@ -58,7 +58,7 @@ gsap.from(splitC.chars, {
   stagger: 0.1,
   scrollTrigger: {
     trigger: projectTitle,
-    start: "top center",
+    start: "center top",
     end: "bottom bottom",
     scrub: 5,
     // markers: true,

@@ -14,6 +14,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  background-color: #000;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -455,119 +456,104 @@ body {
             %typo-standar,
             %displayed-column-start;
           background: none;
-          & .budget__title {
-            text-align: left;
-            color: #fff;
-            font-size: 2rem;
-            font-weight: 600;
-            width: 100%;
-            @include mixins.breakpoint(medium) {
-              font-size: variables.$typo-litle-device-small;
-            }
-          }
-          & .budget__standard__ctnr {
-            @extend %globale-size, %displayed-column-evenly;
-            @include mixins.breakpoint(medium) {
-              padding-left: 0;
-            }
-            & .standar__item {
-              @extend %reset-marg-pad, %globale-size;
-              list-style-type: none;
-              color: #fff;
-              font-size: 1.2rem;
-              font-weight: 500;
-              text-shadow: 0px 0px 3px #000;
-              @include mixins.breakpoint(medium) {
-                font-size: variables.$typo-litle-device-small;
-              }
-              @include mixins.breakpoint(large) {
-                font-size: variables.$typo-litle-device-small;
-              }
-            }
-          }
-          & .slider__wrapper {
-            @extend %globale-size;
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: flex-end;
-            justify-content: flex-end;
-            overflow: hidden;
-            & .slider__container {
-              @extend %displayed-row-center-evenly, %reset-marg-pad;
-              height: auto;
-              width: 100%;
-              margin: 0;
-              padding: 0;
-              &:hover .slider__el:not(:hover) {
-                transform: scale(0.8);
-              }
-              & .slider__el {
-                @extend %displayed-row-center-evenly;
-                padding: 3px;
+          & .main-separ__ctnr {
+            @extend %globale-size,
+              %reset-marg-pad,
+              %typo-standar,
+              %displayed-row-evenly;
+            & .slider-wrapper {
+              margin-left: 0;
+              height: 55vh;
+              width: 15%;
+              transform: matrix3d(
+                0.99,
+                0.16,
+                0,
+                -0.0001,
+                -0.16,
+                0.7029,
+                0.71,
+                -0.001,
+                0,
+                -0.71,
+                0.71,
+                0,
+                0,
+                0,
+                0,
+                1
+              );
+              -webkit-transform: matrix3d(
+                0.99,
+                0.16,
+                0,
+                -0.0001,
+                -0.16,
+                0.7029,
+                0.71,
+                -0.001,
+                0,
+                -0.71,
+                0.71,
+                0,
+                0,
+                0,
+                0,
+                1
+              );
+              overflow-y: scroll;
+              overflow-x: hidden;
+              & .card {
+                @extend %displayed-column-center;
+                margin: 20px;
                 height: 15vh;
-                width: auto;
-                flex-shrink: 0;
-                border-radius: 10px;
-                background-color: #000;
-                border: 3px solid transparent;
-                background: linear-gradient(#000, #000) padding-box,
-                  radial-gradient(
-                      circle at 15% 50%,
-                      #a0d9f2,
-                      #cbd6ff,
-                      #fde4d5,
-                      #faf0e4,
-                      #f8f9f0,
-                      #ffffff
-                    )
-                    border-box;
-                transition: 0.4s ease-in-out;
-                overflow: hidden;
+                width: 10vw;
+                border-radius: 15px;
+                background: url("../image/slide_texture.webp") no-repeat 50% 50%;
+                background-size: 100%;
+                transition: 0.4s ease;
                 &:hover {
-                  transform: scale(1.1);
+                  filter: grayscale(100%) drop-shadow(0px 0px 5px #fff);
                 }
-                &.scaling__slide {
-                  height: 25vh;
-                  width: 35vw;
+                &__title {
+                  font-size: variables.$typo-size-small;
+                  text-shadow: 0px 0px 8px #000;
                 }
-                & .slider__txt {
-                  @extend %typo-code;
-                  width: 15ch;
-                  text-align: center;
-                  &.translate__txt {
-                    transition: transform 0.7s ease-in-out;
-                    transform: translateY(-70px);
-                    font-size: 3rem;
+              }
+            }
+            & .budget-separ__ctnr {
+              @extend %globale-size,
+                %reset-marg-pad,
+                %typo-standar,
+                %displayed-column-start;
+                max-width: 60%;
+              & .budget__title {
+                text-align: left;
+                color: #fff;
+                font-size: 2rem;
+                font-weight: 600;
+                width: 100%;
+                @include mixins.breakpoint(medium) {
+                  font-size: variables.$typo-litle-device-small;
+                }
+              }
+              & .budget__standard__ctnr {
+                @extend %globale-size, %displayed-column-evenly;
+                @include mixins.breakpoint(medium) {
+                  padding-left: 0;
+                }
+                & .standar__item {
+                  @extend %reset-marg-pad, %globale-size;
+                  list-style-type: none;
+                  color: #fff;
+                  font-size: 1.2rem;
+                  font-weight: 500;
+                  text-shadow: 0px 0px 3px #000;
+                  @include mixins.breakpoint(medium) {
+                    font-size: variables.$typo-litle-device-small;
                   }
-                }
-                & .slider__caption {
-                  position: relative;
-                  display: none;
-                  text-align: left;
-                  width: 15ch;
-                  &.slider__caption--view {
-                    display: block;
-                  }
-                }
-                & .slider__el--separate {
-                  height: 10vh;
-                  width: 2px;
-                  background-color: #fff;
-                  border-radius: 5px;
-                  visibility: hidden;
-                  &.translate__separate {
-                    visibility: visible;
-                    transition: transform 0.7s ease 0.7s;
-                    transform: translateX(-220px);
-                  }
-                }
-                & .slider__img {
-                  visibility: hidden;
-                  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-                  &.morph__img {
-                    height: 10vh;
-                    width: auto;
-                    visibility: visible;
+                  @include mixins.breakpoint(large) {
+                    font-size: variables.$typo-litle-device-small;
                   }
                 }
               }
