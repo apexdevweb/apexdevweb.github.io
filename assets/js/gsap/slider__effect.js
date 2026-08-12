@@ -25,7 +25,6 @@ for (let i = 0; i < 8; i++) {
   sliderContainer.appendChild(cardsEl);
 
   cardsEl.addEventListener("click", () => {
-  
     if (cursorSliderTxt.textContent === titleArray[i]) {
       cursorSliderTxt.style.fontSize = "1.2rem";
       cursorSliderTxt.textContent = "";
