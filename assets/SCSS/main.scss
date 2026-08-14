@@ -217,11 +217,44 @@ body {
       font-size: variables.$typo-size-small;
       color: rgba(255, 255, 255, 0.732);
       text-shadow: variables.$special-shadow-txt;
-      backdrop-filter: blur(5px);
       border-bottom-left-radius: 10px;
       @include mixins.breakpoint(medium) {
         display: none;
       }
+    }
+  }
+  & .cipher-ctnr {
+    @extend %displayed-column-center;
+    position: fixed;
+    top: 53%;
+    right: -9%;
+    height: 10vh;
+    width: 20vw;
+    z-index: 99;
+    transform: rotate(90deg);
+    overflow: hidden;
+    text-align: center;
+    mix-blend-mode: difference;
+    &__el {
+      @extend %typo-code;
+      margin: auto;
+      height: auto;
+      width: 100%;
+      border-bottom: 1px solid red;
+      font-size: 2.5rem;
+      color: #fff;
+      text-shadow: 0px 0px 8px #fff;
+      text-transform: uppercase;
+    }
+  }
+  .cipher-char {
+    display: inline-block;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 1;
+    transform: translateX(0);
+    &--fade {
+      opacity: 0;
+      transform: translateX(-8px);
     }
   }
   & main {
@@ -465,68 +498,14 @@ body {
               margin-left: 0;
               height: 55vh;
               width: 15%;
-              transform: matrix3d(
-                0.99,
-                0.16,
-                0,
-                -0.0001,
-                -0.16,
-                0.7029,
-                0.71,
-                -0.001,
-                0,
-                -0.71,
-                0.71,
-                0,
-                0,
-                0,
-                0,
-                1
-              );
-              -webkit-transform: matrix3d(
-                0.99,
-                0.16,
-                0,
-                -0.0001,
-                -0.16,
-                0.7029,
-                0.71,
-                -0.001,
-                0,
-                -0.71,
-                0.71,
-                0,
-                0,
-                0,
-                0,
-                1
-              );
-              overflow-y: scroll;
-              overflow-x: hidden;
-              & .card {
-                @extend %displayed-column-center;
-                margin: 20px;
-                height: 15vh;
-                width: 10vw;
-                border-radius: 15px;
-                background: url("../image/slide_texture.webp") no-repeat 50% 50%;
-                background-size: 100%;
-                transition: 0.4s ease;
-                &:hover {
-                  filter: grayscale(100%) drop-shadow(0px 0px 5px #fff);
-                }
-                &__title {
-                  font-size: variables.$typo-size-small;
-                  text-shadow: 0px 0px 8px #000;
-                }
-              }
+              //a completer
             }
             & .budget-separ__ctnr {
               @extend %globale-size,
                 %reset-marg-pad,
                 %typo-standar,
                 %displayed-column-start;
-                max-width: 60%;
+              max-width: 60%;
               & .budget__title {
                 text-align: left;
                 color: #fff;

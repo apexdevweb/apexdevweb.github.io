@@ -13,7 +13,7 @@ body .access__container .primary__title__ctnr, body .access__container .primary_
   padding: 0;
 }
 
-body .cursor__effect, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .slider-wrapper .card, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .choice__cost__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__foot, .tt-origin-point, .sect__eco, .sect__eco .contact__form, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details, .sect__eco .contact__form .validate__ctnr {
+body .cursor__effect, body .cipher-ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .choice__cost__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__foot, .tt-origin-point, .sect__eco, .sect__eco .contact__form, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details, .sect__eco .contact__form .validate__ctnr {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -84,6 +84,14 @@ body .access__container .primary__title__ctnr .secondary__title, body .access__c
 .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr input[type=tel],
 .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr textarea {
   font-family: "Zalando Sans Expanded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+
+body .cipher-ctnr__el {
+  font-family: "Google Sans Code", monospace;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -844,13 +852,44 @@ body .cursor__effect .cursor__txt {
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.732);
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(5px);
   border-bottom-left-radius: 10px;
 }
 @media (max-width: 600px) {
   body .cursor__effect .cursor__txt {
     display: none;
   }
+}
+body .cipher-ctnr {
+  position: fixed;
+  top: 53%;
+  right: -9%;
+  height: 10vh;
+  width: 20vw;
+  z-index: 99;
+  transform: rotate(90deg);
+  overflow: hidden;
+  text-align: center;
+  mix-blend-mode: difference;
+}
+body .cipher-ctnr__el {
+  margin: auto;
+  height: auto;
+  width: 100%;
+  border-bottom: 1px solid red;
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 0px 0px 8px #fff;
+  text-transform: uppercase;
+}
+body .cipher-char {
+  display: inline-block;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  opacity: 1;
+  transform: translateX(0);
+}
+body .cipher-char--fade {
+  opacity: 0;
+  transform: translateX(-8px);
 }
 body main {
   height: auto;
@@ -1159,26 +1198,6 @@ body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .slider
   margin-left: 0;
   height: 55vh;
   width: 15%;
-  transform: matrix3d(0.99, 0.16, 0, -0.0001, -0.16, 0.7029, 0.71, -0.001, 0, -0.71, 0.71, 0, 0, 0, 0, 1);
-  -webkit-transform: matrix3d(0.99, 0.16, 0, -0.0001, -0.16, 0.7029, 0.71, -0.001, 0, -0.71, 0.71, 0, 0, 0, 0, 1);
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .slider-wrapper .card {
-  margin: 20px;
-  height: 15vh;
-  width: 10vw;
-  border-radius: 15px;
-  background: url("../image/slide_texture.webp") no-repeat 50% 50%;
-  background-size: 100%;
-  transition: 0.4s ease;
-}
-body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .slider-wrapper .card:hover {
-  filter: grayscale(100%) drop-shadow(0px 0px 5px #fff);
-}
-body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .slider-wrapper .card__title {
-  font-size: 1.2rem;
-  text-shadow: 0px 0px 8px #000;
 }
 body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr {
   max-width: 60%;
