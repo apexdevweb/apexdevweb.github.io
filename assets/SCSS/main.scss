@@ -83,7 +83,7 @@ body {
   & header {
     @extend %displayed-row-evenly;
     margin-top: 25px;
-    height: 35vh;
+    height: 33vh;
     width: 100%;
     overflow: hidden;
     & .uxui__container {
@@ -329,14 +329,16 @@ body {
         }
       }
     }
-    & .sect__alpha,
-    .sect__beta,
+    & .sect__beta,
     .sect__ceta {
       @extend %displayed-column-evenly, %globale-size;
-      margin-top: 20vh;
+      margin-top: 0;
       color: #fff;
     }
     & .sect__alpha {
+      @extend %displayed-column-evenly, %globale-size;
+      margin-top: 0;
+      color: #fff;
       & .service__title {
         margin: 0;
         @extend %typo-standar;
@@ -494,18 +496,12 @@ body {
               %reset-marg-pad,
               %typo-standar,
               %displayed-row-evenly;
-            & .slider-wrapper {
-              margin-left: 0;
-              height: 55vh;
-              width: 15%;
-              //a completer
-            }
             & .budget-separ__ctnr {
               @extend %globale-size,
                 %reset-marg-pad,
                 %typo-standar,
                 %displayed-column-start;
-              max-width: 60%;
+              max-width: 100%;
               & .budget__title {
                 text-align: left;
                 color: #fff;

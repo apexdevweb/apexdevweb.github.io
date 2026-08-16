@@ -1,15 +1,16 @@
 function initCipher() {
-  const text = "SCRIPT'ENJOYER";
+  const textA = "SCRIPT'ENJOYER";
+  // const textB = "apexdevweb@gmail.com";
   const cipherEl = document.getElementById("ciphing");
 
-  cipherEl.innerHTML = text
+  cipherEl.innerHTML = textA
     .split("")
     .map((char) => `<span class="cipher-char">${char}</span>`)
     .join("");
-  runFullCycle(cipherEl, text);
+  runFullCycle(cipherEl, textA);
 }
 const START_DELAY = 3000;
-function runFullCycle(cipherEl, text) {
+function runFullCycle(cipherEl, textA) {
   setTimeout(() => {
     const spans = cipherEl.querySelectorAll(".cipher-char");
     let index = 0;
@@ -18,7 +19,7 @@ function runFullCycle(cipherEl, text) {
     const revealInterval = setInterval(() => {
       if (index >= spans.length) {
         clearInterval(revealInterval);
-        runDigitCycles(cipherEl, spans, text);
+        runDigitCycles(cipherEl, spans, textA);
         return;
       }
       swapChar(spans[index], Math.floor(Math.random() * 10));
@@ -26,10 +27,10 @@ function runFullCycle(cipherEl, text) {
     }, 200);
   }, START_DELAY);
 }
-function runDigitCycles(cipherEl, spans, text) {
+function runDigitCycles(cipherEl, spans, textA) {
   let index = 0;
   let cycles = 0;
-  const maxCycles = 2;
+  const maxCycles = 1;
 
   const digitInterval = setInterval(() => {
     swapChar(spans[index], Math.floor(Math.random() * 10));
@@ -44,14 +45,14 @@ function runDigitCycles(cipherEl, spans, text) {
       clearInterval(digitInterval);
       // retour aux lettres, puis on relance tout le cycle
       setTimeout(() => {
-        restoreLetters(cipherEl, spans, text, () => {
-          runFullCycle(cipherEl, text);
+        restoreLetters(cipherEl, spans, textA, () => {
+          runFullCycle(cipherEl, textA);
         });
       }, 300);
     }
   }, 150);
 }
-function restoreLetters(cipherEl, spans, text, callback) {
+function restoreLetters(cipherEl, spans, textA, callback) {
   let index = 0;
   const restoreInterval = setInterval(() => {
     if (index >= spans.length) {
@@ -59,7 +60,7 @@ function restoreLetters(cipherEl, spans, text, callback) {
       callback();
       return;
     }
-    swapChar(spans[index], text[index]);
+    swapChar(spans[index], textA[index]);
     index++;
   }, 100);
 }

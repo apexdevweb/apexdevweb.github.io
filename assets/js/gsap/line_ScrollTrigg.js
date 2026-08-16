@@ -25,7 +25,7 @@ gsap.registerPlugin(ScrollTrigger);
     scrollTrigger: {
       trigger: sectionPrima,
       start: "top top",
-      end: "+=500",
+      end: "+=900",
       scrub: 3,
       pin: true,
       pinSpacing: true,
