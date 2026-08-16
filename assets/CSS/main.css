@@ -12,7 +12,7 @@ body .access__container .primary__title__ctnr, body .access__container .primary_
   padding: 0;
 }
 
-body .cursor__effect, body .cipher-ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .choice__cost__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__foot, main .sect-prima, .tt-origin-point, .sect__eco, .sect__eco .contact__form, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details, .sect__eco .contact__form .validate__ctnr {
+body .cursor__effect, body .cipher-ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .choice__cost__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__foot, main .sect-prima, .tt-origin-point, .sect__eco, .sect__eco .contact__form, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details, .sect__eco .contact__form .validate__ctnr, #transition-overlay {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -70,7 +70,7 @@ body .cursor__effect .cursor__txt, body main .main___ruler--ctnr .ruler .mask {
   letter-spacing: 3px;
 }
 
-body .access__container .primary__title__ctnr .primary__title, body main .sect__beta .project__wrapper .project__item__ctnr .project__item__title, body main .sect__ceta .description__ctnr .model__title, main .sect-prima .slider-wrapper .meter-info, main .sect-prima .slider-wrapper .morphing-txt, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details .sector__details--title, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details .sector__footer, .sect__eco .contact__form .validate__ctnr .validate__btn, .dl__sub__ctnr .dl__item {
+body .access__container .primary__title__ctnr .primary__title, body main .sect__beta .project__wrapper .project__item__ctnr .project__item__title, body main .sect__ceta .description__ctnr .model__title, main .sect-prima .slider-wrapper .morphing-txt, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details .sector__details--title, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details .sector__footer, .sect__eco .contact__form .validate__ctnr .validate__btn, .dl__sub__ctnr .dl__item, #transition-overlay .meter-info {
   font-family: "Zen Dots", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -104,10 +104,23 @@ body .access__container .access__sub__ctnr .access__link:hover, body header .uxu
 
 #transition-overlay {
   position: fixed;
+  height: 100vh;
+  width: 100%;
   inset: 0;
   background: #000;
   pointer-events: none;
   z-index: 9999;
+  text-align: center;
+}
+#transition-overlay .meter-info {
+  text-transform: uppercase;
+  z-index: 99;
+  font-size: 10rem;
+  white-space: wrap;
+  display: block;
+  transform-origin: center;
+  color: rgba(255, 255, 255, 0.11);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 @keyframes revealUi {
@@ -647,16 +660,6 @@ main .sect-prima .slider-wrapper {
 main .sect-prima .slider-wrapper__subcontainer {
   height: 35vh;
   width: 13%;
-}
-main .sect-prima .slider-wrapper .meter-info {
-  position: absolute;
-  top: 10vh;
-  left: 17.8vw;
-  z-index: 99;
-  text-align: center;
-  font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.11);
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 main .sect-prima .slider-wrapper__svgA {
   width: 250px;

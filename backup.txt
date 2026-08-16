@@ -1,0 +1,80 @@
+
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+function pageTransitionIn() {
+  gsap.from("#transition-overlay", {
+    opacity: 1,
+    duration: 0.4,
+    ease: "power2.inOut",
+  });
+  gsap.to("#transition-overlay", {
+    opacity: 0,
+    duration: 4.5,
+    ease: "power2.inOut",
+    delay: 0.2,
+  });
+}
+
+function pageTransitionOut(url) {
+  gsap.to("#transition-overlay", {
+    opacity: 1,
+    duration: 0.4,
+    ease: "power2.inOut",
+    onComplete: () => {
+      window.location.href = url;
+    },
+  });
+}
+
+window.onload = pageTransitionIn;
+
+document.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    const url = link.getAttribute("href");
+    if (url.startsWith("http")) return;
+    e.preventDefault();
+    pageTransitionOut(url);
+  });
+});
+function loadingMeter(targetText, options = {}) {
+  const alphaMeter = document.getElementById("load-meter");
+  if (!alphaMeter) return;
+
+  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*+=<>?/\\|";
+  const revealSpeed = options.revealSpeed || 40; // ms entre chaque frame de scramble
+  const lockDelay = options.lockDelay || 3; // nb de frames avant de verrouiller la lettre suivante
+
+  let resolvedCount = 0;
+  let frame = 0;
+
+  function randomChar() {
+    return chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+
+  const intervalId = setInterval(() => {
+    frame++;
+    if (frame % lockDelay === 0 && resolvedCount < targetText.length) {
+      resolvedCount++;
+    }
+    let display = "";
+    for (let i = 0; i < targetText.length; i++) {
+      if (i < resolvedCount) {
+        display += targetText[i]; // lettre déjà décryptée
+      } else if (targetText[i] === " ") {
+        display += " "; // garde les espaces intacts
+      } else {
+        display += randomChar(); // lettre encore en scramble
+      }
+    }
+    alphaMeter.textContent = display;
+    if (resolvedCount >= targetText.length) {
+      clearInterval(intervalId); // s'arrête une fois le texte complet révélé
+    }
+  }, revealSpeed);
+
+  return intervalId;
+}
+loadingMeter("SCRIPT'ENJOYER LOADED", { revealSpeed: 20, lockDelay: 4 });

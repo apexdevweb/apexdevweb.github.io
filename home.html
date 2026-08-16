@@ -32,7 +32,9 @@
 </head>
 
 <body>
-  <div id="transition-overlay"></div>
+  <div id="transition-overlay">
+    <p id="load-meter" class="meter-info"></p>
+  </div>
   <canvas id="smoke-canvas"></canvas>
   <div class="cursor__effect">
     <small class="cursor__txt">Lorem, ipsum.</small>
@@ -158,7 +160,6 @@
             <path id="triangle-inverse" d="M 250.0,450.0 L 76.79,150.0 L 423.21,150.0 Z" fill="none" stroke="#ffffff"
               stroke-width="1.5" />
           </svg>
-          <small id="load-meter" class="meter-info"></small>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="60 20 420 420" class="slider-wrapper__svgB">
             <path id="stat-pentagon-full"
               d="M 250.0,50.0 L 440.21,188.2 L 367.56,411.8 L 132.44,411.8 L 59.79,188.2 Z M 250.0,100.0 L 392.66,203.65 L 338.17,371.35 L 161.83,371.35 L 107.34,203.65 Z M 250.0,150.0 L 345.11,219.1 L 308.78,330.9 L 191.22,330.9 L 154.89,219.1 Z M 250.0,200.0 L 297.55,234.55 L 279.39,290.45 L 220.61,290.45 L 202.45,234.55 Z M 250,250 L 250.0,50.0 M 250,250 L 440.21,188.2 M 250,250 L 367.56,411.8 M 250,250 L 132.44,411.8 M 250,250 L 59.79,188.2"
@@ -512,8 +513,8 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/MorphSVGPlugin.min.js"></script>
   <script src="assets/js/gsap/lenis_smooth.js"></script>
-  <script src="assets/js/gsap/home_letters.js"></script>
   <script src="assets/js/gsap/page_transition.js"></script>
+  <script src="assets/js/gsap/home_letters.js"></script>
   <script src="assets/js/gsap/line_ScrollTrigg.js"></script>
   <script src="assets/js/gsap/line_drawing.js"></script>
   <script src="assets/js/gsap/home_scrollTrigg.js"></script>
@@ -526,7 +527,6 @@
   <script src="assets/js/contactInfo.js"></script>
   <script src="assets/js/randomCipher.js"></script>
   <script src="assets/js/gsap/morphingLogo.js"></script>
-
 </body>
 
 </html>
