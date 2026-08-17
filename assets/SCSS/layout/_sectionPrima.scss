@@ -77,7 +77,45 @@ main {
       height: 25vh;
       width: 100%;
       overflow: hidden;
+      & .stat-container {
+        position: absolute;
+        left: 2vw;
+        width: 250px;
+        height: 250px;
+        &__info {
+          @extend %typo-code;
+          display: inline-block;
+          color: rgba(255, 255, 255, 0.733);
+          text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+          letter-spacing: 2px;
+          text-transform: lowercase;
+          width: auto;
+          padding: 3px;
+          @for $i from 1 through 5 {
+            &:nth-child(#{$i}) {
+              @if $i == 1 {
+                transform: translate(105px, -8px);
+                border-bottom: 1px solid red;
+              } @else if $i == 2 {
+                transform: translate(177px, 75px);
+                  border-left: 1px solid red;
+              } @else if $i == 3 {
+                transform: translate(-110px, 75px);
+                   border-right: 1px solid red;
+              } @else if $i == 4 {
+                transform: translate(-128px, 200px);
+                 border-top: 1px solid red;
+              } @else if $i == 5 {
+                transform: translate(-14px, 200px);
+                 border-top: 1px solid red;
+              }
+            }
+          }
+        }
+      }
       &__subcontainer {
+        position: relative;
+        top: 0;
         height: 35vh;
         width: 13%;
       }

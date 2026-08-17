@@ -184,7 +184,7 @@ gsap.from(splitI.chars, {
   },
   scrollTrigger: {
     trigger: morphTxt,
-    start: "center top",
+    start: "top 58%",
     end: "bottom bottom",
     scrub: 5,
     // markers: true,

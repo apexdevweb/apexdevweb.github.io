@@ -82,7 +82,7 @@ function pageTransitionOut(url) {
     return;
   }
 
-  loadingMeter("Good by", { revealSpeed: 30, lockDelay: 4 });
+  loadingMeter("Good by", { revealSpeed: 50, lockDelay: 4 });
 
   gsap.to(overlay, {
     opacity: 1,

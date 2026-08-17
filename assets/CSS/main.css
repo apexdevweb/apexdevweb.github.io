@@ -88,7 +88,7 @@ body .access__container .primary__title__ctnr .secondary__title, body .access__c
   letter-spacing: 2px;
 }
 
-body .cipher-ctnr__el {
+body .cipher-ctnr__el, main .sect-prima .slider-wrapper .stat-container__info {
   font-family: "Google Sans Code", monospace;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -657,7 +657,44 @@ main .sect-prima .slider-wrapper {
   width: 100%;
   overflow: hidden;
 }
+main .sect-prima .slider-wrapper .stat-container {
+  position: absolute;
+  left: 2vw;
+  width: 250px;
+  height: 250px;
+}
+main .sect-prima .slider-wrapper .stat-container__info {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.733);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  letter-spacing: 2px;
+  text-transform: lowercase;
+  width: auto;
+  padding: 3px;
+}
+main .sect-prima .slider-wrapper .stat-container__info:nth-child(1) {
+  transform: translate(105px, -8px);
+  border-bottom: 1px solid red;
+}
+main .sect-prima .slider-wrapper .stat-container__info:nth-child(2) {
+  transform: translate(177px, 75px);
+  border-left: 1px solid red;
+}
+main .sect-prima .slider-wrapper .stat-container__info:nth-child(3) {
+  transform: translate(-110px, 75px);
+  border-right: 1px solid red;
+}
+main .sect-prima .slider-wrapper .stat-container__info:nth-child(4) {
+  transform: translate(-128px, 200px);
+  border-top: 1px solid red;
+}
+main .sect-prima .slider-wrapper .stat-container__info:nth-child(5) {
+  transform: translate(-14px, 200px);
+  border-top: 1px solid red;
+}
 main .sect-prima .slider-wrapper__subcontainer {
+  position: relative;
+  top: 0;
   height: 35vh;
   width: 13%;
 }
@@ -913,17 +950,17 @@ body .cursor__effect .cursor__txt {
 }
 body .cipher-ctnr {
   position: fixed;
-  top: 53%;
-  right: -9%;
+  top: 55%;
+  right: -12.3%;
   height: 10vh;
-  width: 20vw;
+  width: 27vw;
   z-index: 99;
   transform: rotate(90deg);
-  overflow: hidden;
   text-align: center;
   mix-blend-mode: difference;
 }
 body .cipher-ctnr__el {
+  text-align: center;
   margin: auto;
   height: auto;
   width: 100%;
@@ -932,6 +969,8 @@ body .cipher-ctnr__el {
   color: #fff;
   text-shadow: 0px 0px 8px #fff;
   text-transform: uppercase;
+  transition: 0.3s ease;
+  white-space: nowrap;
 }
 body .cipher-char {
   display: inline-block;
@@ -997,12 +1036,12 @@ body main .main___ruler--ctnr .ruler .one {
 body main .main___ruler--ctnr .ruler .lines {
   width: 100%;
   height: 1px;
-  background-color: rgba(255, 255, 255, 0.732);
+  background-color: red;
   position: absolute;
 }
 body main .main___ruler--ctnr .ruler .lines span {
-  width: 0.1rem;
-  background-color: rgba(255, 255, 255, 0.732);
+  width: 0.01rem;
+  background-color: red;
   height: 20px;
 }
 body main .main___ruler--ctnr .ruler .lines span:nth-child(1) {
