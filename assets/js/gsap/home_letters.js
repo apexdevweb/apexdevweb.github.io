@@ -168,10 +168,11 @@ gsap.from(splitH.chars, {
   ease: "power2.inOut",
 });
 const morphTxt = document.querySelector(".morphing-txt");
+let morphArray = ["Prototyping"];
 let splitI = new SplitText(morphTxt, {
   type: "chars, words, lines",
 });
-gsap.from(splitI.chars, {
+tlX.from(splitI.chars, {
   x: -20,
   transformOrigin: "left",
   scale: 0,

@@ -113,7 +113,6 @@ body .access__container .access__sub__ctnr .access__link:hover, body header .uxu
   text-align: center;
 }
 #transition-overlay .meter-info {
-  text-transform: uppercase;
   z-index: 99;
   font-size: 10rem;
   white-space: wrap;
@@ -651,6 +650,16 @@ main .sect-prima .prima-subcontainer__wireframepict {
     overflow: hidden;
   }
 }
+main .sect-prima .prima-subcontainer__separate {
+  position: relative;
+  margin-top: 0;
+  margin-left: 0;
+  height: 1px;
+  width: 62%;
+  border-radius: 15px;
+  background-color: #fff;
+  border: none;
+}
 main .sect-prima .slider-wrapper {
   position: relative;
   height: 25vh;
@@ -681,15 +690,15 @@ main .sect-prima .slider-wrapper .stat-container__info:nth-child(2) {
   border-left: 1px solid red;
 }
 main .sect-prima .slider-wrapper .stat-container__info:nth-child(3) {
-  transform: translate(-110px, 75px);
+  transform: translate(-135px, 75px);
   border-right: 1px solid red;
 }
 main .sect-prima .slider-wrapper .stat-container__info:nth-child(4) {
-  transform: translate(-128px, 200px);
+  transform: translate(-140px, 200px);
   border-top: 1px solid red;
 }
 main .sect-prima .slider-wrapper .stat-container__info:nth-child(5) {
-  transform: translate(-14px, 200px);
+  transform: translate(160px, 174px);
   border-top: 1px solid red;
 }
 main .sect-prima .slider-wrapper__subcontainer {
@@ -704,9 +713,18 @@ main .sect-prima .slider-wrapper__svgA {
   filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
 }
 main .sect-prima .slider-wrapper__svgB {
-  height: 0;
-  width: 0;
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: auto;
+  pointer-events: none;
+}
+main .sect-prima .slider-wrapper__svgB .pentagon-data {
+  fill: rgba(255, 0, 0, 0.15);
+  stroke: #ff0000;
+  stroke-width: 2;
+  opacity: 0;
 }
 main .sect-prima .slider-wrapper .morphing-txt {
   width: 80%;
@@ -964,7 +982,6 @@ body .cipher-ctnr__el {
   margin: auto;
   height: auto;
   width: 100%;
-  border-bottom: 1px solid red;
   font-size: 2.5rem;
   color: #fff;
   text-shadow: 0px 0px 8px #fff;

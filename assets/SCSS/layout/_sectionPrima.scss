@@ -70,6 +70,16 @@ main {
         @include mixins.breakpoint(large) {
         }
       }
+      &__separate {
+        position: relative;
+        margin-top: 0;
+        margin-left: 0;
+        height: 1px;
+        width: 62%;
+        border-radius: 15px;
+        background-color: #fff;
+        border: none;
+      }
     }
     & .slider-wrapper {
       @extend %reset-marg-pad, %displayed-row-evenly;
@@ -100,13 +110,13 @@ main {
                 transform: translate(177px, 75px);
                   border-left: 1px solid red;
               } @else if $i == 3 {
-                transform: translate(-110px, 75px);
+                transform: translate(-135px, 75px);
                    border-right: 1px solid red;
               } @else if $i == 4 {
-                transform: translate(-128px, 200px);
+                transform: translate(-140px, 200px);
                  border-top: 1px solid red;
               } @else if $i == 5 {
-                transform: translate(-14px, 200px);
+                transform: translate(160px, 174px);
                  border-top: 1px solid red;
               }
             }
@@ -125,9 +135,18 @@ main {
         filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
       }
       &__svgB {
-        height: 0;
-        width: 0;
         position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: auto;
+        pointer-events: none;  
+        .pentagon-data {
+          fill: rgba(255, 0, 0, 0.15);
+          stroke: #ff0000;
+          stroke-width: 2;
+          opacity: 0;
+        }
       }
       & .morphing-txt {
         @extend %typo-subtitle;

@@ -1,8 +1,12 @@
 gsap.registerPlugin(MorphSVGPlugin, ScrollTrigger);
+const triangle = document.getElementById("triangle-inverse");
+const pentagone = document.getElementById("stat-pentagon-full");
+const chartStats = document.getElementById("stat-pentagon-data");
 const statInfo = document.querySelectorAll(".stat-container__info");
 let meterInterval = null;
-gsap.to("#triangle-inverse", {
-  morphSVG: "#stat-pentagon-full",
+
+gsap.to(triangle, {
+  morphSVG: pentagone,
   duration: 2.5,
   scrollTrigger: {
     trigger: ".slider-wrapper__subcontainer",
@@ -13,7 +17,6 @@ gsap.to("#triangle-inverse", {
   },
   ease: "expo.inOut",
 });
-
 gsap.from(statInfo, {
   x: -50,
   transformOrigin: "right",
@@ -30,3 +33,4 @@ gsap.from(statInfo, {
   },
   ease: "expo.inOut",
 });
+
