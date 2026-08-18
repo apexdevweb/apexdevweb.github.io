@@ -708,6 +708,9 @@ main .sect-prima .slider-wrapper .stat-container__info:nth-child(5) {
   transform: translate(160px, 174px);
   border-top: 1px solid red;
 }
+main .sect-prima .slider-wrapper .stat-container__info:hover {
+  cursor: pointer;
+}
 main .sect-prima .slider-wrapper__subcontainer {
   position: relative;
   top: 0;

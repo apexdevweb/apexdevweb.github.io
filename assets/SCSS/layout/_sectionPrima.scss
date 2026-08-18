@@ -121,6 +121,9 @@ main {
               }
             }
           }
+          &:hover{
+            cursor: pointer;
+          }
         }
       }
       &__subcontainer {

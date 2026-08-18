@@ -222,13 +222,14 @@ let splitk = new SplitText(txtCode, {
 });
 gsap.from(splitk.chars, {
   x: -6,
-  y: 6,
+  y: -6,
   transformOrigin: "left bottom",
   scale: 4,
+  autoAlpha: 0.01,
   opacity: 0,
-  duration: 6.3,
+  duration: 9,
   stagger: {
-    amount: 0.8,
+    amount: 5.8,
     from: "random",
   },
   scrollTrigger: {
