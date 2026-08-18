@@ -2,7 +2,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 const toolsItems = document.querySelectorAll(".tools__item");
 let tlX = gsap.timeline({
   repeat: -1, // -1 signifie l'infini
-  repeatDelay: 1
+  repeatDelay: 1,
 });
 toolsItems.forEach((toolsEl) => {
   let split = new SplitText(toolsEl, {
@@ -168,11 +168,10 @@ gsap.from(splitH.chars, {
   ease: "power2.inOut",
 });
 const morphTxt = document.querySelector(".morphing-txt");
-let morphArray = ["Prototyping"];
 let splitI = new SplitText(morphTxt, {
   type: "chars, words, lines",
 });
-tlX.from(splitI.chars, {
+gsap.from(splitI.chars, {
   x: -20,
   transformOrigin: "left",
   scale: 0,
@@ -188,6 +187,55 @@ tlX.from(splitI.chars, {
     start: "top 58%",
     end: "bottom bottom",
     scrub: 5,
+    // markers: true,
+  },
+  ease: "expo.inOut",
+});
+const globalServiceTxt = document.querySelectorAll(".globale-service__txt");
+let splitJ = new SplitText(globalServiceTxt, {
+  type: "chars, words, lines",
+});
+gsap.from(splitJ.lines, {
+  y: 10,
+  transformOrigin: "bottom",
+  scaleY: 0,
+  opacity: 0,
+  filter: "blur(25px)",
+  duration: 3.5,
+  stagger: {
+    amount: 1,
+    from: "random",
+  },
+  scrollTrigger: {
+    trigger: globalServiceTxt,
+    start: "top 58%",
+    end: "bottom bottom",
+    scrub: 6,
+    // markers: true,
+  },
+  ease: "expo.inOut",
+});
+
+const txtCode = document.querySelectorAll(".code__el");
+let splitk = new SplitText(txtCode, {
+  type: "chars, words, lines",
+});
+gsap.from(splitk.chars, {
+  x: -6,
+  y: 6,
+  transformOrigin: "left bottom",
+  scale: 4,
+  opacity: 0,
+  duration: 6.3,
+  stagger: {
+    amount: 0.8,
+    from: "random",
+  },
+  scrollTrigger: {
+    trigger: txtCode,
+    start: "top 58%",
+    end: "bottom bottom",
+    scrub: 9,
     // markers: true,
   },
   ease: "expo.inOut",

@@ -6,6 +6,12 @@
   margin: 0;
   padding: 0;
 }
+%displayed-column-stretch {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: stretch;
+}
 %displayed-column-center {
   display: flex;
   flex-flow: column nowrap;

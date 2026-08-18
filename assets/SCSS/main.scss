@@ -241,11 +241,12 @@ body {
       height: auto;
       width: 100%;
       font-size: 2.5rem;
-      color: #fff;
-      text-shadow: 0px 0px 8px #fff;
+      color: rgba(255, 255, 255, 0.3);
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
       text-transform: uppercase;
       transition: 0.3s ease;
       white-space: nowrap;
+      
     }
   }
   .cipher-char {
