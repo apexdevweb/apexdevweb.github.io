@@ -106,22 +106,27 @@ main {
               @if $i == 1 {
                 transform: translate(105px, -8px);
                 border-bottom: 1px solid red;
+                color: #ff5e00;
               } @else if $i == 2 {
                 transform: translate(177px, 75px);
                 border-left: 1px solid red;
+                color:#ff5e00;
               } @else if $i == 3 {
                 transform: translate(-135px, 75px);
                 border-right: 1px solid red;
+                color: #ff5e00;
               } @else if $i == 4 {
                 transform: translate(-140px, 200px);
                 border-top: 1px solid red;
+                color: #ff5e00;
               } @else if $i == 5 {
                 transform: translate(160px, 174px);
                 border-top: 1px solid red;
+                color: #ff5e00;
               }
             }
           }
-          &:hover{
+          &:hover {
             cursor: pointer;
           }
         }
@@ -135,7 +140,7 @@ main {
       &__svgA {
         width: 250px;
         height: 250px;
-        filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
+        filter: drop-shadow(0px 0px 5px #fff);
       }
       &__svgB {
         position: absolute;
@@ -144,6 +149,7 @@ main {
         width: 0;
         height: auto;
         pointer-events: none;
+        filter: drop-shadow(0px 0px 5px #fff);
         .pentagon-data {
           fill: rgba(255, 0, 0, 0.15);
           stroke: #ff0000;

@@ -193,34 +193,44 @@ body {
     @extend %displayed-column-center;
     margin: auto;
     padding: 5px;
-    min-height: 5vh;
+    height: 10vh;
     width: auto;
     position: fixed;
     pointer-events: none;
     text-align: center;
     z-index: 99;
-    border-top: transparent;
-    border-right: transparent;
-    border-left: rgba(255, 255, 255, 0.5);
-    border-bottom: rgba(255, 255, 255, 0.5);
-    border-bottom-left-radius: 10px;
-    border-width: 2px;
-    border-style: solid;
     transform: translate(80%, -50%);
+    overflow: hidden;
     transition: transform 0.4s ease-out;
     @include mixins.breakpoint(medium) {
       display: none;
     }
     & .cursor__txt {
       @extend %reset-marg-pad, %typo-special;
+      position: absolute;
       text-align: left;
       font-size: variables.$typo-size-small;
       color: rgba(255, 255, 255, 0.732);
       text-shadow: variables.$special-shadow-txt;
       border-bottom-left-radius: 10px;
+      z-index: 99;
       @include mixins.breakpoint(medium) {
         display: none;
       }
+    }
+    & .frame-svg {
+      width: 180px;
+      height: 180px;
+      filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.732));
+    }
+    & .diagram-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: auto;
+      pointer-events: none;
+      filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.732));
     }
   }
   & .cipher-ctnr {
@@ -246,7 +256,6 @@ body {
       text-transform: uppercase;
       transition: 0.3s ease;
       white-space: nowrap;
-      
     }
   }
   .cipher-char {

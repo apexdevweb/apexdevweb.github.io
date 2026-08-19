@@ -197,7 +197,7 @@ let splitJ = new SplitText(globalServiceTxt, {
 });
 gsap.from(splitJ.lines, {
   y: 10,
-  transformOrigin: "bottom",
+  transformOrigin: "center center",
   scaleY: 0,
   opacity: 0,
   filter: "blur(25px)",

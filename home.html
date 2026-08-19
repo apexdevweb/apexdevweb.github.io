@@ -38,6 +38,15 @@
   <canvas id="smoke-canvas"></canvas>
   <div class="cursor__effect">
     <small class="cursor__txt"></small>
+    <svg class="frame-svg" xmlns="http://w3.org" viewBox="32 15 70 70">
+      <path id="cursor-frame" d="M 25,35 L 25,55 L 35,65 L 95,65" fill="none" stroke="#FFFFFFBB" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 15 70 70" class="diagram-svg">
+      <path id="branch-diagram"
+        d="M 100,190 L 255,190 M 270,175 L 285,190 L 270,205 L 255,190 Z M 285,190 L 430,120 M 285,190 L 430,260 M 430,120 L 455,100 L 595,100 L 620,120 L 595,140 L 455,140 Z M 430,260 L 455,240 L 595,240 L 620,260 L 595,280 L 455,280 Z"
+        fill="none" stroke="#ffffff" stroke-width="1.5" />
+    </svg>
   </div>
   <div class="cipher-ctnr">
     <small class="cipher-ctnr__el" id="ciphing"></small>
@@ -166,12 +175,12 @@
         <div class="slider-wrapper__subcontainer">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="60 5 420 520" class="slider-wrapper__svgA">
             <path id="triangle-inverse" d="M 250.0,450.0 L 76.79,150.0 L 423.21,150.0 Z" fill="none" stroke="#ffffff"
-              stroke-width="1.5" />
+              stroke-width="2.5" />
           </svg>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="60 5 420 520" class="slider-wrapper__svgB">
             <path id="stat-pentagon-full" class="pentagon-grid"
               d="M 250.0,50.0 L 440.21,188.2 L 367.56,411.8 L 132.44,411.8 L 59.79,188.2 Z M 250.0,100.0 L 392.66,203.65 L 338.17,371.35 L 161.83,371.35 L 107.34,203.65 Z M 250.0,150.0 L 345.11,219.1 L 308.78,330.9 L 191.22,330.9 L 154.89,219.1 Z M 250.0,200.0 L 297.55,234.55 L 279.39,290.45 L 220.61,290.45 L 202.45,234.55 Z M 250,250 L 250.0,50.0 M 250,250 L 440.21,188.2 M 250,250 L 367.56,411.8 M 250,250 L 132.44,411.8 M 250,250 L 59.79,188.2"
-              fill="none" stroke="#ffffff" stroke-width="1.5" />
+              fill="none" stroke="#ffffff" stroke-width="2.5" />
 
             <path id="stat-pentagon-data" class="pentagon-data"
               d="M 250.0,90.0 L 402.17,200.56 L 320.53,347.08 L 173.59,355.17 L 211.96,237.64 Z"
