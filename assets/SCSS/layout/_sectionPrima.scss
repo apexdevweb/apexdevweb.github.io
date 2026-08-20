@@ -175,7 +175,7 @@ main {
           line-height: 75px;
         }
         &__code {
-          @extend %displayed-column-start;
+          @extend %displayed-row-start;
           position: absolute;
           padding-left: 10px;
           top: 7.7vh;
@@ -184,13 +184,29 @@ main {
           background-color: rgba(0, 0, 0, 0.728);
           border-radius: 15px;
           overflow: visible;
-          & .code__el {
-            @extend %typo-code;
-            display: block;
-            font-size: 1rem;
-            font-weight: 600;
-            line-height: 16px;
+          & .coding-container {
+            @extend %displayed-column-start;
+            height: auto;
             width: 100%;
+            overflow: visible;
+            & .code__el {
+              @extend %typo-code;
+              display: block;
+              font-size: 1rem;
+              font-weight: 600;
+              line-height: 16px;
+              width: 100%;
+              color: #ff5e00;
+              filter: drop-shadow(0px 0px 8px #ff0000);
+            }
+          }
+          & .coding-rank {
+            @extend %typo-standar;
+            text-align: right;
+            line-height: 37px;
+            font-size: 3.2rem;
+            font-weight: 700;
+            width: 5ch;
             color: #ff5e00;
             filter: drop-shadow(0px 0px 8px #ff0000);
           }

@@ -9,10 +9,18 @@
   pointer-events: none;
   z-index: 9999;
   text-align: center;
+  & .load-vid {
+    position: relative;
+    height: 50vh;
+    width: auto;
+    object-fit: cover;
+    box-shadow: inset 0px 0px 28px 18px#000;
+  }
   & .meter-info {
     @extend %typo-subtitle;
+    position: absolute;
     z-index: 99;
-    font-size: 10rem;
+    font-size: 9rem;
     white-space: wrap;
     display: block;
     transform-origin: center;

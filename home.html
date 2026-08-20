@@ -29,10 +29,14 @@
   <link rel=stylesheet href=assets/kineticslider/css/kinetic.css>
   <link rel="shortcut icon" href="assets/image/Logohdpi.webp" type="image/x-icon">
   <title>Script'Enjøyer</title>
+
 </head>
 
 <body>
   <div id="transition-overlay">
+    <video class="load-vid" id="loading-movie" muted playsinline preload="auto">
+      <source src="assets/video/loadingvid.mp4" type="video/mp4">
+    </video>
     <p id="load-meter" class="meter-info"></p>
   </div>
   <canvas id="smoke-canvas"></canvas>
@@ -41,11 +45,6 @@
     <svg class="frame-svg" xmlns="http://w3.org" viewBox="32 15 70 70">
       <path id="cursor-frame" d="M 25,35 L 25,55 L 35,65 L 95,65" fill="none" stroke="#FFFFFFBB" stroke-width="1.5"
         stroke-linecap="round" stroke-linejoin="round" />
-    </svg>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 15 70 70" class="diagram-svg">
-      <path id="branch-diagram"
-        d="M 100,190 L 255,190 M 270,175 L 285,190 L 270,205 L 255,190 Z M 285,190 L 430,120 M 285,190 L 430,260 M 430,120 L 455,100 L 595,100 L 620,120 L 595,140 L 455,140 Z M 430,260 L 455,240 L 595,240 L 620,260 L 595,280 L 455,280 Z"
-        fill="none" stroke="#ffffff" stroke-width="1.5" />
     </svg>
   </div>
   <div class="cipher-ctnr">
@@ -190,19 +189,22 @@
         <div class="morph-container">
           <p class="morphing-txt">Prototyping</p>
           <div class="morph-container__code">
-            <code class="code__el">
+            <div class="coding-container">
+              <code class="code__el">
               >_              
               fn main() {
                 let you: &str = "random_user";
                 let request: &str = "need a website";
             </code>
-            <code class="code__el">
+              <code class="code__el">
                if request == "need a website" {
                 let app_id: &str = "maxPerformance";
                 println!("{} received an App with id: {}", you, app_id);
                } 
               }
             </code>
+            </div>
+            <strong class="coding-rank"></strong>
           </div>
           <div class="globale-service">
             <p class="globale-service__txt">Wireframing</p>

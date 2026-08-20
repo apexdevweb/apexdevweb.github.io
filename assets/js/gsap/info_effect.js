@@ -1,42 +1,134 @@
-gsap.registerPlugin(MorphSVGPlugin, SplitText);
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
-let tlSpecial = gsap.timeline();
+const progressInfo = document.querySelector(".coding-rank");
+const infoLanguage = document.querySelectorAll(".stat-container__info");
+
+const progressData = [70, 50, 20, 50, 60];
+
 let currentSplit = null;
+let currentAnimation = null;
 
-const svgFrame = document.getElementById("cursor-frame");
-const svgDiagram = document.getElementById("branch-diagram");
-const cursorInfo = document.querySelector(".cursor__txt");
-const infoRust = document.getElementById("info-rust");
-let progressRustData = 20;
 
-// sauvegarde la forme d'origine du frame, une seule fois, avant tout morph
-const originalFrameD = svgFrame.getAttribute("d");
+// ========================================
+// NETTOYAGE
+// ========================================
 
-infoRust.addEventListener("click", () => {
-  cursorInfo.textContent = `Rust-${progressRustData}%`;
+function cleanupAnimation() {
 
-  if (currentSplit) currentSplit.revert();
-  currentSplit = new SplitText(cursorInfo, { type: "chars, words, lines" });
+  // Nettoyage de l'animation GSAP
+  if (currentAnimation) {
 
-  tlSpecial.clear();
-  tlSpecial
-    .from(currentSplit.chars, {
-      z: -50,
-      scale: 4,
-      autoAlpha: 0,
-      duration: 0.5,
-      stagger: { amount: 0.2, from: "bottom" },
-      ease: "power2.inOut",
-    })
-    .to(svgFrame, {
-      morphSVG: svgDiagram, // frame -> diagramme
-      duration: 2.5,
+    // Nettoyage du ScrollTrigger associé
+    if (currentAnimation.scrollTrigger) {
+      currentAnimation.scrollTrigger.kill();
+    }
+
+    // Suppression de l'animation
+    currentAnimation.kill();
+
+    currentAnimation = null;
+  }
+
+  // Nettoyage du SplitText
+  if (currentSplit) {
+    currentSplit.revert();
+    currentSplit = null;
+  }
+}
+
+
+// ========================================
+// CLICK SUR UN LANGAGE
+// ========================================
+
+infoLanguage.forEach((language, index) => {
+
+  language.addEventListener("click", () => {
+
+    // -------------------------------
+    // Nettoyage de l'ancien état
+    // -------------------------------
+
+    cleanupAnimation();
+
+
+    // -------------------------------
+    // Récupération de la valeur
+    // -------------------------------
+
+    const dataValue = progressData[index];
+
+
+    // -------------------------------
+    // Affichage de la valeur
+    // -------------------------------
+
+    progressInfo.textContent = `${dataValue}%`;
+
+
+    // -------------------------------
+    // SplitText
+    // -------------------------------
+
+    currentSplit = new SplitText(progressInfo, {
+      type: "chars"
     });
-});
 
-infoRust.addEventListener("mouseout&", () => {
-  tlSpecial.to(svgFrame, {
-    morphSVG: originalFrameD, // diagramme -> frame (retour à l'état sauvegardé)
-    duration: 1.5,
+
+    // -------------------------------
+    // Animation d'apparition
+    // -------------------------------
+
+    gsap.fromTo(
+      currentSplit.chars,
+
+      {
+        z: -50,
+        scale: 4,
+        autoAlpha: 0
+      },
+
+      {
+        z: 0,
+        scale: 1,
+        autoAlpha: 1,
+        duration: 0.5,
+        stagger: 0.05,
+        ease: "power2.inOut"
+      }
+    );
+
+
+    // -------------------------------
+    // Animation de disparition
+    // au scroll
+    // -------------------------------
+
+    currentAnimation = gsap.to(
+      currentSplit.chars,
+
+      {
+        x: 20,
+        scaleX: 0,
+        opacity: 0,
+
+        stagger: 0.05,
+
+        ease: "power2.inOut",
+
+        scrollTrigger: {
+          trigger: ".stat-container",
+
+          start: "top center",
+          end: "bottom center",
+
+          scrub: 1,
+
+          // markers: true
+        }
+      }
+    );
+
   });
+
 });

@@ -1,1 +1,59 @@
-color:#00FF40;
+gsap.registerPlugin(ScrollTrigger, SplitText);
+const progressInfo = document.querySelector(".coding-rank");
+const infoLanguage = document.querySelectorAll(".stat-container__info");
+const progressData = [70, 50, 20, 50, 60];
+let currentSplit = null;
+let scrollAnimation = null;
+
+infoLanguage.forEach((language, index) => {
+  language.addEventListener("click", () => {
+    const dataValue = progressData[index];
+    // Nettoyer l'ancien SplitText
+    if (currentSplit) {
+      currentSplit.revert();
+    }
+    // Nettoyer l'ancien ScrollTrigger
+    if (scrollAnimation) {
+      scrollAnimation.kill();
+    }
+    // Afficher la nouvelle valeur
+    progressInfo.textContent = `${dataValue}%`;
+    // Split du texte
+    currentSplit = new SplitText(progressInfo, {
+      type: "chars",
+    });
+    // Animation d'apparition
+    gsap.Clear();
+    gsap.fromTo(
+      currentSplit.chars,
+      {
+        z: -50,
+        scale: 4,
+        autoAlpha: 0,
+      },
+      {
+        z: 0,
+        scale: 1,
+        autoAlpha: 1,
+        duration: 0.5,
+        stagger: 0.05,
+        ease: "power2.inOut",
+      }
+    );
+    // Animation de disparition au scroll
+    scrollAnimation = gsap.to(currentSplit.chars, {
+      x: 20,
+      scaleX: 0,
+      opacity: 0,
+      stagger: 0.05,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: ".stat-container",
+        start: "top center",
+        end: "bottom center",
+        scrub: 1,
+        // markers: true,
+      },
+    });
+  });
+});
