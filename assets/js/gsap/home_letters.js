@@ -167,6 +167,30 @@ gsap.from(splitH.chars, {
   },
   ease: "power2.inOut",
 });
+const masteringTxt = document.querySelector(".slider-wrapper__titlesvg");
+let splitL = new SplitText(masteringTxt, {
+  type: "chars, words, lines",
+});
+gsap.to(splitL.chars, {
+  x: -20,
+  transformOrigin: "left",
+  scale: 0,
+  opacity: 0,
+  filter: "blur(25px)",
+  duration: 8,
+  stagger: {
+    amount: 3,
+    from: "random",
+  },
+  scrollTrigger: {
+    trigger: masteringTxt,
+    start: "top 58%",
+    end: "bottom bottom",
+    scrub: 5,
+    // markers: true,
+  },
+  ease: "expo.inOut",
+});
 const morphTxt = document.querySelector(".morphing-txt");
 let splitI = new SplitText(morphTxt, {
   type: "chars, words, lines",

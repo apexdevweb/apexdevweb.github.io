@@ -1,12 +1,12 @@
 const images = [
-    "assets/kineticslider/img/codingpapper0.webp",
-    "assets/kineticslider/img/codingpapper3.webp",
-    "assets/kineticslider/img/codingpapper2.webp",
+    "assets/kineticslider/img/codingpapper5.jpg",
+    "assets/kineticslider/img/codingpapper4.jpg",
+    "assets/kineticslider/img/codingpapper6.png",
   ],
   texts = [
     ["Custom website development", "Feature integration"],
     ["Integration of third-party systems", "User interface (UI) design"],
-    ["Secure application development", "Feature integration"],
+    ["Secure application development", "Secure Coding & Architecture"],
   ];
 rgbKineticSlider = new rgbKineticSlider({
   slideImages: images,

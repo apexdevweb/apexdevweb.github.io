@@ -87,9 +87,10 @@ function transitionToText(cipherEl, nextText, callback) {
       });
     } else if (index < oldLength) {
       // nouveau texte plus court : on fait disparaître la lettre en trop
-      spans[index].classList.add("cipher-char--fade");
+      const i = index; // on capture la valeur actuelle
+      spans[i].classList.add("cipher-char--fade");
       setTimeout(() => {
-        spans[index].remove();
+        if (spans[i]) spans[i].remove(); // sécurité en bonus
       }, 200);
     }
 

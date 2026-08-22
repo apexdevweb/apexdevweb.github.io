@@ -89,9 +89,9 @@ main {
       overflow: hidden;
       & .stat-container {
         position: absolute;
-        left: 2vw;
-        width: 250px;
-        height: 250px;
+        left: 2.5vw;
+        width: 9%;
+        height: auto;
         &__info {
           @extend %typo-code;
           display: inline-block;
@@ -101,43 +101,66 @@ main {
           text-transform: lowercase;
           width: auto;
           padding: 3px;
+          z-index: 999;
+          transition: color 0.8s ease;
+          border-radius: 5px;
           @for $i from 1 through 5 {
             &:nth-child(#{$i}) {
               @if $i == 1 {
-                transform: translate(105px, -8px);
+                transform: translate(85px, 25px);
                 border-bottom: 1px solid red;
-                color: #ff5e00;
+                color: #ffff;
               } @else if $i == 2 {
-                transform: translate(177px, 75px);
+                transform: translate(150px, 99px);
                 border-left: 1px solid red;
-                color:#ff5e00;
+                color:#ffff;
               } @else if $i == 3 {
-                transform: translate(-135px, 75px);
+                transform: translate(-150px, 101px);
                 border-right: 1px solid red;
-                color: #ff5e00;
+                color: #ffff;
               } @else if $i == 4 {
-                transform: translate(-140px, 200px);
+                transform: translate(-5px, 185px);
                 border-top: 1px solid red;
-                color: #ff5e00;
+                color: #ffff;
               } @else if $i == 5 {
-                transform: translate(160px, 174px);
+                transform: translate(100px, 185px);
                 border-top: 1px solid red;
-                color: #ff5e00;
+                color: #ffff;
               }
             }
           }
           &:hover {
             cursor: pointer;
+            color: #000;
+            background-color: #fff;
           }
         }
       }
       &__subcontainer {
+        display: flex;
+        flex-flow: column nowrap;
+        place-items: center;
+        place-content: center stretch;
         position: relative;
+        padding: 0;
         top: 0;
-        height: 35vh;
-        width: 13%;
+        left: 0;
+        height: auto;
+        width: 10%;
+        text-align: center;
+      }
+      &__titlesvg {
+        @extend %typo-standar;
+        margin-top: 8px;
+        color: #fff;
+        font-size: 1.4rem;
+        font-weight: 600;
+        letter-spacing: -2px;
+        width: 17ch;
+        line-height: 0px;
       }
       &__svgA {
+        margin-top: 0;
         width: 250px;
         height: 250px;
         filter: drop-shadow(0px 0px 5px #fff);
@@ -202,6 +225,7 @@ main {
           }
           & .coding-rank {
             @extend %typo-standar;
+            padding-right: 15px;
             text-align: right;
             line-height: 37px;
             font-size: 3.2rem;
@@ -215,7 +239,7 @@ main {
           @extend %displayed-column-stretch;
           position: absolute;
           top: 0;
-          right: 0;
+          right: 1vw;
           padding: 0;
           height: auto;
           width: 37%;
@@ -227,7 +251,7 @@ main {
             font-size: 3.2rem;
             font-weight: 600;
             letter-spacing: -5px;
-            line-height: 37px;
+            line-height: 36px;
             text-transform: uppercase;
             mix-blend-mode: difference;
           }

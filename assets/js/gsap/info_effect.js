@@ -2,7 +2,6 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const progressInfo = document.querySelector(".coding-rank");
 const infoLanguage = document.querySelectorAll(".stat-container__info");
-
 const progressData = [70, 50, 20, 50, 60];
 
 let currentSplit = null;
