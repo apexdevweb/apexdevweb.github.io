@@ -21,6 +21,7 @@ main {
       position: relative;
       height: auto;
       width: 100%;
+      overflow: hidden;
       @include mixins.breakpoint(medium) {
         display: flex;
         flex-flow: column nowrap;
@@ -62,9 +63,10 @@ main {
         z-index: 0;
         animation: revealUi 2s ease 1.5s 1 normal forwards;
         @include mixins.breakpoint(medium) {
-          min-width: 375px;
-          max-width: 200px;
+          max-width: 375px;
+          min-width: 200px;
           height: 350px;
+          width: auto;
           overflow: hidden;
         }
         @include mixins.breakpoint(large) {
@@ -79,6 +81,11 @@ main {
         border-radius: 15px;
         background-color: #fff;
         border: none;
+        @include mixins.breakpoint(medium) {
+          width: 100%;
+        }
+        @include mixins.breakpoint(large) {
+        }
       }
     }
     & .slider-wrapper {
@@ -87,11 +94,29 @@ main {
       height: 25vh;
       width: 100%;
       overflow: hidden;
+      @include mixins.breakpoint(medium) {
+        margin-top: 0;
+        height: 50vh;
+        display: flex;
+        flex-flow: column nowrap;
+        place-items: center;
+        place-content: center space-evenly;
+      }
+      @include mixins.breakpoint(large) {
+      }
       & .stat-container {
         position: absolute;
         left: 2.5vw;
         width: 9%;
         height: auto;
+        z-index: 9999;
+        @include mixins.breakpoint(medium) {
+          left: 0;
+          width: 100%;
+          height: 45vh;
+        }
+        @include mixins.breakpoint(large) {
+        }
         &__info {
           @extend %typo-code;
           display: inline-block;
@@ -101,7 +126,7 @@ main {
           text-transform: lowercase;
           width: auto;
           padding: 3px;
-          z-index: 999;
+          z-index: 9999;
           transition: color 0.8s ease;
           border-radius: 5px;
           @for $i from 1 through 5 {
@@ -110,22 +135,47 @@ main {
                 transform: translate(85px, 25px);
                 border-bottom: 1px solid red;
                 color: #ffff;
+                @include mixins.breakpoint(medium) {
+                  transform: translate(160px, 0px);
+                }
+                @include mixins.breakpoint(large) {
+                }
               } @else if $i == 2 {
                 transform: translate(150px, 99px);
                 border-left: 1px solid red;
-                color:#ffff;
+                color: #ffff;
+                @include mixins.breakpoint(medium) {
+                  transform: translate(220px, 73px);
+                }
+                @include mixins.breakpoint(large) {
+                }
               } @else if $i == 3 {
                 transform: translate(-150px, 101px);
                 border-right: 1px solid red;
                 color: #ffff;
+                @include mixins.breakpoint(medium) {
+                  transform: translate(-60px, 73px);
+                }
+                @include mixins.breakpoint(large) {
+                }
               } @else if $i == 4 {
                 transform: translate(-5px, 185px);
                 border-top: 1px solid red;
                 color: #ffff;
+                @include mixins.breakpoint(medium) {
+                  transform: translate(-80px, 185px);
+                }
+                @include mixins.breakpoint(large) {
+                }
               } @else if $i == 5 {
                 transform: translate(100px, 185px);
                 border-top: 1px solid red;
                 color: #ffff;
+                @include mixins.breakpoint(medium) {
+                  transform: translate(5px, 185px);
+                }
+                @include mixins.breakpoint(large) {
+                }
               }
             }
           }
@@ -184,6 +234,15 @@ main {
         display: block;
         height: auto;
         width: 80%;
+        @include mixins.breakpoint(medium) {
+          display: flex;
+          flex-flow: column nowrap;
+          place-items: flex-start;
+          place-content: space-between;
+          width: 100%;
+        }
+        @include mixins.breakpoint(large) {
+        }
         & .morphing-txt {
           @extend %typo-standar;
           height: auto;
@@ -196,6 +255,16 @@ main {
           letter-spacing: -8px;
           text-transform: uppercase;
           line-height: 75px;
+          @include mixins.breakpoint(medium) {
+            width: 100%;
+            font-size: 2.8rem;
+            margin-top: 0;
+            margin-left: 0;
+            letter-spacing: -4px;
+            line-height: -50px;
+          }
+          @include mixins.breakpoint(large) {
+          }
         }
         &__code {
           @extend %displayed-row-start;
@@ -207,6 +276,15 @@ main {
           background-color: rgba(0, 0, 0, 0.728);
           border-radius: 15px;
           overflow: visible;
+          @include mixins.breakpoint(medium) {
+            margin: 0;
+            top: 0;
+            height: 50vh;
+            width: 100%;
+            z-index: -99;
+          }
+          @include mixins.breakpoint(large) {
+          }
           & .coding-container {
             @extend %displayed-column-start;
             height: auto;
@@ -221,6 +299,11 @@ main {
               width: 100%;
               color: #ff5e00;
               filter: drop-shadow(0px 0px 8px #ff0000);
+              @include mixins.breakpoint(medium) {
+                width: 18ch;
+              }
+              @include mixins.breakpoint(large) {
+              }
             }
           }
           & .coding-rank {
@@ -233,6 +316,13 @@ main {
             width: 5ch;
             color: #ff5e00;
             filter: drop-shadow(0px 0px 8px #ff0000);
+            @include mixins.breakpoint(medium) {
+              text-align: left;
+              width: 7ch;
+              font-size: 3rem;
+            }
+            @include mixins.breakpoint(large) {
+            }
           }
         }
         & .globale-service {
@@ -244,6 +334,13 @@ main {
           height: auto;
           width: 37%;
           text-align: left;
+          @include mixins.breakpoint(medium) {
+            top: 43vh;
+            right: 1vw;
+            width: 99%;
+          }
+          @include mixins.breakpoint(large) {
+          }
           &__txt {
             @extend %typo-standar;
             color: #fff;
@@ -253,7 +350,13 @@ main {
             letter-spacing: -5px;
             line-height: 36px;
             text-transform: uppercase;
-            mix-blend-mode: difference;
+            @include mixins.breakpoint(medium) {
+              font-size: 1rem;
+              letter-spacing: -1px;
+              line-height: 12px;
+            }
+            @include mixins.breakpoint(large) {
+            }
           }
         }
       }

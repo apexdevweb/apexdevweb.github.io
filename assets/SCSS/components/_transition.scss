@@ -1,4 +1,6 @@
 @use "./placeholders";
+@use "./mixins";
+
 #transition-overlay {
   @extend %displayed-column-center;
   position: fixed;
@@ -24,7 +26,13 @@
     white-space: wrap;
     display: block;
     transform-origin: center;
-    color: rgba(255, 255, 255, 0.11);
+    color: rgba(255, 255, 255, 0.349);
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    @include mixins.breakpoint(medium) {
+      @include mixins.format-texte(2rem, auto);
+    }
+    @include mixins.breakpoint(large) {
+    }
   }
 }

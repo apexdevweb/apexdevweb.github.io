@@ -235,6 +235,14 @@ body {
     transform: rotate(90deg);
     text-align: center;
     mix-blend-mode: difference;
+    @include mixins.breakpoint(medium) {
+      top: 40%;
+      right: -11%;
+      height: 2vh;
+      width: 27vw;
+    }
+    @include mixins.breakpoint(large) {
+    }
     &__el {
       @extend %typo-code;
       text-align: center;
@@ -247,6 +255,11 @@ body {
       text-transform: uppercase;
       transition: 0.3s ease;
       white-space: nowrap;
+      @include mixins.breakpoint(medium) {
+        font-size: 1.5rem;
+      }
+      @include mixins.breakpoint(large) {
+      }
     }
   }
   .cipher-char {
@@ -342,13 +355,17 @@ body {
       margin-top: 0;
       color: #fff;
       & .service__title {
-        margin: 0;
         @extend %typo-standar;
+        position: absolute;
+        top: 5%;
+        left: 0%;
+        width: 100%;
         font-size: variables.$typo-size-big;
         text-align: center;
         @include mixins.breakpoint(medium) {
-          font-size: variables.$typo-litle-device-big;
-          text-align: left;
+          top: 20%;
+          text-align: center;
+          @include mixins.format-texte(1.9rem, auto);
         }
       }
     }

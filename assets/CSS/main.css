@@ -140,10 +140,16 @@ body .access__container .access__sub__ctnr .access__link:hover, body header .uxu
   white-space: wrap;
   display: block;
   transform-origin: center;
-  color: rgba(255, 255, 255, 0.11);
+  color: rgba(255, 255, 255, 0.349);
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  overflow: hidden;
 }
-
+@media (max-width: 600px) {
+  #transition-overlay .meter-info {
+    font-size: 2rem;
+    line-height: auto;
+  }
+}
 @keyframes revealUi {
   from {
     opacity: 0;
@@ -530,6 +536,7 @@ canvas {
 @media (max-width: 600px) {
   .line-container {
     position: absolute;
+    aspect-ratio: 1402/857;
   }
 }
 .tree-svg {
@@ -577,7 +584,11 @@ canvas {
   white-space: nowrap;
   opacity: 0;
 }
-
+@media (max-width: 600px) {
+  .tt-bubble {
+    font-size: 0.5rem;
+  }
+}
 .title-frame {
   position: relative;
   height: 199px;
@@ -592,17 +603,6 @@ canvas {
   pointer-events: none;
   z-index: 0;
   filter: drop-shadow(0px 0px 5px #fff);
-}
-.title-frame__text {
-  position: absolute;
-  top: 38%;
-  left: 20%;
-  width: 60%;
-  margin: 0;
-  color: #fff;
-  text-align: center;
-  z-index: 1;
-  opacity: 0;
 }
 
 main .sect-prima {
@@ -621,6 +621,7 @@ main .sect-prima .prima-subcontainer {
   position: relative;
   height: auto;
   width: 100%;
+  overflow: hidden;
 }
 @media (max-width: 600px) {
   main .sect-prima .prima-subcontainer {
@@ -665,9 +666,10 @@ main .sect-prima .prima-subcontainer__wireframepict {
 }
 @media (max-width: 600px) {
   main .sect-prima .prima-subcontainer__wireframepict {
-    min-width: 375px;
-    max-width: 200px;
+    max-width: 375px;
+    min-width: 200px;
     height: 350px;
+    width: auto;
     overflow: hidden;
   }
 }
@@ -681,17 +683,40 @@ main .sect-prima .prima-subcontainer__separate {
   background-color: #fff;
   border: none;
 }
+@media (max-width: 600px) {
+  main .sect-prima .prima-subcontainer__separate {
+    width: 100%;
+  }
+}
 main .sect-prima .slider-wrapper {
   position: relative;
   height: 25vh;
   width: 100%;
   overflow: hidden;
 }
+@media (max-width: 600px) {
+  main .sect-prima .slider-wrapper {
+    margin-top: 0;
+    height: 50vh;
+    display: flex;
+    flex-flow: column nowrap;
+    place-items: center;
+    place-content: center space-evenly;
+  }
+}
 main .sect-prima .slider-wrapper .stat-container {
   position: absolute;
   left: 2.5vw;
   width: 9%;
   height: auto;
+  z-index: 9999;
+}
+@media (max-width: 600px) {
+  main .sect-prima .slider-wrapper .stat-container {
+    left: 0;
+    width: 100%;
+    height: 45vh;
+  }
 }
 main .sect-prima .slider-wrapper .stat-container__info {
   display: inline-block;
@@ -701,7 +726,7 @@ main .sect-prima .slider-wrapper .stat-container__info {
   text-transform: lowercase;
   width: auto;
   padding: 3px;
-  z-index: 999;
+  z-index: 9999;
   transition: color 0.8s ease;
   border-radius: 5px;
 }
@@ -710,25 +735,50 @@ main .sect-prima .slider-wrapper .stat-container__info:nth-child(1) {
   border-bottom: 1px solid red;
   color: white;
 }
+@media (max-width: 600px) {
+  main .sect-prima .slider-wrapper .stat-container__info:nth-child(1) {
+    transform: translate(160px, 0px);
+  }
+}
 main .sect-prima .slider-wrapper .stat-container__info:nth-child(2) {
   transform: translate(150px, 99px);
   border-left: 1px solid red;
   color: white;
+}
+@media (max-width: 600px) {
+  main .sect-prima .slider-wrapper .stat-container__info:nth-child(2) {
+    transform: translate(220px, 73px);
+  }
 }
 main .sect-prima .slider-wrapper .stat-container__info:nth-child(3) {
   transform: translate(-150px, 101px);
   border-right: 1px solid red;
   color: white;
 }
+@media (max-width: 600px) {
+  main .sect-prima .slider-wrapper .stat-container__info:nth-child(3) {
+    transform: translate(-60px, 73px);
+  }
+}
 main .sect-prima .slider-wrapper .stat-container__info:nth-child(4) {
   transform: translate(-5px, 185px);
   border-top: 1px solid red;
   color: white;
 }
+@media (max-width: 600px) {
+  main .sect-prima .slider-wrapper .stat-container__info:nth-child(4) {
+    transform: translate(-80px, 185px);
+  }
+}
 main .sect-prima .slider-wrapper .stat-container__info:nth-child(5) {
   transform: translate(100px, 185px);
   border-top: 1px solid red;
   color: white;
+}
+@media (max-width: 600px) {
+  main .sect-prima .slider-wrapper .stat-container__info:nth-child(5) {
+    transform: translate(5px, 185px);
+  }
 }
 main .sect-prima .slider-wrapper .stat-container__info:hover {
   cursor: pointer;
@@ -783,6 +833,15 @@ main .sect-prima .slider-wrapper .morph-container {
   height: auto;
   width: 80%;
 }
+@media (max-width: 600px) {
+  main .sect-prima .slider-wrapper .morph-container {
+    display: flex;
+    flex-flow: column nowrap;
+    place-items: flex-start;
+    place-content: space-between;
+    width: 100%;
+  }
+}
 main .sect-prima .slider-wrapper .morph-container .morphing-txt {
   height: auto;
   width: 80%;
@@ -795,6 +854,16 @@ main .sect-prima .slider-wrapper .morph-container .morphing-txt {
   text-transform: uppercase;
   line-height: 75px;
 }
+@media (max-width: 600px) {
+  main .sect-prima .slider-wrapper .morph-container .morphing-txt {
+    width: 100%;
+    font-size: 2.8rem;
+    margin-top: 0;
+    margin-left: 0;
+    letter-spacing: -4px;
+    line-height: -50px;
+  }
+}
 main .sect-prima .slider-wrapper .morph-container__code {
   position: absolute;
   padding-left: 10px;
@@ -804,6 +873,15 @@ main .sect-prima .slider-wrapper .morph-container__code {
   background-color: rgba(0, 0, 0, 0.728);
   border-radius: 15px;
   overflow: visible;
+}
+@media (max-width: 600px) {
+  main .sect-prima .slider-wrapper .morph-container__code {
+    margin: 0;
+    top: 0;
+    height: 50vh;
+    width: 100%;
+    z-index: -99;
+  }
 }
 main .sect-prima .slider-wrapper .morph-container__code .coding-container {
   height: auto;
@@ -819,6 +897,11 @@ main .sect-prima .slider-wrapper .morph-container__code .coding-container .code_
   color: #ff5e00;
   filter: drop-shadow(0px 0px 8px #ff0000);
 }
+@media (max-width: 600px) {
+  main .sect-prima .slider-wrapper .morph-container__code .coding-container .code__el {
+    width: 18ch;
+  }
+}
 main .sect-prima .slider-wrapper .morph-container__code .coding-rank {
   padding-right: 15px;
   text-align: right;
@@ -829,6 +912,13 @@ main .sect-prima .slider-wrapper .morph-container__code .coding-rank {
   color: #ff5e00;
   filter: drop-shadow(0px 0px 8px #ff0000);
 }
+@media (max-width: 600px) {
+  main .sect-prima .slider-wrapper .morph-container__code .coding-rank {
+    text-align: left;
+    width: 7ch;
+    font-size: 3rem;
+  }
+}
 main .sect-prima .slider-wrapper .morph-container .globale-service {
   position: absolute;
   top: 0;
@@ -838,6 +928,13 @@ main .sect-prima .slider-wrapper .morph-container .globale-service {
   width: 37%;
   text-align: left;
 }
+@media (max-width: 600px) {
+  main .sect-prima .slider-wrapper .morph-container .globale-service {
+    top: 43vh;
+    right: 1vw;
+    width: 99%;
+  }
+}
 main .sect-prima .slider-wrapper .morph-container .globale-service__txt {
   color: #fff;
   margin: 0;
@@ -846,9 +943,14 @@ main .sect-prima .slider-wrapper .morph-container .globale-service__txt {
   letter-spacing: -5px;
   line-height: 36px;
   text-transform: uppercase;
-  mix-blend-mode: difference;
 }
-
+@media (max-width: 600px) {
+  main .sect-prima .slider-wrapper .morph-container .globale-service__txt {
+    font-size: 1rem;
+    letter-spacing: -1px;
+    line-height: 12px;
+  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -1092,6 +1194,14 @@ body .cipher-ctnr {
   text-align: center;
   mix-blend-mode: difference;
 }
+@media (max-width: 600px) {
+  body .cipher-ctnr {
+    top: 40%;
+    right: -11%;
+    height: 2vh;
+    width: 27vw;
+  }
+}
 body .cipher-ctnr__el {
   text-align: center;
   margin: auto;
@@ -1103,6 +1213,11 @@ body .cipher-ctnr__el {
   text-transform: uppercase;
   transition: 0.3s ease;
   white-space: nowrap;
+}
+@media (max-width: 600px) {
+  body .cipher-ctnr__el {
+    font-size: 1.5rem;
+  }
 }
 body .cipher-char {
   display: inline-block;
@@ -1267,14 +1382,19 @@ body main .sect__alpha {
   color: #fff;
 }
 body main .sect__alpha .service__title {
-  margin: 0;
+  position: absolute;
+  top: 5%;
+  left: 0%;
+  width: 100%;
   font-size: 3.5rem;
   text-align: center;
 }
 @media (max-width: 600px) {
   body main .sect__alpha .service__title {
-    font-size: 2.5rem;
-    text-align: left;
+    top: 20%;
+    text-align: center;
+    font-size: 1.9rem;
+    line-height: auto;
   }
 }
 body main .sect__beta .project__title {
