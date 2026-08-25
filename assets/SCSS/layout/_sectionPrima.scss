@@ -96,7 +96,7 @@ main {
       overflow: hidden;
       @include mixins.breakpoint(medium) {
         margin-top: 0;
-        height: 50vh;
+        height: 55vh;
         display: flex;
         flex-flow: column nowrap;
         place-items: center;
@@ -335,7 +335,7 @@ main {
           width: 37%;
           text-align: left;
           @include mixins.breakpoint(medium) {
-            top: 43vh;
+            top: 44.5vh;
             right: 1vw;
             width: 99%;
           }

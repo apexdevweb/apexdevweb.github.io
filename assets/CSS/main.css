@@ -126,6 +126,16 @@ body .access__container .access__sub__ctnr .access__link:hover, body header .uxu
   z-index: 9999;
   text-align: center;
 }
+@media (max-width: 600px) {
+  #transition-overlay {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    place-items: center;
+    place-content: center;
+  }
+}
 #transition-overlay .load-vid {
   position: relative;
   height: 50vh;
@@ -146,7 +156,9 @@ body .access__container .access__sub__ctnr .access__link:hover, body header .uxu
 }
 @media (max-width: 600px) {
   #transition-overlay .meter-info {
-    font-size: 2rem;
+    left: 2vw;
+    width: 12ch;
+    font-size: 1.9rem;
     line-height: auto;
   }
 }
@@ -697,7 +709,7 @@ main .sect-prima .slider-wrapper {
 @media (max-width: 600px) {
   main .sect-prima .slider-wrapper {
     margin-top: 0;
-    height: 50vh;
+    height: 55vh;
     display: flex;
     flex-flow: column nowrap;
     place-items: center;
@@ -930,7 +942,7 @@ main .sect-prima .slider-wrapper .morph-container .globale-service {
 }
 @media (max-width: 600px) {
   main .sect-prima .slider-wrapper .morph-container .globale-service {
-    top: 43vh;
+    top: 44.5vh;
     right: 1vw;
     width: 99%;
   }
