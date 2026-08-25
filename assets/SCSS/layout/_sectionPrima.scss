@@ -136,7 +136,7 @@ main {
                 border-bottom: 1px solid red;
                 color: #ffff;
                 @include mixins.breakpoint(medium) {
-                  transform: translate(160px, 0px);
+                  transform: translate(160px, -10px);
                 }
                 @include mixins.breakpoint(large) {
                 }
@@ -145,7 +145,7 @@ main {
                 border-left: 1px solid red;
                 color: #ffff;
                 @include mixins.breakpoint(medium) {
-                  transform: translate(220px, 73px);
+                  transform: translate(220px, 70px);
                 }
                 @include mixins.breakpoint(large) {
                 }
@@ -154,7 +154,7 @@ main {
                 border-right: 1px solid red;
                 color: #ffff;
                 @include mixins.breakpoint(medium) {
-                  transform: translate(-60px, 73px);
+                  transform: translate(-60px, 70px);
                 }
                 @include mixins.breakpoint(large) {
                 }
@@ -163,7 +163,7 @@ main {
                 border-top: 1px solid red;
                 color: #ffff;
                 @include mixins.breakpoint(medium) {
-                  transform: translate(-80px, 185px);
+                  transform: translate(-80px, 180px);
                 }
                 @include mixins.breakpoint(large) {
                 }
@@ -172,7 +172,7 @@ main {
                 border-top: 1px solid red;
                 color: #ffff;
                 @include mixins.breakpoint(medium) {
-                  transform: translate(5px, 185px);
+                  transform: translate(5px, 180px);
                 }
                 @include mixins.breakpoint(large) {
                 }
@@ -335,7 +335,7 @@ main {
           width: 37%;
           text-align: left;
           @include mixins.breakpoint(medium) {
-            top: 44.5vh;
+            top: 45.7vh;
             right: 1vw;
             width: 99%;
           }
