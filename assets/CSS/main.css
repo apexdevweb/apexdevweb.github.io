@@ -545,6 +545,12 @@ canvas {
   overflow: visible;
   z-index: 99;
 }
+@media (max-width: 412px) {
+  .line-container {
+    margin-right: 0;
+    height: 380px;
+  }
+}
 @media (max-width: 600px) {
   .line-container {
     position: absolute;
@@ -576,10 +582,29 @@ canvas {
   background-color: rgba(0, 0, 0, 0.662);
   color: #ffffff !important;
 }
+@media (max-width: 412px) {
+  .tt-origin-point {
+    width: 160px;
+    height: 160px;
+    font-size: 0.7rem;
+  }
+}
 .tt-origin-point__txt {
   line-height: 1.3;
   color: #fff;
   display: block;
+}
+
+.tt-origin-point {
+  top: 56.1%;
+  left: -16.5%;
+}
+@media (max-width: 600px) {
+  .tt-origin-point {
+    height: 15vh;
+    top: 71%;
+    left: 57%;
+  }
 }
 
 .tt-bubble {
@@ -596,9 +621,16 @@ canvas {
   white-space: nowrap;
   opacity: 0;
 }
+@media (max-width: 412px) {
+  .tt-bubble {
+    padding: 5px 9px;
+    font-size: 0.55rem;
+  }
+}
 @media (max-width: 600px) {
   .tt-bubble {
     font-size: 0.5rem;
+    z-index: 999;
   }
 }
 .title-frame {
@@ -658,8 +690,9 @@ main .sect-prima .prima-subcontainer__wireframectnr {
 @media (max-width: 600px) {
   main .sect-prima .prima-subcontainer__wireframectnr {
     min-width: 375px;
-    max-width: 600px;
+    max-width: 200px;
     height: 350px;
+    width: auto;
     overflow: hidden;
   }
 }
@@ -963,6 +996,18 @@ main .sect-prima .slider-wrapper .morph-container .globale-service__txt {
     line-height: 12px;
   }
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -1251,6 +1296,12 @@ body main .main___ruler--ctnr {
   z-index: 99;
   margin-bottom: 10px;
 }
+@media (max-width: 600px) {
+  body main .main___ruler--ctnr {
+    width: 100vw;
+    background-color: #a0d9f2;
+  }
+}
 body main .main___ruler--ctnr .ruler {
   color: #fff;
 }
@@ -1422,6 +1473,12 @@ body main .sect__beta .project__title {
 }
 body main .sect__beta .project__wrapper {
   padding: 15px;
+}
+@media (max-width: 600px) {
+  body main .sect__beta .project__wrapper {
+    height: auto;
+    width: 100vw;
+  }
 }
 body main .sect__beta .project__wrapper .project__item__ctnr {
   padding: 3px;

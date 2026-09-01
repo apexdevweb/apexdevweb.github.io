@@ -5,28 +5,80 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="twitter:site" content="@ScriptEnjoyer">
-  <meta name="twitter:creator" content="@ScriptEnjoyer">
-  <meta name="robots" content="index, follow">
+
+  <!-- ===== SEO : titre et description ===== -->
+  <title>Script'Enjøyer — Développeur Web Full-Stack | Portfolio</title>
+  <meta name="description" content="Portfolio de Script'Enjøyer, développeur web full-stack : projets, compétences en HTML, CSS, JavaScript et animations interactives (GSAP). Découvrez mes réalisations." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://apexdevweb.github.io/" />
+
+  <!-- ===== SEO : Open Graph (aperçu sur réseaux sociaux) ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="Script'Enjøyer" />
+  <meta property="og:title" content="Script'Enjøyer — Développeur Web Full-Stack" />
+  <meta property="og:description" content="Portfolio de développeur web full-stack : projets, compétences et animations interactives." />
+  <meta property="og:url" content="https://apexdevweb.github.io/" />
+  <meta property="og:image" content="https://apexdevweb.github.io/assets/img/og-cover.jpg" />
+
+  <!-- ===== SEO : Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ScriptEnjoyer" />
+  <meta name="twitter:creator" content="@ScriptEnjoyer" />
+  <meta name="twitter:title" content="Script'Enjøyer — Développeur Web Full-Stack" />
+  <meta name="twitter:description" content="Portfolio de développeur web full-stack : projets, compétences et animations interactives." />
+  <meta name="twitter:image" content="https://apexdevweb.github.io/assets/img/og-cover.jpg" />
+
+  <!-- ===== SEO : données structurées (identité + site) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Script'Enjøyer",
+    "url": "https://apexdevweb.github.io/",
+    "jobTitle": "Développeur Web Full-Stack",
+    "sameAs": [
+      "https://twitter.com/ScriptEnjoyer"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Script'Enjøyer",
+    "url": "https://apexdevweb.github.io/",
+    "inLanguage": "fr-FR"
+  }
+  </script>
+
   <link rel="stylesheet" href="assets/CSS/main.css" />
-  <title>Script'Enjøyer</title>
 </head>
 
 <body>
   <div class="access__container">
     <hgroup class="primary__title__ctnr">
-      <h1 class="primary__title">
-        <span class="primary__title__el">Script</span><span class="primary__title__el">'</span><span
-          class="primary__title__el">Enjøyer</span>
+      <h1 class="primary__title" aria-label="Script'Enjøyer">
+        <span class="primary__title__el" aria-hidden="true">Script</span><span class="primary__title__el" aria-hidden="true">'</span><span
+          class="primary__title__el" aria-hidden="true">Enjøyer</span>
       </h1>
       <h2 class="secondary__title">Web Development</h2>
       <div class="banner__line"></div>
     </hgroup>
+
+    <!-- Contenu descriptif : invisible à l'écran (classe visually-hidden),
+         mais présent dans le DOM pour Google et les lecteurs d'écran.
+         Le design reste 100% inchangé. -->
+    <p class="intro__text visually-hidden">
+      Bienvenue sur le portfolio de Script'Enjøyer, développeur web full-stack : front-end
+      (HTML, CSS, JavaScript, animations interactives avec GSAP) et back-end.
+    </p>
+
     <div class="access__sub__ctnr">
       <div class="top__angle--A top_bar"></div>
       <div class="top__angle--B top_bar"></div>
       <div class="top__angle--C top_bar"></div>
-      <a href="home.html" class="access__link" id="enterbtn">Enter</a>
+      <a href="home.html" class="access__link" id="enterbtn" aria-label="Découvrir le portfolio de Script'Enjøyer">Enter</a>
       <div class="bottom__angle--C bottom_bar"></div>
       <div class="bottom__angle--B bottom_bar"></div>
       <div class="bottom__angle--A bottom_bar"></div>

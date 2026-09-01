@@ -1,11 +1,43 @@
-  &__text {
-    position: absolute;
-    top: 38%;
-    left: 20%;
-    width: 60%;
-    margin: 0;
-    color: #fff;
-    text-align: center;
-    z-index: 1;
-    opacity: 0;
-  }
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="twitter:site" content="@ScriptEnjoyer">
+  <meta name="twitter:creator" content="@ScriptEnjoyer">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="assets/CSS/main.css" />
+  <title>Script'Enjøyer</title>
+</head>
+
+<body>
+  <div class="access__container">
+    <hgroup class="primary__title__ctnr">
+      <h1 class="primary__title">
+        <span class="primary__title__el">Script</span><span class="primary__title__el">'</span><span
+          class="primary__title__el">Enjøyer</span>
+      </h1>
+      <h2 class="secondary__title">Web Development</h2>
+      <div class="banner__line"></div>
+    </hgroup>
+    <div class="access__sub__ctnr">
+      <div class="top__angle--A top_bar"></div>
+      <div class="top__angle--B top_bar"></div>
+      <div class="top__angle--C top_bar"></div>
+      <a href="home.html" class="access__link" id="enterbtn">Enter</a>
+      <div class="bottom__angle--C bottom_bar"></div>
+      <div class="bottom__angle--B bottom_bar"></div>
+      <div class="bottom__angle--A bottom_bar"></div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="assets/js/gsap/page_transition.js"></script>
+  <script src="assets/js/gsap/index_letters.js"></script>
+  <script src="assets/js/anime__barre.js"></script>
+</body>
+
+</html>

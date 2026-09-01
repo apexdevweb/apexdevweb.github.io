@@ -43,8 +43,9 @@ main {
         border-radius: 15px;
         @include mixins.breakpoint(medium) {
           min-width: 375px;
-          max-width: 600px;
+          max-width: 200px;
           height: 350px;
+          width: auto;
           overflow: hidden;
         }
         @include mixins.breakpoint(large) {
