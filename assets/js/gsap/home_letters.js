@@ -35,10 +35,10 @@ gsap.from(splitB.chars, {
   scaleY: 0,
   duration: 1.5,
   opacity: 0,
-  stagger: 0.1,
+  stagger: 0.2,
   scrollTrigger: {
     trigger: serviceTitle,
-    start: "center top",
+    start: "top bottom",
     end: "bottom bottom",
     scrub: 5,
     // markers: true,

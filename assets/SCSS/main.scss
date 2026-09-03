@@ -242,13 +242,13 @@ body {
     right: -12.3%;
     height: 10vh;
     width: 27vw;
-    z-index: 99;
+    z-index: 999;
     transform: rotate(90deg);
     text-align: center;
     mix-blend-mode: difference;
     @include mixins.breakpoint(medium) {
-      top: 40%;
-      right: -11%;
+      top: 30%;
+      left: 45%;
       height: 2vh;
       width: 27vw;
     }

@@ -1246,15 +1246,15 @@ body .cipher-ctnr {
   right: -12.3%;
   height: 10vh;
   width: 27vw;
-  z-index: 99;
+  z-index: 999;
   transform: rotate(90deg);
   text-align: center;
   mix-blend-mode: difference;
 }
 @media (max-width: 600px) {
   body .cipher-ctnr {
-    top: 40%;
-    right: -11%;
+    top: 30%;
+    left: 45%;
     height: 2vh;
     width: 27vw;
   }
