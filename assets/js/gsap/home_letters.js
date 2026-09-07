@@ -65,6 +65,7 @@ gsap.from(splitC.chars, {
   },
   ease: "power2.inOut",
 });
+const aboutTitleCtnr = document.querySelector(".description__title__ctnr");
 const aboutTitle = document.querySelector(".description__title");
 let splitD = new SplitText(aboutTitle, {
   type: "chars, words, lines",
@@ -73,12 +74,12 @@ gsap.from(splitD.chars, {
   y: 20,
   transformOrigin: "bottom",
   scaleY: 0,
-  duration: 0.5,
+  duration: 1.5,
   opacity: 0,
   stagger: 0.1,
   scrollTrigger: {
-    trigger: aboutTitle,
-    start: "top center",
+    trigger: aboutTitleCtnr,
+    start: "top top",
     end: "bottom bottom",
     scrub: 5,
     // markers: true,
@@ -98,8 +99,8 @@ aboutItems.forEach((aboutEl) => {
     opacity: 0,
     stagger: 0.2,
     scrollTrigger: {
-      trigger: aboutEl,
-      start: "top center",
+      trigger: aboutTitleCtnr,
+      start: "top top",
       end: "bottom bottom",
       scrub: 3,
       // markers: true,
@@ -120,13 +121,14 @@ gsap.from(splitF.chars, {
   stagger: 0.1,
   scrollTrigger: {
     trigger: modelTitle,
-    start: "top 70%",
+    start: "top top",
     end: "bottom bottom",
-    scrub: 5,
+    scrub: 4,
     // markers: true,
   },
   ease: "power2.inOut",
 });
+const budgetCtnr = document.querySelector(".budget__ctnr");
 const budgetTitle = document.querySelectorAll(".budget__title");
 let splitG = new SplitText(budgetTitle, {
   type: "chars, words, lines",
@@ -139,10 +141,10 @@ gsap.from(splitG.words, {
   opacity: 0,
   stagger: 0.3,
   scrollTrigger: {
-    trigger: budgetTitle,
+    trigger: budgetCtnr,
     start: "top center",
     end: "bottom bottom",
-    scrub: 4,
+    scrub: 3,
     // markers: true,
   },
   ease: "power2.inOut",
