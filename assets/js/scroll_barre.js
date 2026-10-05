@@ -26,3 +26,4 @@ gsap.to(cursorIndex, {
     },
   },
 });
+

@@ -1,5 +1,3 @@
-gsap.registerPlugin(ScrollTrigger);
-
 let tlB = gsap.timeline();
 const slider = document.querySelector(".content");
 tlB.from(slider, {
@@ -21,26 +19,6 @@ tlB.from(slider, {
     // markers: true,
   },
   ease: "power2.inOut",
-});
-const tlD = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".project__item__ctnr", // 1 seul déclencheur
-    start: "top 80%",
-    end: "bottom 10%",
-    scrub: 3,
-    // markers: true,
-  },
-});
-const vidItems = document.querySelectorAll(".project__item__ctnr");
-tlD.from(vidItems, {
-  x: -200,
-  transformOrigin: "left",
-  scaleX: 0,
-  rotation: 0,
-  opacity: 0,
-  duration: 1.5,
-  ease: "back.out(1.7)",
-  stagger: 0.4,
 });
 const descriptionTxt = document.querySelector(".description__sub__ctnr");
 if (window.matchMedia("(max-width: 600px)").matches) {

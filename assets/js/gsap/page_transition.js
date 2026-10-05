@@ -1,5 +1,3 @@
-gsap.registerPlugin(ScrollTrigger);
-
 // --- Constantes de configuration ---
 const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*+=<>?/\\|";
 const TEXT_IN = "SCRIPT'ENJOYER LOADED";

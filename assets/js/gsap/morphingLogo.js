@@ -1,4 +1,3 @@
-gsap.registerPlugin(MorphSVGPlugin, ScrollTrigger);
 const triangle = document.getElementById("triangle-inverse");
 const pentagone = document.getElementById("stat-pentagon-full");
 const chartStats = document.getElementById("stat-pentagon-data");

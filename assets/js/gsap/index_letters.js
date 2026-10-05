@@ -1,4 +1,3 @@
-gsap.registerPlugin(ScrollTrigger, SplitText);
 let tlA = gsap.timeline();
 const primaryEl = document.querySelectorAll(".primary__title__el");
 primaryEl.forEach((titleEl) => {

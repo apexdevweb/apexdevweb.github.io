@@ -1,7 +1,8 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&family=Zen+Dots&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap");
-body main .main___ruler--ctnr, body main .main___ruler--ctnr .ruler, body main .sect__beta, body main .sect__alpha, body main .sect__beta .project-wrapper .project-el__sub-ctnr, body main .sect__beta .project-wrapper .project-el__title-container, body main .sect__ceta, body main .sect__ceta .description__ctnr, body main .sect__ceta .description__ctnr .description__title__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr .budget__standard__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr .budget__standard__ctnr .standar__item, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__title__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__list__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__foot, body main .sect__ceta .description__ctnr .dl__ctnr .dl__sub__ctnr, body main .sect__ceta .description__ctnr .model__container, body .main__footer .footer__sub__ctnr, .sect__delta, .sect__delta .choice__sub__ctnr, .sect__eco, .sect__eco .contact__form, .sect__eco .contact__form .main__input__ctnr, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details .sector__details--title, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details .sector__footer, .dl__sub__ctnr {
+body main .main___ruler--ctnr, body main .main___ruler--ctnr .ruler, body main .sect__beta,
+body main .sect__ceta, body main .sect__alpha, body main .sect__beta .project-wrapper .project-el__sub-ctnr, body main .sect__beta .project-wrapper .project-el__title-container, body main .sect__ceta .description__ctnr, body main .sect__ceta .description__ctnr .description__title__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr .budget__standard__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr .budget__standard__ctnr .standar__item, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__title__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__list__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__foot, body main .sect__ceta .description__ctnr .dl__ctnr .dl__sub__ctnr, body main .sect__ceta .description__ctnr .model__container, body .main__footer .footer__sub__ctnr, .sect__delta, .sect__delta .choice__sub__ctnr, .sect__eco, .sect__eco .contact__form, .sect__eco .contact__form .main__input__ctnr, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details .sector__details--title, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details .sector__footer, .dl__sub__ctnr {
   height: auto;
   width: 100%;
 }
@@ -25,7 +26,8 @@ body .cursor__effect, body .cipher-ctnr, body main .sect__ceta .description__ctn
   justify-content: center;
 }
 
-body .access__container, body .access__container .primary__title__ctnr, body .access__container .access__sub__ctnr, body main .sect__beta, body main .sect__alpha, body main .sect__beta .project-wrapper, body main .sect__beta .project-wrapper .project-el__sub-ctnr, body main .sect__ceta, body main .sect__ceta .description__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr .budget__standard__ctnr, body main .sect__ceta .description__ctnr .dl__ctnr, body .main__footer, .sect__delta {
+body .access__container, body .access__container .primary__title__ctnr, body .access__container .access__sub__ctnr, body main .sect__beta,
+body main .sect__ceta, body main .sect__alpha, body main .sect__beta .project-wrapper, body main .sect__beta .project-wrapper .project-el__sub-ctnr, body main .sect__ceta .description__ctnr, body main .sect__ceta .description__ctnr .budget__ctnr .main-separ__ctnr .budget-separ__ctnr .budget__standard__ctnr, body main .sect__ceta .description__ctnr .dl__ctnr, body .main__footer, .sect__delta {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -82,7 +84,7 @@ body .cursor__effect .cursor__txt, body main .main___ruler--ctnr .ruler .mask, .
   letter-spacing: 3px;
 }
 
-body .access__container .primary__title__ctnr .primary__title, body .access__container .primary__title__ctnr .secondary__title .special-letter, body main .sect__ceta .description__ctnr .model__title, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details .sector__details--title, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details .sector__footer, .sect__eco .contact__form .validate__ctnr .validate__btn, .dl__sub__ctnr .dl__item, #transition-overlay .meter-info {
+body .access__container .primary__title__ctnr .primary__title, body main .sect__ceta .description__ctnr .model__title, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details .sector__details--title, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details .sector__footer, .sect__eco .contact__form .validate__ctnr .validate__btn, .dl__sub__ctnr .dl__item, #transition-overlay .meter-info {
   font-family: "Zen Dots", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -111,7 +113,8 @@ body .cipher-ctnr__el, main .sect-prima .slider-wrapper .stat-container__info, m
 body .access__container .access__sub__ctnr .access__link:hover, body header .uxui__container .title__uixui, body main .sect__ceta .description__ctnr .budget__ctnr .fast__choice__ctnr .fast__choice .choice__foot .choice__btn:hover, body main .sect__ceta .description__ctnr .dl__ctnr .free__pack:hover, .sect__eco .contact__form .validate__ctnr .validate__btn:hover, .dl__sub__ctnr .dl__item {
   color: transparent;
   background: radial-gradient(circle at 15% 50%, #a0d9f2, #cbd6ff, #fde4d5, #faf0e4, #f8f9f0, #ffffff);
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 
 #transition-overlay {
@@ -138,7 +141,8 @@ body .access__container .access__sub__ctnr .access__link:hover, body header .uxu
   position: relative;
   height: 50vh;
   width: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   box-shadow: inset 0px 0px 28px 18px #000;
 }
 #transition-overlay .meter-info {
@@ -160,12 +164,30 @@ body .access__container .access__sub__ctnr .access__link:hover, body header .uxu
     line-height: auto;
   }
 }
+@-webkit-keyframes revealUi {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes revealUi {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+@-webkit-keyframes bannerLineAnim {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: 40%;
   }
 }
 @keyframes bannerLineAnim {
@@ -178,11 +200,29 @@ body .access__container .access__sub__ctnr .access__link:hover, body header .uxu
     width: 40%;
   }
 }
+@-webkit-keyframes bipSymbole {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes bipSymbole {
   from {
     opacity: 0;
   }
   to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes viewProLink {
+  from {
+    opacity: 0.8;
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -497,7 +537,7 @@ canvas {
 }
 @media (max-width: 600px) {
   .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .name__sub__ctnr,
-  .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .mail__sub__ctnr {
+.sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .mail__sub__ctnr {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -576,7 +616,8 @@ canvas {
   transform: translate(-50%, -50%);
   z-index: 2;
   opacity: 0;
-  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   background-color: rgba(0, 0, 0, 0.662);
   color: #ffffff !important;
 }
@@ -705,7 +746,8 @@ main .sect-prima .prima-subcontainer__wireframepict {
   height: 650px;
   overflow: hidden;
   z-index: 0;
-  animation: revealUi 2s ease 1.5s 1 normal forwards;
+  -webkit-animation: revealUi 2s ease 1.5s 1 normal forwards;
+          animation: revealUi 2s ease 1.5s 1 normal forwards;
 }
 @media (max-width: 600px) {
   main .sect-prima .prima-subcontainer__wireframepict {
@@ -996,7 +1038,7 @@ main .sect-prima .slider-wrapper .morph-container .globale-service__txt {
 }
 .slider-tech__frame {
   position: absolute;
-  top: 35%;
+  top: 28%;
   left: 2%;
 }
 
@@ -1076,55 +1118,15 @@ main .sect-prima .slider-wrapper .morph-container .globale-service__txt {
   z-index: 0;
   will-change: transform;
   stroke: #b3b3b3;
-  pointer-events: none;
 }
 
-.triangle-up__slider,
-.square-frame__slider {
+.triangle-up__slider, .square-frame__slider {
   position: absolute;
   top: 0;
   height: 0;
   width: 0;
   z-index: 0;
   overflow: hidden;
-  pointer-events: none;
-}
-
-.up-frame__slider,
-.down-frame__slider {
-  height: 20%;
-  width: 50%;
-  opacity: 0;
-  text-align: center;
-  position: absolute;
-  z-index: 0;
-  filter: drop-shadow(0px 0px 5px rgb(255, 255, 255));
-}
-
-.up-frame__slider {
-  top: 14vh;
-  left: 56%;
-}
-.up-frame__slider:nth-of-type(2) {
-  top: 18vh;
-  left: 53%;
-}
-.up-frame__slider:nth-of-type(3) {
-  top: 22vh;
-  left: 50%;
-}
-
-.down-frame__slider {
-  bottom: -8vh;
-  left: 45%;
-}
-.down-frame__slider:nth-of-type(5) {
-  bottom: -4vh;
-  left: 48%;
-}
-.down-frame__slider:nth-of-type(6) {
-  bottom: 0;
-  left: 51%;
 }
 
 .visually-hidden {
@@ -1184,20 +1186,12 @@ body .access__container .primary__title__ctnr .secondary__title {
     text-align: center;
   }
 }
-body .access__container .primary__title__ctnr .secondary__title .special-letter {
-  font-size: 10rem;
-  font-weight: 100;
-}
-@media (max-width: 600px) {
-  body .access__container .primary__title__ctnr .secondary__title .special-letter {
-    font-size: 5rem;
-  }
-}
 body .access__container .primary__title__ctnr .banner__line {
   height: 0.7vh;
   background-color: #fff;
   border-radius: 50px;
-  animation: bannerLineAnim 1.5s ease 1.5s 1 normal forwards;
+  -webkit-animation: bannerLineAnim 1.5s ease 1.5s 1 normal forwards;
+          animation: bannerLineAnim 1.5s ease 1.5s 1 normal forwards;
 }
 body .access__container .access__sub__ctnr {
   height: 20vh;
@@ -1245,7 +1239,8 @@ body header .uxui__container .title__uixui {
   filter: drop-shadow(0px 0px 8px #000);
   mix-blend-mode: difference;
   opacity: 0;
-  animation: revealUi 2s ease 1s 1 normal forwards;
+  -webkit-animation: revealUi 2s ease 1s 1 normal forwards;
+          animation: revealUi 2s ease 1s 1 normal forwards;
 }
 @media (max-width: 600px) {
   body header .uxui__container .title__uixui {
@@ -1275,7 +1270,8 @@ body header .uxui__container hr {
   background-color: #fff;
   opacity: 0;
   mix-blend-mode: difference;
-  animation: revealUi 2s ease 1.5s 1 normal forwards;
+  -webkit-animation: revealUi 2s ease 1.5s 1 normal forwards;
+          animation: revealUi 2s ease 1.5s 1 normal forwards;
 }
 @media (max-width: 600px) {
   body header .uxui__container hr {
@@ -1297,7 +1293,8 @@ body header .uxui__container a {
   text-decoration: none;
   mix-blend-mode: difference;
   opacity: 0;
-  animation: revealUi 2s ease 1.8s 1 normal forwards;
+  -webkit-animation: revealUi 2s ease 1.8s 1 normal forwards;
+          animation: revealUi 2s ease 1.8s 1 normal forwards;
 }
 @media (max-width: 600px) {
   body header .uxui__container a {
@@ -1575,7 +1572,8 @@ body main .main___ruler--ctnr .ruler .two {
   border-bottom-left-radius: 10px;
   box-shadow: 0px -5px 10px 5px #fff;
 }
-body main .sect__beta {
+body main .sect__beta,
+body main .sect__ceta {
   margin-top: 0;
   color: #fff;
 }
@@ -1601,9 +1599,8 @@ body main .sect__alpha .service__title {
 }
 body main .sect__beta {
   display: block;
-  height: 100vh;
+  height: 80vh;
   width: 100%;
-  z-index: 5;
   overflow: hidden;
 }
 body main .sect__beta .project__title {
@@ -1624,11 +1621,11 @@ body main .sect__beta .project__info {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 body main .sect__beta .project-wrapper {
-  height: 100vh;
+  height: auto;
   width: 100%;
 }
 body main .sect__beta .project-wrapper .project-el {
-  margin-top: 16.4vh;
+  margin-top: 4.4vh;
   padding: 0;
   height: auto;
   width: 100%;
@@ -1644,10 +1641,10 @@ body main .sect__beta .project-wrapper .project-el__details-container {
 }
 body main .sect__beta .project-wrapper .project-el__details-info {
   position: absolute;
-  top: -24.5vh;
-  left: 9vw;
+  top: -13vh;
+  left: 7.5vw;
   width: 45%;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: -1px;
   text-transform: uppercase;
@@ -1662,9 +1659,6 @@ body main .sect__beta .project-wrapper .project-el__details-mini {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   text-align: right;
   line-height: 180px;
-}
-body main .sect__beta .project-wrapper .project-el__sub-ctnr {
-  z-index: 999;
 }
 body main .sect__beta .project-wrapper .project-el__title-container {
   margin-top: 0;
@@ -1701,15 +1695,9 @@ body main .sect__beta .project-wrapper .project-el__txt-link {
   text-align: right;
   z-index: 999;
 }
-body main .sect__beta .project-wrapper .project-el__sticker {
-  position: relative;
+body main .sect__beta .project-wrapper .project-el__video {
   height: auto;
   width: 35vw;
-}
-body main .sect__ceta {
-  overflow: hidden;
-  color: #fff;
-  z-index: 1;
 }
 body main .sect__ceta .description__ctnr .description__title__ctnr .description__title {
   font-size: 3.5rem;
@@ -1765,7 +1753,8 @@ body main .sect__ceta .description__ctnr .description__sub__ctnr .description__i
 body main .sect__ceta .description__ctnr .description__sub__ctnr .description__img__ctnr img {
   height: auto;
   width: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
   filter: grayscale(100%) drop-shadow(0px 0px 5px #fff);
 }
@@ -2033,6 +2022,4 @@ body .main__footer .footer__sub__ctnr a .icon__img {
 body .main__footer .footer__sub__ctnr a:hover {
   transition: 0.3s ease;
   filter: drop-shadow(0px 0px 5px #fff);
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

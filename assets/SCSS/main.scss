@@ -9,6 +9,7 @@
 @use "abstract/addjs";
 @use "layout/contact";
 @use "layout/sectionPrima";
+@use "abstract/sliderProject";
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -59,6 +60,14 @@ body {
         @include mixins.breakpoint(medium) {
           font-size: variables.$typo-litle-device-medium;
           text-align: center;
+        }
+        & .special-letter {
+          @extend %typo-subtitle;
+          font-size: 10rem;
+          font-weight: 100;
+          @include mixins.breakpoint(medium) {
+            font-size: 5rem;
+          }
         }
       }
       & .banner__line {
@@ -238,7 +247,7 @@ body {
   & .cipher-ctnr {
     @extend %displayed-column-center;
     position: fixed;
-    top: 55%;
+    top: 45%;
     right: -12.3%;
     height: 10vh;
     width: 27vw;
@@ -293,8 +302,8 @@ body {
       z-index: 99;
       margin-bottom: 10px;
       @include mixins.breakpoint(medium) {
-       width: 100vw;
-       background-color: #a0d9f2;
+        width: 100vw;
+        background-color: #a0d9f2;
       }
       @include mixins.breakpoint(large) {
       }
@@ -305,7 +314,7 @@ body {
           margin: auto;
           position: absolute;
           width: 2rem; // Toute la largeur de la règle
-          height: 8px;
+          height: 6px;
           background-color: #000; // Couleur vive pour bien la voir
           left: 0;
           top: 0;
@@ -361,8 +370,7 @@ body {
         }
       }
     }
-    & .sect__beta,
-    .sect__ceta {
+    & .sect__beta {
       @extend %displayed-column-evenly, %globale-size;
       margin-top: 0;
       color: #fff;
@@ -387,9 +395,14 @@ body {
       }
     }
     & .sect__beta {
+      display: block;
+      height: 100vh;
+      width: 100%;
+      z-index: 5;
+      overflow: hidden;
       & .project__title {
-        margin: 0;
         @extend %typo-standar;
+        margin: 0;
         font-size: variables.$typo-size-big;
         text-align: center;
         @include mixins.breakpoint(medium) {
@@ -397,77 +410,112 @@ body {
           text-align: left;
         }
       }
-      & .project__wrapper {
-        @extend %globale-size, %displayed-row-wrap;
-        padding: 15px;
-        @include mixins.breakpoint(medium) {
-         height: auto;
-         width: 100vw;
-        }
-        & .project__item__ctnr {
-          padding: 3px;
-          @extend %displayed-column-evenly;
+      & .project__info {
+        @extend %typo-standar;
+        font-size: variables.$typo-size-small;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.3);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      }
+
+      & .project-wrapper {
+        @extend %displayed-column-evenly;
+        height: 100vh;
+        width: 100%;
+        & .project-el {
+          @extend %displayed-row-center-evenly;
+          margin-top: 16.4vh;
+          padding: 0;
           height: auto;
-          width: 20vw;
-          overflow: hidden;
-          border-radius: 15px;
-          @include mixins.breakpoint(medium) {
-            width: 100%;
-          }
-          @include mixins.breakpoint(large) {
-            width: auto;
-          }
-          & .project__item__title {
-            @extend %typo-subtitle, %reset-marg-pad;
-            font-size: variables.$typo-size-small;
-            @include mixins.breakpoint(medium) {
-              font-size: variables.$typo-litle-device-small;
-            }
-          }
-          & video {
-            height: 22vh;
-            width: auto;
-            border-radius: 15px;
-            filter: grayscale(100%);
-            @include mixins.breakpoint(medium) {
-              height: auto;
-              width: 100%;
-            }
-          }
-          &:hover video {
-            transition: 0.8s ease;
-            filter: none;
-            z-index: 99;
-          }
-          &:hover .project__link {
-            visibility: visible;
-            animation: viewProLink 0.1s ease 0.2s 1 normal forwards;
-            text-decoration: underline;
-          }
-          & .project__link {
-            text-align: center;
-            opacity: 0;
-            // visibility: hidden;
-            @extend %typo-standar, %reset-marg-pad;
+          width: 100%;
+          &__details-container {
+            display: inline-block;
             position: absolute;
-            z-index: 99;
-            font-size: 3.8rem;
-            mix-blend-mode: difference;
+            top: 0;
+            left: 1%;
+            height: 15vh;
+            width: 45%;
+            text-align: right;
+          }
+          &__details-info {
+            @extend %typo-standar;
+            position: absolute;
+            top: -24.5vh;
+            left: 9vw;
+            width: 45%;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.3);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            text-align: center;
+            line-height: 0px;
+          }
+          &__details-mini {
+            @extend %typo-standar;
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.3);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            text-align: right;
+            line-height: 180px;
+          }
+          &__sub-ctnr {
+            @extend %displayed-column-evenly, %globale-size;
+            z-index: 999;
+          }
+          &__title-container {
+            @extend %globale-size;
+            margin-top: 0;
+            padding-right: 115px;
+          }
+          &__title-el {
+            @extend %typo-standar;
+            color: #fff;
+            margin-top: auto;
+            font-size: 3.2rem;
+            font-weight: 600;
+            letter-spacing: -5px;
+            word-spacing: -8px;
+            line-height: 0px;
+            text-transform: uppercase;
+            text-align: right;
+          }
+          &__txt-el {
+            @extend %typo-standar;
+            letter-spacing: 3px;
+            font-size: variables.$typo-size-small;
+            text-align: right;
+            color: rgba(255, 255, 255, 0.3);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            padding-right: 50px;
+          }
+          &__txt-link {
+            @extend %typo-standar;
+            color: #fff;
+            margin-top: auto;
+            font-size: 3.2rem;
+            font-weight: 600;
+            letter-spacing: -5px;
+            word-spacing: -8px;
+            line-height: auto;
+            text-transform: uppercase;
+            text-align: right;
+            z-index: 999;
+          }
+          &__sticker {
+            position: relative;
             height: auto;
-            width: 100%;
-            font-weight: 800;
-            @include mixins.breakpoint(medium) {
-              font-size: variables.$typo-litle-device-small;
-            }
-            @include mixins.breakpoint(large) {
-              font-size: variables.$typo-litle-device-small;
-            }
+            width: 35vw;
           }
         }
       }
     }
     & .sect__ceta {
-      @extend %globale-size;
+      @extend %globale-size, %displayed-column-evenly;
+      overflow: hidden;
+      color: #fff;
+      z-index: 1;
       & .description__ctnr {
         @extend %globale-size, %displayed-column-evenly;
         & .description__title__ctnr {
@@ -530,7 +578,7 @@ body {
             %reset-marg-pad,
             %typo-standar,
             %displayed-column-start;
-        background: none;
+          background: none;
           & .main-separ__ctnr {
             @extend %globale-size,
               %reset-marg-pad,

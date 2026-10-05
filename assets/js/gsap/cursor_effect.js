@@ -1,4 +1,3 @@
-gsap.registerPlugin(SplitText);
 const cursor = document.querySelector(".cursor__effect");
 const cursorTxt = document.querySelector(".cursor__txt");
 document.addEventListener("mousemove", (e) => {

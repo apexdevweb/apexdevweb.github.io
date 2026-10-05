@@ -1,6 +1,6 @@
 const images = [
     "assets/kineticslider/img/codingpapper5.jpg",
-    "assets/kineticslider/img/codingpapper4.jpg",
+    "assets/kineticslider/img/codingpapper8.jpg",
     "assets/kineticslider/img/codingpapper6.png",
   ],
   texts = [

@@ -1,4 +1,3 @@
-gsap.registerPlugin(ScrollTrigger, SplitText);
 const toolsItems = document.querySelectorAll(".tools__item");
 let tlX = gsap.timeline({
   repeat: -1, // -1 signifie l'infini

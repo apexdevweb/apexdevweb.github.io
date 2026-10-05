@@ -75,6 +75,8 @@ a:hover {
 }
 .rgbKineticSlider {
   display: block;
+  height: 100%;
+  width: 100%;
   visibility: hidden;
   opacity: 1;
   animation: 5s 1s forwards slideAnime;

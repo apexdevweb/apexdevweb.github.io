@@ -1,5 +1,3 @@
-gsap.registerPlugin(ScrollTrigger);
-
 (() => {
   const sectionPrima = document.querySelector(".sect-prima");
   const container = document.querySelector(".line-container");

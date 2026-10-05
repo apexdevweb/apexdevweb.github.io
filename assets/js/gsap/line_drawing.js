@@ -1,21 +1,16 @@
-gsap.registerPlugin(ScrollTrigger);
-
 (() => {
   const frame = document.querySelector(".title-frame");
   if (!frame) return;
-
   const entry = frame.querySelector(".tf-entry");
   const top = frame.querySelector(".tf-top");
   const bottom = frame.querySelector(".tf-bottom");
   const exit = frame.querySelector(".tf-exit");
   const text = frame.querySelector(".title-frame__text");
-
   [entry, top, bottom, exit].forEach((path) => {
     const length = path.getTotalLength();
     gsap.set(path, { strokeDasharray: length, strokeDashoffset: length });
   });
   gsap.set(text, { autoAlpha: 0, y: 10 });
-
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: frame,
@@ -25,7 +20,6 @@ gsap.registerPlugin(ScrollTrigger);
       // markers: true,
     },
   });
-
   // 1. Ligne d'entrée
   tl.to(entry, { strokeDashoffset: 0, ease: "none", duration: 0.5 })
     // 2. Les deux ailes se dessinent en même temps
