@@ -33,7 +33,26 @@ morphTl
 const hoverVidCtnr = document.querySelectorAll(".project-el__sticker");
 const hoverUpFrame = document.querySelectorAll(".up-frame__slider");
 const hoverDownFrame = document.querySelectorAll(".down-frame__slider");
-hoverVidCtnr.forEach((vidEl) => {
+const vidModal = document.querySelector(".vid-modal");
+const frameTech = document.querySelector(".tech-path");
+const vidFrame = document.querySelector(".vid-path");
+const frameTechOriginalD = frameTech.getAttribute("d");
+const videoEl = document.getElementById("vid-el");
+const titleVideo = document.querySelectorAll(".project-el__title-el");
+const typeVideo = document.querySelectorAll(".project-el__details-mini");
+const linkVideo = document.querySelectorAll(".project-el__txt-link");
+const textVideo = document.querySelectorAll(".project-el__txt-el");
+let rootVid = [
+  "./assets/video/AGdemo.mp4",
+  "./assets/video/codefarmers.mp4",
+  "OFR",
+  "./assets/sollineDemo.mp4",
+  "",
+  "",
+  "",
+  "",
+];
+hoverVidCtnr.forEach((vidEl, index) => {
   vidEl.addEventListener("mouseover", () => {
     gsap.to([hoverUpFrame, hoverDownFrame], {
       opacity: 1,
@@ -51,6 +70,135 @@ hoverVidCtnr.forEach((vidEl) => {
       overwrite: true,
     });
   });
+  //<=========A PEAUFINER=======>
+  vidEl.addEventListener("click", () => {
+    if (!vidModal.classList.contains("vid-visualiser")) {
+      vidModal.classList.add("vid-visualiser");
+      //<==video au click==>
+      if (rootVid[index]) {
+        videoEl.src = rootVid[index];
+        videoEl.load();
+        gsap.to(titleVideo[0], {
+          y: -110,
+          x: -570,
+          delay: 0.3,
+          fontSize: "1.8rem",
+          letterSpacing: "2px",
+          duration: 0.8,
+          ease: "power3.inOut",
+        });
+        gsap.to(titleVideo[1], {
+          y: -40,
+          x: -460,
+          delay: 0.5,
+          fontSize: "1.8rem",
+          letterSpacing: "2px",
+          duration: 0.8,
+          ease: "power3.inOut",
+        });
+        gsap.to(titleVideo[2], {
+          y: -110,
+          x: -540,
+          delay: 0.3,
+          fontSize: "1.8rem",
+          letterSpacing: "2px",
+          duration: 0.8,
+          ease: "power3.inOut",
+        });
+        gsap.to(titleVideo[3], {
+          y: -40,
+          x: -320,
+          delay: 0.5,
+          fontSize: "1.8rem",
+          letterSpacing: "2px",
+          duration: 0.8,
+          ease: "power3.inOut",
+        });
+        gsap.to(titleVideo[4], {
+          y: -110,
+          x: -560,
+          delay: 0.3,
+          fontSize: "1.8rem",
+          letterSpacing: "2px",
+          duration: 0.8,
+          ease: "power3.inOut",
+        });
+        gsap.to(titleVideo[5], {
+          y: -40,
+          x: -140,
+          delay: 0.5,
+          fontSize: "1.8rem",
+          letterSpacing: "2px",
+          duration: 0.8,
+          ease: "power3.inOut",
+        });
+        gsap.to(typeVideo, {
+          opacity: 0,
+          duration: 0.4,
+        });
+        gsap.to(linkVideo, {
+          opacity: 0,
+          duration: 0.6,
+        });
+        gsap.to(textVideo, {
+          opacity: 0,
+          duration: 0.8,
+        });
+      }
+      //<==video au click fin==>
+      gsap.to(frameTech, {
+        y: -200,
+        x: -120,
+        duration: 0.9,
+        morphSVG: vidFrame,
+        transformOrigin: "center center",
+        ease: "expo.inOut",
+        overwrite: "auto",
+      });
+      gsap.to(videoEl, {
+        opacity: 1,
+        ease: "expo.inOut",
+      });
+      lenis.stop();
+    } else {
+      vidModal.classList.remove("vid-visualiser");
+      videoEl.pause();
+      videoEl.src = "";
+      videoEl.load();
+      gsap.to(titleVideo, {
+        y: 0,
+        x: 0,
+        fontSize: "3.2rem",
+        letterSpacing: "-5px",
+        duration: 0.8,
+        transformOrigin: "center center",
+        ease: "power3.inOut",
+      });
+      gsap.to(typeVideo, {
+        opacity: 1,
+        duration: 0.4,
+      });
+      gsap.to(linkVideo, {
+        opacity: 1,
+        duration: 0.6,
+      });
+      gsap.to(textVideo, {
+        opacity: 1,
+        duration: 0.8,
+      });
+      gsap.to(frameTech, {
+        y: 0,
+        x: 0,
+        duration: 0.9,
+        morphSVG: frameTechOriginalD,
+        transformOrigin: "center center",
+        ease: "expo.inOut",
+        overwrite: "auto",
+      });
+      lenis.start();
+    }
+  });
+  //<=========A PEAUFINER=======>
 });
 //hover fin
 const DOM = {

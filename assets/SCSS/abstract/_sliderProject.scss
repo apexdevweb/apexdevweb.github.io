@@ -2,9 +2,14 @@
 .slider-tech__frame {
   position: absolute;
   top: 35%;
-  left: 2%;
+  left: 1%;
 }
-
+.vid-frame__slider {
+  position: absolute;
+  top: 0;
+  left: 1%;
+  opacity: 0;
+}
 .slider-indicator {
   position: absolute;
   top: 2vh;
@@ -110,25 +115,17 @@
   filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 1));
 }
 .up-frame__slider {
-  top: 14vh;
+  top: 18vh;
   left: 56%;
-  &:nth-of-type(2) {
-    top: 18vh;
-    left: 53%;
-  }
   &:nth-of-type(3) {
     top: 22vh;
     left: 50%;
   }
 }
 .down-frame__slider {
-  bottom: -8vh;
+  bottom: -4vh;
   left: 45%;
   &:nth-of-type(5) {
-    bottom: -4vh;
-    left: 48%;
-  }
-  &:nth-of-type(6) {
     bottom: 0;
     left: 51%;
   }
