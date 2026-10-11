@@ -427,8 +427,8 @@ body {
           display: none;
           position: absolute;
           top: 28%;
-          left: 45%;
-          height: 50vh;
+          left: 50%;
+          height: 52vh;
           width: auto;
           overflow: hidden;
           z-index: 998;
@@ -440,10 +440,26 @@ body {
             width: auto;
             z-index: 999;
           }
+          &__close {
+            margin: 0 0 10px 0;
+            text-align: center;
+            height: 30px;
+            width: 30px;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: transparent;
+            border-radius: 10px;
+            border: 1px solid #fff;
+            z-index: 999;
+            &:hover {
+              color: rgba(255, 255, 255, 0.5);
+              cursor: pointer;
+            }
+          }
           &.vid-visualiser {
             display: flex;
             flex-flow: column nowrap;
-            align-items: center;
+            align-items: flex-end;
             justify-content: space-evenly;
             animation: revealUi 1.5s ease 1 normal forwards;
           }
@@ -481,7 +497,7 @@ body {
           }
           &__details-mini {
             @extend %typo-standar;
-            display: inline-block;//cruciale pour les animation gsap
+            display: inline-block; //cruciale pour les animation gsap
             font-size: 0.7rem;
             color: rgba(255, 255, 255, 0.3);
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
@@ -534,7 +550,7 @@ body {
             height: auto;
             width: 35vw;
             z-index: 998;
-            &:hover{
+            &:hover {
               cursor: pointer;
             }
           }

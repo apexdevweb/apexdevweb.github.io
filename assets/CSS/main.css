@@ -134,13 +134,6 @@ body .access__container .access__sub__ctnr .access__link:hover, body header .uxu
     place-content: center;
   }
 }
-#transition-overlay .load-vid {
-  position: relative;
-  height: 50vh;
-  width: auto;
-  object-fit: cover;
-  box-shadow: inset 0px 0px 28px 18px #000;
-}
 #transition-overlay .meter-info {
   position: absolute;
   z-index: 99;
@@ -1631,8 +1624,8 @@ body main .sect__beta .project-wrapper .vid-modal {
   display: none;
   position: absolute;
   top: 28%;
-  left: 45%;
-  height: 50vh;
+  left: 50%;
+  height: 52vh;
   width: auto;
   overflow: hidden;
   z-index: 998;
@@ -1645,10 +1638,26 @@ body main .sect__beta .project-wrapper .vid-modal__slidevid {
   width: auto;
   z-index: 999;
 }
+body main .sect__beta .project-wrapper .vid-modal__close {
+  margin: 0 0 10px 0;
+  text-align: center;
+  height: 30px;
+  width: 30px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  z-index: 999;
+}
+body main .sect__beta .project-wrapper .vid-modal__close:hover {
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
 body main .sect__beta .project-wrapper .vid-modal.vid-visualiser {
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-evenly;
   animation: revealUi 1.5s ease 1 normal forwards;
 }

@@ -42,9 +42,6 @@
 
 <body>
   <div id="transition-overlay">
-    <video class="load-vid" id="loading-movie" muted playsinline preload="auto">
-      <source src="assets/video/loadingvid.mp4" type="video/mp4">
-    </video>
     <p id="load-meter" class="meter-info"></p>
   </div>
   <canvas id="smoke-canvas"></canvas>
@@ -436,6 +433,7 @@
         " fill="none" stroke="rgba(255, 255, 255, 0.5)" stroke-width="4" />
         </svg>
         <div class="vid-modal">
+          <button class="vid-modal__close"><i class="fa-solid fa-xmark"></i></button>
           <video controls class="vid-modal__slidevid" id="vid-el"></video>
         </div>
         <article class="project-el">
@@ -490,7 +488,7 @@
           <div class="project-el__sub-ctnr">
             <hgroup class="project-el__title-container">
               <h3 class="project-el__title-el">Out of Reach</h3>
-              <h4 class="project-el__title-el">Web Security Community</h4>
+              <h4 class="project-el__title-el">Web Security</h4>
             </hgroup>
             <p class="project-el__txt-el">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
               Aperiam repellat explicabo minima porro deleniti <br>
@@ -532,7 +530,7 @@
           <div class="project-el__sub-ctnr">
             <hgroup class="project-el__title-container">
               <h3 class="project-el__title-el">Architectural</h3>
-              <h4 class="project-el__title-el">Architectural Firm web site</h4>
+              <h4 class="project-el__title-el">Firm web site</h4>
             </hgroup>
             <p class="project-el__txt-el">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
               Aperiam repellat explicabo minima porro deleniti <br>

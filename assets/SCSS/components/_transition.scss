@@ -21,13 +21,6 @@
   }
   @include mixins.breakpoint(large) {
   }
-  & .load-vid {
-    position: relative;
-    height: 50vh;
-    width: auto;
-    object-fit: cover;
-    box-shadow: inset 0px 0px 28px 18px#000;
-  }
   & .meter-info {
     @extend %typo-subtitle;
     position: absolute;
