@@ -1,49 +1,12 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 // SECTION SLIDER VIDEO DE PROJET
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
-//morphing
-const morphTriangle = document.querySelector("#triangleup-slide");
-const morphLosange = document.querySelector("#losange-slide");
-const morphSquare = document.querySelector("#squareframe-combined");
-const morphTl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".sect__beta",
-    start: "top top",
-    end: "bottom bottom",
-    scrub: 6,
-    // markers: true,
-  },
-});
-morphTl
-  .from(morphLosange, {
-    x: 1850,
-    rotation: 180,
-    morphSVG: morphTriangle,
-    transformOrigin: "center center",
-    ease: "expo.inOut",
-  })
-  .to(morphLosange, {
-    x: "35%",
-    morphSVG: morphSquare,
-    transformOrigin: "center center",
-    ease: "expo.inOut",
-  });
-//morphing fin
-//hover
-const hoverVidCtnr = document.querySelectorAll(".project-el__sticker");
-const hoverUpFrame = document.querySelectorAll(".up-frame__slider");
-const hoverDownFrame = document.querySelectorAll(".down-frame__slider");
-const vidModal = document.querySelector(".vid-modal");
-const frameTech = document.querySelector(".tech-path");
-const vidFrame = document.querySelector(".vid-path");
-const frameTechOriginalD = frameTech.getAttribute("d");
-const videoEl = document.getElementById("vid-el");
-const titleVideo = document.querySelectorAll(".project-el__title-el");
-const typeVideo = document.querySelectorAll(".project-el__details-mini");
-const linkVideo = document.querySelectorAll(".project-el__txt-link");
-const textVideo = document.querySelectorAll(".project-el__txt-el");
-const btnClose = document.querySelector(".vid-modal__close");
-let rootVid = [
+
+/* ============================================================
+   1. CONFIG
+   ============================================================ */
+
+const VIDEO_SOURCES = [
   "./assets/video/AGdemo.mp4",
   "./assets/video/codefarmers.mp4",
   "./assets/video/ofrDemo.mp4",
@@ -53,260 +16,274 @@ let rootVid = [
   "./assets/video/streaming.mp4",
   "./assets/video/numericash.mp4",
 ];
-hoverVidCtnr.forEach((vidEl, index) => {
-  vidEl.addEventListener("mouseover", () => {
-    gsap.to([hoverUpFrame, hoverDownFrame], {
-      opacity: 1,
-      stagger: 0.05,
-      duration: 0.3,
-      ease: "expo.inOut",
-      overwrite: true,
-    });
-  });
-  vidEl.addEventListener("mouseleave", () => {
-    gsap.to([hoverUpFrame, hoverDownFrame], {
-      opacity: 0,
-      duration: 0.3,
-      ease: "expo.inOut",
-      overwrite: true,
-    });
-  });
-  //<=========A PEAUFINER=======>
-  vidEl.addEventListener("click", () => {
-    if (!vidModal.classList.contains("vid-visualiser")) {
-      gsap.killTweensOf(titleVideo, "x,y");
-      gsap.killTweensOf([typeVideo, linkVideo, textVideo, videoEl], "opacity");
-      vidModal.classList.add("vid-visualiser");
-      //<==video au click==>
-      if (rootVid[index]) {
-        videoEl.src = rootVid[index];
-        videoEl.load();
-        //G1
-        gsap.to(titleVideo[0], {
-          y: -90,
-          x: -500,
-          delay: 0.3,
-          duration: 0.8,
-          ease: "power3.inOut",
-          overwrite: "auto",
-        });
-        gsap.to(titleVideo[1], {
-          y: -40,
-          x: -360,
-          delay: 0.5,
-          duration: 0.8,
-          ease: "power3.inOut",
-          overwrite: "auto",
-        });
-        //G2
-        gsap.to(titleVideo[2], {
-          y: -90,
-          x: -470,
-          delay: 0.3,
-          duration: 0.8,
-          ease: "power3.inOut",
-          overwrite: "auto",
-        });
-        gsap.to(titleVideo[3], {
-          y: -40,
-          x: -200,
-          delay: 0.5,
-          duration: 0.8,
-          ease: "power3.inOut",
-          overwrite: "auto",
-        });
-        //G3
-        gsap.to(titleVideo[4], {
-          y: -90,
-          x: -480,
-          delay: 0.3,
-          duration: 0.8,
-          ease: "power3.inOut",
-          overwrite: "auto",
-        });
-        gsap.to(titleVideo[5], {
-          y: -40,
-          x: -260,
-          delay: 0.5,
-          duration: 0.8,
-          ease: "power3.inOut",
-          overwrite: "auto",
-        });
-        //G4
-        gsap.to(titleVideo[6], {
-          y: -90,
-          x: -350,
-          delay: 0.3,
-          duration: 0.8,
-          ease: "power3.inOut",
-          overwrite: "auto",
-        });
-        gsap.to(titleVideo[7], {
-          y: -40,
-          x: -260,
-          delay: 0.5,
-          duration: 0.8,
-          ease: "power3.inOut",
-          overwrite: "auto",
-        });
-        //G5
-        gsap.to(titleVideo[8], {
-          y: -90,
-          x: -380,
-          delay: 0.3,
-          duration: 0.8,
-          ease: "power3.inOut",
-          overwrite: "auto",
-        });
-        gsap.to(titleVideo[9], {
-          y: -40,
-          x: -290,
-          delay: 0.5,
-          duration: 0.8,
-          ease: "power3.inOut",
-          overwrite: "auto",
-        });
-        //G6
-        gsap.to(titleVideo[10], {
-          y: -90,
-          x: -580,
-          delay: 0.3,
-          duration: 0.8,
-          ease: "power3.inOut",
-          overwrite: "auto",
-        });
-        gsap.to(titleVideo[11], {
-          y: -40,
-          x: -190,
-          delay: 0.5,
-          duration: 0.8,
-          ease: "power3.inOut",
-        });
-        //G7
-        gsap.to(titleVideo[12], {
-          y: -90,
-          x: -480,
-          delay: 0.3,
-          duration: 0.8,
-          ease: "power3.inOut",
-          overwrite: "auto",
-        });
-        gsap.to(titleVideo[13], {
-          y: -40,
-          x: -130,
-          delay: 0.5,
-          duration: 0.8,
-          ease: "power3.inOut",
-          overwrite: "auto",
-        });
-        gsap.to(typeVideo, {
-          opacity: 0,
-          duration: 0.4,
-        });
-        gsap.to(linkVideo, {
-          opacity: 0,
-          duration: 0.6,
-        });
-        gsap.to(textVideo, {
-          opacity: 0,
-          duration: 0.8,
-        });
-      }
-      //<==video au click fin==>
-      gsap.to(frameTech, {
-        y: -200,
-        x: -120,
-        duration: 0.9,
-        morphSVG: vidFrame,
-        transformOrigin: "center center",
-        ease: "expo.inOut",
-        overwrite: "auto",
-      });
-      gsap.to(videoEl, {
-        opacity: 1,
-        ease: "expo.inOut",
-      });
-      lenis.stop();
-    }
-    btnClose.addEventListener("click", () => {
-      if (vidModal.classList.contains("vid-visualiser")) {
-        gsap.killTweensOf(titleVideo, "x,y");
-        gsap.killTweensOf(
-          [typeVideo, linkVideo, textVideo, videoEl],
-          "opacity"
-        );
-        vidModal.classList.remove("vid-visualiser");
-        videoEl.pause();
-        videoEl.src = "";
-        videoEl.load();
-        gsap.to(titleVideo, {
-          y: 0,
-          x: 0,
-          duration: 0.8,
-          transformOrigin: "center center",
-          ease: "power3.inOut",
-          overwrite: "auto",
-          clearProps: "transform",
-        });
-        gsap.to(typeVideo, {
-          opacity: 1,
-          duration: 0.4,
-        });
-        gsap.to(linkVideo, {
-          opacity: 1,
-          duration: 0.6,
-        });
-        gsap.to(textVideo, {
-          opacity: 1,
-          duration: 0.8,
-        });
-        gsap.to(frameTech, {
-          y: 0,
-          x: 0,
-          duration: 0.9,
-          morphSVG: frameTechOriginalD,
-          transformOrigin: "center center",
-          ease: "expo.inOut",
-          overwrite: "auto",
-        });
-        lenis.start();
-      }
-    });
-  });
-  //<=========A PEAUFINER=======>
-});
-//hover fin
+
+// Position des 2 titres (h3, h4) de chaque slide quand la vidéo est ouverte.
+// On anime left/top (et pas x/y) pour ne jamais entrer en conflit avec la
+// timeline du slider, qui anime y / scaleY / opacity / filter sur ces titres.
+// => CSS requis : .project-el__title-el { position: relative; }
+const TITLE_OPEN_POS = [
+  [
+    { left: -500, top: -90 },
+    { left: -360, top: -40 },
+  ], // slide 1
+  [
+    { left: -470, top: -90 },
+    { left: -200, top: -40 },
+  ], // slide 2
+  [
+    { left: -480, top: -90 },
+    { left: -260, top: -40 },
+  ], // slide 3
+  [
+    { left: -350, top: -90 },
+    { left: -260, top: -40 },
+  ], // slide 4
+  [
+    { left: -380, top: -90 },
+    { left: -290, top: -40 },
+  ], // slide 5
+  [
+    { left: -580, top: -90 },
+    { left: -190, top: -40 },
+  ], // slide 6
+  [
+    { left: -480, top: -90 },
+    { left: -130, top: -40 },
+  ], // slide 7
+  [
+    { left: -480, top: -90 },
+    { left: -130, top: -40 },
+  ], // slide 8 (à ajuster)
+];
+const TITLE_DELAYS = [0.3, 0.5];
+
+// Slider
+const SLIDE_SCROLL_DISTANCE = 900; // px de scroll alloués par slide
+const SLIDE_OFFSET = 1.8; // décalage (temps timeline) entre deux slides
+const TEXT_DELAY = 0.1;
+const VID_DELAY = 0.3;
+const SCRAMBLE_TEXT_DELAY = 0.1;
+const SCRAMBLE_MINI_DELAY = 0.3;
+const IMAGE_HOLD = 1; // moment où la slide commence à disparaître
+const TEXT_HOLD = 1.8; // moment où le titre commence à disparaître
+const SCRAMBLE_CHARS = "!@#$%^&*()-_=+<>?/[]{}";
+
+/* ============================================================
+     2. ÉLÉMENTS DU DOM
+     ============================================================ */
+
 const DOM = {
   sliderSection: document.querySelector(".sect__beta"),
   projectTitle: document.querySelector(".project__title"),
   projectInfo: document.querySelector(".project__info"),
-  slideWrapper: document.querySelector(".project-wrapper"),
   indicator: document.querySelector(".slider-indicator"),
   indicatorData: document.getElementById("dataProg"),
+
+  // morphing
+  morphTriangle: document.querySelector("#triangleup-slide"),
+  morphLosange: document.querySelector("#losange-slide"),
+  morphSquare: document.querySelector("#squareframe-combined"),
+
+  // slides
+  stickers: document.querySelectorAll(".project-el__sticker"),
+  titles: document.querySelectorAll(".project-el__title-el"),
+  types: document.querySelectorAll(".project-el__details-mini"),
+  links: document.querySelectorAll(".project-el__txt-link"),
+  texts: document.querySelectorAll(".project-el__txt-el"),
+
+  // lecteur vidéo
+  vidModal: document.querySelector(".vid-modal"),
+  video: document.getElementById("vid-el"),
+  btnClose: document.querySelector(".vid-modal__close"),
+  frameTech: document.querySelector(".tech-path"),
+  vidFrame: document.querySelector(".vid-path"),
+  hoverFrames: [
+    ...document.querySelectorAll(".up-frame__slider"),
+    ...document.querySelectorAll(".down-frame__slider"),
+  ],
 };
-/* ---------- Pin principal de la section (référence gardée pour les autres ScrollTrigger) ---------- */
 
-// NB : un seul pin sur toute la section. Ne plus ajouter de "pin: true" sur un
-// élément enfant (ex: .project-wrapper) — un pin imbriqué casse le calcul de
-// progression (self.progress) du ScrollTrigger enfant.
+const frameTechOriginalD = DOM.frameTech.getAttribute("d");
 
-/* ---------- Animation d'intro (titre / info / indicateur) ---------- */
+/* ============================================================
+     3. ÉTAT
+     ============================================================ */
+
+// Les slides sont empilées (position: absolute) : un clic arrive toujours sur
+// celle du dessus. L'index de la slide visible vient donc du scroll, pas du clic.
+let activeSlide = 0;
+let openedSlide = null; // slide dont la vidéo est ouverte
+
+const isVideoOpen = () => DOM.vidModal.classList.contains("vid-visualiser");
+
+// éléments appartenant à une slide donnée
+const getSlideEls = (i) => ({
+  titles: [DOM.titles[i * 2], DOM.titles[i * 2 + 1]].filter(Boolean),
+  type: DOM.types[i],
+  link: DOM.links[i],
+  text: DOM.texts[i],
+});
+
+/* ============================================================
+     4. MORPHING (fond)
+     ============================================================ */
+
+function initMorph() {
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: DOM.sliderSection,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 6,
+      },
+    })
+    .from(DOM.morphLosange, {
+      x: 1850,
+      rotation: 180,
+      morphSVG: DOM.morphTriangle,
+      transformOrigin: "center center",
+      ease: "expo.inOut",
+    })
+    .to(DOM.morphLosange, {
+      x: "35%",
+      morphSVG: DOM.morphSquare,
+      transformOrigin: "center center",
+      ease: "expo.inOut",
+    });
+}
+
+/* ============================================================
+     5. LECTEUR VIDÉO (ouverture / fermeture)
+     ============================================================ */
+
+function openVideo(i) {
+  if (isVideoOpen() || !VIDEO_SOURCES[i]) return;
+
+  const { titles, type, link, text } = getSlideEls(i);
+  openedSlide = i;
+  DOM.vidModal.classList.add("vid-visualiser");
+
+  DOM.video.src = VIDEO_SOURCES[i];
+  DOM.video.load();
+
+  // titres de la slide courante uniquement
+  titles.forEach((el, n) => {
+    gsap.to(el, {
+      ...TITLE_OPEN_POS[i][n],
+      delay: TITLE_DELAYS[n],
+      x: -80,
+      duration: 0.8,
+      ease: "expo.inOut",
+      overwrite: "auto",
+      stagger: 0.3,
+    });
+  });
+
+  gsap.to(type, { opacity: 0, duration: 0.4, overwrite: "auto" });
+  gsap.to(link, { opacity: 0, duration: 0.6, overwrite: "auto" });
+  gsap.to(text, {
+    delay: 0.8,
+    y: -50,
+    x: 75,
+    opacity: 1,
+    duration: 0.5,
+    overwrite: "auto",
+  });
+
+  gsap.to(DOM.frameTech, {
+    y: -200,
+    x: -120,
+    duration: 0.9,
+    morphSVG: DOM.vidFrame,
+    transformOrigin: "center center",
+    ease: "expo.inOut",
+    overwrite: "auto",
+  });
+  gsap.to(DOM.video, { opacity: 1, ease: "expo.inOut", overwrite: "auto" });
+
+  lenis.stop();
+}
+
+function closeVideo() {
+  if (!isVideoOpen() || openedSlide === null) return;
+
+  const { titles, type, link, text } = getSlideEls(openedSlide);
+  DOM.vidModal.classList.remove("vid-visualiser");
+
+  DOM.video.pause();
+  DOM.video.removeAttribute("src");
+  DOM.video.load();
+
+  gsap.to(titles, {
+    left: 0,
+    top: 0,
+    x: 0,
+    duration: 0.5,
+    ease: "expo.inOut",
+    overwrite: "auto",
+    stagger: 0.8,
+  });
+  gsap.to(type, { opacity: 1, duration: 0.4, overwrite: "auto" });
+  gsap.to(link, { opacity: 1, duration: 0.6, overwrite: "auto" });
+  gsap.to(text, { y: 0, opacity: 0, duration: 0.8, overwrite: "auto" });
+
+  gsap.to(DOM.frameTech, {
+    y: 0,
+    x: 0,
+    duration: 0.9,
+    morphSVG: frameTechOriginalD,
+    transformOrigin: "center center",
+    ease: "expo.inOut",
+    overwrite: "auto",
+  });
+
+  openedSlide = null;
+  lenis.start();
+}
+
+function initVideoPlayer() {
+  DOM.stickers.forEach((sticker) => {
+    // effet hover (cadres décoratifs)
+    sticker.addEventListener("mouseover", () =>
+      gsap.to(DOM.hoverFrames, {
+        opacity: 1,
+        stagger: 0.05,
+        duration: 0.3,
+        ease: "expo.inOut",
+        overwrite: true,
+      })
+    );
+    sticker.addEventListener("mouseleave", () =>
+      gsap.to(DOM.hoverFrames, {
+        opacity: 0,
+        duration: 0.3,
+        ease: "expo.inOut",
+        overwrite: true,
+      })
+    );
+
+    // clic : on utilise la slide visible, pas celle qui reçoit le clic
+    sticker.addEventListener("click", () => openVideo(activeSlide));
+  });
+
+  // branché UNE seule fois, hors de toute boucle
+  DOM.btnClose.addEventListener("click", closeVideo);
+}
+
+/* ============================================================
+     6. ANIMATION D'INTRO (titre / info / indicateur)
+     ============================================================ */
 
 function animateIntroText() {
-  const splitInfo = new SplitText(DOM.projectInfo, {
-    type: "chars, words, lines",
-  });
-  const splitTitle = new SplitText(DOM.projectTitle, {
-    type: "chars, words, lines",
-  });
+  const splitInfo = new SplitText(DOM.projectInfo, { type: "words" });
+  const splitTitle = new SplitText(DOM.projectTitle, { type: "lines" });
 
-  // même ScrollTrigger réutilisé pour les 3 animations d'intro
-  const introTrigger = {
+  const scrollTrigger = {
     trigger: DOM.sliderSection,
     start: "top top",
     end: "bottom bottom",
     scrub: 5,
-    // markers: true,
   };
 
   gsap.to(splitInfo.words, {
@@ -318,7 +295,7 @@ function animateIntroText() {
     opacity: 1,
     stagger: 0.2,
     ease: "expo.inOut",
-    scrollTrigger: introTrigger,
+    scrollTrigger,
   });
 
   gsap.to(splitTitle.lines, {
@@ -330,7 +307,7 @@ function animateIntroText() {
     opacity: 1,
     stagger: 0.2,
     ease: "expo.inOut",
-    scrollTrigger: introTrigger,
+    scrollTrigger,
   });
 
   gsap.from(DOM.indicator, {
@@ -340,30 +317,23 @@ function animateIntroText() {
     opacity: 0,
     duration: 1.2,
     ease: "expo.inOut",
-    scrollTrigger: introTrigger,
+    scrollTrigger,
   });
 }
 
-/* ---------- Défilement des slides (crossfade) ---------- */
+/* ============================================================
+     7. DÉFILEMENT DES SLIDES (crossfade)
+     ============================================================ */
 
-const SLIDE_SCROLL_DISTANCE = 900; // px de scroll alloués par slide
-const SLIDE_OFFSET = 1.8; // décalage (en "temps" de timeline) entre deux slides
-const TEXT_DELAY = 0.1; // décalage du texte par rapport à l'apparition de l'image
-const VID_DELAY = 0.3;
-const SCRAMBLE_TEXT_DELAY = 0.1;
-const SCRAMBLE_MINI_DELAY = 0.3;
-const IMAGE_HOLD = 1; // moment où l'image commence à disparaître
-const TEXT_HOLD = 1.8; // moment où le texte commence à disparaître
+// met à jour la slide active, l'index et la progress-bar
+function updateSliderIndicator(progress, total, indexEls) {
+  activeSlide = Math.round(progress * (total - 1));
 
-// met à jour l'index actif (classe is-active) et la progress-bar selon la progression du scroll
-function updateSliderIndicator(progress, total, indexEls, progressData) {
-  const activeIndex = Math.round(progress * (total - 1));
+  indexEls.forEach((el, i) =>
+    el.classList.toggle("is-active", i === activeSlide)
+  );
 
-  indexEls.forEach((el, i) => {
-    el.classList.toggle("is-active", i === activeIndex);
-  });
-
-  gsap.to(progressData, {
+  gsap.to(DOM.indicatorData, {
     scaleX: progress,
     duration: 0.2,
     ease: "none",
@@ -371,18 +341,95 @@ function updateSliderIndicator(progress, total, indexEls, progressData) {
   });
 }
 
+// timeline d'apparition + disparition d'une slide
+function addSlideToTimeline(tl, slide, i) {
+  const at = i * SLIDE_OFFSET;
+  const q = (sel) => slide.querySelectorAll(sel);
+
+  const titles = q(".project-el__title-el");
+  const sticker = q(".project-el__sticker");
+  const scrambleInfo = q(".project-el__details-info");
+  const scrambleMini = q(".project-el__details-mini");
+  const linkSplit = new SplitText(q(".project-el__txt-link"), {
+    type: "chars",
+  });
+
+  const scramble = (speed) => ({
+    duration: 0.7,
+    scrambleText: {
+      text: "{original}",
+      chars: SCRAMBLE_CHARS,
+      revealDelay: 0.1,
+      speed,
+      delimiter: "",
+    },
+    ease: "power5.out",
+  });
+
+  // apparition
+  tl.fromTo(
+    slide,
+    { opacity: 0, scale: 0.9 },
+    { opacity: 1, scale: 1, duration: 1 },
+    at
+  )
+    .fromTo(
+      titles,
+      { y: 30, scaleY: 0, opacity: 0, filter: "blur(5px)" },
+      {
+        y: 0,
+        scaleY: 1,
+        opacity: 1,
+        filter: "blur(0px)",
+        duration: 1,
+        ease: "expo.inOut",
+        transformOrigin: "center center",
+      },
+      at + TEXT_DELAY
+    )
+    .fromTo(
+      sticker,
+      { opacity: 0 },
+      { opacity: 1, ease: "expo.inOut" },
+      at + VID_DELAY
+    )
+    .fromTo(
+      linkSplit.chars,
+      { x: 30, scaleX: 0, opacity: 0, filter: "blur(5px)" },
+      {
+        x: 0,
+        scaleX: 1,
+        opacity: 1,
+        filter: "blur(0px)",
+        duration: 1,
+        ease: "expo.inOut",
+        transformOrigin: "right right",
+      },
+      at + TEXT_DELAY
+    )
+    .to(scrambleInfo, scramble(0.01), at + SCRAMBLE_TEXT_DELAY)
+    .to(scrambleMini, scramble(0.1), at + SCRAMBLE_MINI_DELAY);
+
+  // disparition
+  tl.to(slide, { opacity: 0, scale: 1, duration: 1 }, at + IMAGE_HOLD).to(
+    titles,
+    { y: 0, opacity: 0, filter: "blur(5px)", duration: 0.8 },
+    at + TEXT_HOLD
+  );
+}
+
 function animateProjectSlides() {
   const slides = document.querySelectorAll(".project-el");
   if (!slides.length) return;
 
   const indexEls = document.querySelectorAll(".slider-indicator .index");
-  const progressData = DOM.indicatorData;
 
   gsap.set(slides, { position: "absolute", top: 250, left: 0 });
 
-  const tlSlides = gsap.timeline({
+  // un seul pin, sur la section (pas de pin imbriqué sur un enfant)
+  const tl = gsap.timeline({
     scrollTrigger: {
-      trigger: DOM.sliderSection, // <- pin unique, sur la section (plus sur slideWrapper)
+      trigger: DOM.sliderSection,
       start: "top top",
       end: "+=" + slides.length * SLIDE_SCROLL_DISTANCE,
       scrub: 2,
@@ -390,142 +437,33 @@ function animateProjectSlides() {
       pinSpacing: true,
       anticipatePin: 0.2,
       invalidateOnRefresh: true,
-      // markers: true,
       onUpdate: (self) =>
-        updateSliderIndicator(
-          self.progress,
-          slides.length,
-          indexEls,
-          progressData
-        ),
+        updateSliderIndicator(self.progress, slides.length, indexEls),
     },
   });
+
   slides.forEach((slide, i) => {
     slide.style.zIndex = i + 1;
-    const appearAt = i * SLIDE_OFFSET;
-    const text = slide.querySelectorAll(".project-el__title-el");
-    const projectVideo = slide.querySelectorAll(".project-el__sticker");
-    const projectLink = slide.querySelectorAll(".project-el__txt-link");
-    const projectTextScramble = slide.querySelectorAll(
-      ".project-el__details-info"
-    );
-    const projectMiniScramble = slide.querySelectorAll(
-      ".project-el__details-mini"
-    );
-    let linkSplit = new SplitText(projectLink, {
-      type: "chars, words, lines",
-    });
-
-    tlSlides
-      .fromTo(
-        slide,
-        { opacity: 0, scale: 0.9 },
-        { opacity: 1, scale: 1, duration: 1 },
-        appearAt
-      )
-      .fromTo(
-        text,
-        {
-          y: 30,
-          scaleY: 0,
-          opacity: 0,
-          filter: "blur(5px)",
-        },
-        {
-          y: 0,
-          scaleY: 1,
-          opacity: 1,
-          filter: "blur(0px)",
-          duration: 1,
-          ease: "expo.inOut",
-          transformOrigin: "center center",
-        },
-        appearAt + TEXT_DELAY
-      )
-      .fromTo(
-        projectVideo,
-        {
-          opacity: 0,
-        },
-        {
-          opacity: 1,
-          ease: "expo.inOut",
-        },
-        appearAt + VID_DELAY
-      )
-      .fromTo(
-        linkSplit.chars,
-        {
-          x: 30,
-          scaleX: 0,
-          opacity: 0,
-          filter: "blur(5px)",
-        },
-        {
-          x: 0,
-          scaleX: 1,
-          opacity: 1,
-          filter: "blur(0px)",
-          duration: 1,
-          ease: "expo.inOut",
-          transformOrigin: "right right",
-        },
-        appearAt + TEXT_DELAY
-      )
-      .to(
-        projectTextScramble,
-        {
-          duration: 0.7,
-          scrambleText: {
-            text: "{original}",
-            chars: "!@#$%^&*()-_=+<>?/[]{}",
-            revealDelay: 0.1,
-            speed: 0.01,
-            delimiter: "",
-          },
-          ease: "power5.out",
-        },
-        appearAt + SCRAMBLE_TEXT_DELAY
-      )
-      .to(
-        projectMiniScramble,
-        {
-          duration: 0.7,
-          scrambleText: {
-            text: "{original}",
-            chars: "!@#$%^&*()-_=+<>?/[]{}",
-            revealDelay: 0.1,
-            speed: 0.1,
-            delimiter: "",
-          },
-          ease: "power5.out",
-        },
-        appearAt + SCRAMBLE_MINI_DELAY
-      );
-
-    tlSlides
-      .to(slide, { opacity: 0, scale: 1, duration: 1 }, appearAt + IMAGE_HOLD)
-      .to(
-        text,
-        { y: 0, opacity: 0, filter: "blur(5px)", duration: 0.8 },
-        appearAt + TEXT_HOLD
-      );
+    addSlideToTimeline(tl, slide, i);
   });
 }
 
-/* ---------- Init ---------- */
+/* ============================================================
+     8. INIT
+     ============================================================ */
+
+initMorph();
+initVideoPlayer();
 animateIntroText();
-function initSlidesWhenReady() {
-  animateProjectSlides();
-  ScrollTrigger.refresh();
-}
+
 window.addEventListener("load", () => {
-  if (document.fonts && document.fonts.ready) {
-    document.fonts.ready.then(initSlidesWhenReady);
-  } else {
-    initSlidesWhenReady();
-  }
+  const start = () => {
+    animateProjectSlides();
+    ScrollTrigger.refresh();
+  };
+  document.fonts?.ready ? document.fonts.ready.then(start) : start();
 });
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 // SECTION SLIDER VIDEO DE PROJET fin
 ////////////////////////////////////////////////////////////////////////////////////////////////////////

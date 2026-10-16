@@ -469,6 +469,7 @@ body {
         }
         & .project-el {
           @extend %displayed-row-center-evenly;
+          position: relative;
           margin-top: 16.4vh;
           padding: 0;
           height: auto;
@@ -513,7 +514,7 @@ body {
           &__title-container {
             @extend %globale-size;
             margin-top: 0;
-            padding-right: 130px;
+            padding-right: 160px;
           }
           &__title-el {
             @extend %typo-standar;
@@ -531,15 +532,20 @@ body {
             @extend %typo-standar;
             letter-spacing: 3px;
             font-size: variables.$typo-size-small;
-            text-align: right;
+            text-align: left;
             color: rgba(255, 255, 255, 0.3);
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-            padding-right: 50px;
+            padding-right: 0px;
+            opacity: 0;
+            width: 25ch;
+            display: inline-block; //cruciale pour les animation gsap
           }
           &__txt-link {
             @extend %typo-standar;
             color: #fff;
-            margin-top: auto;
+            position: absolute;
+            top: 50%;
+            left: 30%;
             font-size: 3.2rem;
             font-weight: 600;
             letter-spacing: -5px;
@@ -547,6 +553,7 @@ body {
             line-height: auto;
             text-transform: uppercase;
             text-align: right;
+            display: inline-block; //cruciale pour les animation gsap
           }
           &__sticker {
             position: relative;
