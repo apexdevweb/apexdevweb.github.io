@@ -4,28 +4,15 @@ const BASE = 0.15; // hauteur de la bande au repos (fraction de la hauteur du ca
 const BOOST = 0.5; // hauteur max de la bande pendant le scroll (1 = toute la hauteur du canvas)
 const SENSITIVITY = 40; // vitesse de scroll (px/frame) pour atteindre l'effet maximum
 const SMOOTH = 0.14; // fluidité de la montée / descente de l'effet (0.05 = lent, 0.3 = nerveux)
-const PIXEL_COLOR = "#444";
+const PIXEL_COLOR = "#666";
 
-const canvas = document.getElementById("c");
+const canvas = document.getElementById("pixel-canvas");
 const ctx = canvas.getContext("2d");
 
-// Le canvas est sorti de ses parents (un parent avec transform casserait position: fixed)
-// et collé en bas de l'écran, fond transparent, sans bloquer les clics.
-document.body.appendChild(canvas);
-[
-  ["position", "fixed"],
-  ["left", "0"],
-  ["right", "auto"],
-  ["top", "auto"],
-  ["bottom", "0"],
-  ["width", "100%"],
-  ["height", "40vh"], // hauteur maximale de la zone de pixels
-  ["background", "transparent"],
-  ["pointer-events", "none"],
-  ["z-index", "9999"],
-  ["display", "block"],
-].forEach(([k, v]) => canvas.style.setProperty(k, v, "important"));
-
+// Le canvas reste à sa place dans le HTML (il n'est plus déplacé en bas du body).
+// Il est collé en bas de l'écran, fond transparent, sans bloquer les clics.
+// Note : position: fixed est calculé par rapport à la fenêtre tant qu'aucun parent
+// du canvas n'a de transform / filter. Ici le parent est <body> : aucun souci.
 let W, H, dpr, cols, rows;
 let lastY = scrollY;
 let energy = 0; // 0 = repos, 1 = scroll rapide

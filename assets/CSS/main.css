@@ -150,17 +150,27 @@ body .access__container .access__sub__ctnr .access__link:hover, body header .uxu
     opacity: 1;
   }
 }
-#c {
+#pixel-canvas {
+  display: block;
   opacity: 0;
   position: fixed;
   left: 0;
+  right: auto;
+  top: auto;
   bottom: 0;
   width: 100%;
-  height: 30vh;
+  height: 40vh;
   pointer-events: none;
   z-index: 2;
   mix-blend-mode: difference;
   animation: revealUi 4s ease 2s 1 normal forwards;
+  background: transparent;
+}
+@media (max-width: 600px) {
+  #pixel-canvas {
+    top: 60vh;
+    z-index: 1;
+  }
 }
 
 #transition-overlay {
