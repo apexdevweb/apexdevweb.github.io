@@ -1,10 +1,10 @@
 // ---------- Réglages ----------
-const CELL = 14; // taille d'un "pixel" en px
+const CELL = 24; // taille d'un "pixel" en px
 const BASE = 0.15; // hauteur de la bande au repos (fraction de la hauteur du canvas)
 const BOOST = 0.5; // hauteur max de la bande pendant le scroll (1 = toute la hauteur du canvas)
 const SENSITIVITY = 40; // vitesse de scroll (px/frame) pour atteindre l'effet maximum
-const SMOOTH = 0.14; // fluidité de la montée / descente de l'effet (0.05 = lent, 0.3 = nerveux)
-const PIXEL_COLOR = "#666";
+const SMOOTH = 0.05; // fluidité de la montée / descente de l'effet (0.05 = lent, 0.3 = nerveux)
+const PIXEL_COLOR = "#0f1318";
 
 const canvas = document.getElementById("pixel-canvas");
 const ctx = canvas.getContext("2d");
@@ -12,7 +12,6 @@ const ctx = canvas.getContext("2d");
 // Le canvas reste à sa place dans le HTML (il n'est plus déplacé en bas du body).
 // Il est collé en bas de l'écran, fond transparent, sans bloquer les clics.
 // Note : position: fixed est calculé par rapport à la fenêtre tant qu'aucun parent
-// du canvas n'a de transform / filter. Ici le parent est <body> : aucun souci.
 let W, H, dpr, cols, rows;
 let lastY = scrollY;
 let energy = 0; // 0 = repos, 1 = scroll rapide
