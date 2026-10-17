@@ -1,8 +1,8 @@
-var form = document.getElementById("my-form");
+var form = document.getElementById("contact-form");
     
 async function handleSubmit(event) {
   event.preventDefault();
-  var status = document.getElementById("my-form-status");
+  var status = document.getElementById("contact-status");
   var data = new FormData(event.target);
 
   // Vérification du captcha avant envoi
@@ -11,7 +11,7 @@ async function handleSubmit(event) {
       return;
   }
 
-  fetch("https://formspree.io", {
+  fetch("https://formspree.io/f/mbdzjdpp", {
     method: "POST",
     body: data,
     headers: {

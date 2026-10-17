@@ -222,7 +222,6 @@ function closeVideo() {
     duration: 0.5,
     ease: "expo.inOut",
     overwrite: "auto",
-    stagger: 0.8,
   });
   gsap.to(type, { opacity: 1, duration: 0.4, overwrite: "auto" });
   gsap.to(link, { opacity: 1, duration: 0.6, overwrite: "auto" });
