@@ -83,7 +83,7 @@ body .cursor__effect .cursor__txt, body main .main___ruler--ctnr .ruler .mask, .
   letter-spacing: 3px;
 }
 
-body .access__container .primary__title__ctnr .primary__title, body .access__container .primary__title__ctnr .secondary__title .special-letter, body main .sect__ceta .description__ctnr .model__title, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details .sector__details--title, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details .sector__footer, .sect__eco .contact__form .validate__ctnr .validate__btn, .dl__sub__ctnr .dl__item, #transition-overlay .meter-info {
+body .access__container .primary__title__ctnr .primary__title, body .access__container .primary__title__ctnr .secondary__title .special-letter, body main .sect__ceta .description__ctnr .model__title, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details .sector__details--title, .sect__eco .contact__form .main__input__ctnr .submain__input__ctnr .sector__details .sector__footer, .sect__eco .contact__form .capcha-msg, .sect__eco .contact__form .validate__ctnr .validate__btn, .dl__sub__ctnr .dl__item, #transition-overlay .meter-info {
   font-family: "Zen Dots", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -532,6 +532,10 @@ canvas {
 }
 .sect__eco .contact__form .g-recaptcha {
   margin: 25px;
+}
+.sect__eco .contact__form .capcha-msg {
+  color: #fff;
+  font-size: 1.2rem;
 }
 .sect__eco .contact__form .validate__ctnr {
   min-height: 20vh;

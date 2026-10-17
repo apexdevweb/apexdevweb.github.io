@@ -7,7 +7,7 @@ async function handleSubmit(event) {
 
   // Vérification du captcha avant envoi
   if (grecaptcha.getResponse().length === 0) {
-      status.innerHTML = "Veuillez valider le captcha.";
+      status.innerHTML = "Please complete the captcha.";
       return;
   }
 
@@ -19,7 +19,7 @@ async function handleSubmit(event) {
     }
   }).then(response => {
     if (response.ok) {
-      status.innerHTML = "Merci pour votre message !";
+      status.innerHTML = "Thank you for your message; we will contact you within 24 hours.";
       form.reset();
       grecaptcha.reset(); // Réinitialise le captcha
     } else {

@@ -155,6 +155,11 @@
     & .g-recaptcha {
       margin: 25px;
     }
+    & .capcha-msg {
+      color: #fff;
+      font-size: variables.$typo-size-small;
+      @extend %typo-subtitle;
+    }
     & .validate__ctnr {
       @extend %displayed-column-center;
       min-height: 20vh;
