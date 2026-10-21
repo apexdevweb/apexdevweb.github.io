@@ -3,16 +3,16 @@
 #pixel-canvas {
   display: block;
   opacity: 0;
-  position: fixed;
+  position: relative;
   left: 0;
   right: auto;
-  top: auto;
+  top: 520vh;
   bottom: 0;
   width: 100%;
   height: 100vh;
   pointer-events: none; // ne bloque pas les clics
-  z-index: 0;
-  mix-blend-mode: difference;
+  z-index: 999;
+  // mix-blend-mode: difference;
   animation: revealUi 4s ease 2s 1 normal forwards;
   background: transparent;
   @include mixins.breakpoint("medium") {

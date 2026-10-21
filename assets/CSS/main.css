@@ -154,16 +154,15 @@ body .access__container .access__sub__ctnr .access__link:hover, body header .uxu
 #pixel-canvas {
   display: block;
   opacity: 0;
-  position: fixed;
+  position: relative;
   left: 0;
   right: auto;
-  top: auto;
+  top: 520vh;
   bottom: 0;
   width: 100%;
   height: 100vh;
   pointer-events: none;
-  z-index: 0;
-  mix-blend-mode: difference;
+  z-index: 999;
   animation: revealUi 4s ease 2s 1 normal forwards;
   background: transparent;
 }
@@ -1022,6 +1021,7 @@ main .sect-prima .slider-wrapper .morph-container .globale-service__txt {
   position: absolute;
   top: 35%;
   left: 1%;
+  z-index: 0;
 }
 
 .vid-frame__slider {
@@ -1029,6 +1029,7 @@ main .sect-prima .slider-wrapper .morph-container .globale-service__txt {
   top: 0;
   left: 1%;
   opacity: 0;
+  z-index: 0;
 }
 
 .slider-indicator {
@@ -1096,7 +1097,7 @@ main .sect-prima .slider-wrapper .morph-container .globale-service__txt {
   border-radius: 15px;
   will-change: transform;
   transition: 0.2s ease-out;
-  z-index: 999;
+  z-index: 0;
 }
 
 .losange-pre__slider {
@@ -1603,6 +1604,7 @@ body main .main___ruler--ctnr .ruler .two {
 body main .sect__beta {
   margin-top: 0;
   color: #fff;
+  z-index: 0;
 }
 body main .sect__alpha {
   margin-top: 0;
@@ -1669,7 +1671,7 @@ body main .sect__beta .project-wrapper .vid-modal {
 body main .sect__beta .project-wrapper .vid-modal__slidevid {
   height: 50vh;
   width: auto;
-  z-index: 999;
+  z-index: 995;
 }
 body main .sect__beta .project-wrapper .vid-modal__close {
   margin: 0 0 10px 0;
@@ -1681,7 +1683,7 @@ body main .sect__beta .project-wrapper .vid-modal__close {
   background-color: transparent;
   border-radius: 10px;
   border: 1px solid #fff;
-  z-index: 999;
+  z-index: 995;
 }
 body main .sect__beta .project-wrapper .vid-modal__close:hover {
   color: rgba(255, 255, 255, 0.5);
@@ -1700,7 +1702,7 @@ body main .sect__beta .project-wrapper .project-el {
   padding: 0;
   height: auto;
   width: 100%;
-  z-index: 999;
+  z-index: 995;
 }
 body main .sect__beta .project-wrapper .project-el__details-container {
   display: inline-block;
@@ -1777,7 +1779,7 @@ body main .sect__beta .project-wrapper .project-el__sticker {
   position: relative;
   height: auto;
   width: 35vw;
-  z-index: 998;
+  z-index: 995;
 }
 body main .sect__beta .project-wrapper .project-el__sticker:hover {
   cursor: pointer;
@@ -1785,7 +1787,9 @@ body main .sect__beta .project-wrapper .project-el__sticker:hover {
 body main .sect__ceta {
   overflow: hidden;
   color: #fff;
-  z-index: 1;
+  z-index: 999 !important;
+  margin-top: 520vh;
+  background-color: #0f1318;
 }
 body main .sect__ceta .description__ctnr .description__title__ctnr .description__title {
   font-size: 3.5rem;

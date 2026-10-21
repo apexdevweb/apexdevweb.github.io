@@ -433,7 +433,7 @@ function animateProjectSlides() {
       end: "+=" + slides.length * SLIDE_SCROLL_DISTANCE,
       scrub: 2,
       pin: true,
-      pinSpacing: true,
+      pinSpacing: false,
       anticipatePin: 0.2,
       invalidateOnRefresh: true,
       onUpdate: (self) =>
