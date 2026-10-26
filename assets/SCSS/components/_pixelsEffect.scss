@@ -16,8 +16,8 @@
   animation: revealUi 4s ease 2s 1 normal forwards;
   background: transparent;
   @include mixins.breakpoint("medium") {
+    top: 720vh;
     height: 100vh;
-    top: 0;
     z-index: 1;
   }
 }

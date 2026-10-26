@@ -30,6 +30,13 @@
     margin-top: 0;
     margin-bottom: 50px;
     padding: 5px;
+    @include mixins.breakpoint(medium) {
+      display: flex;
+      flex-flow: row wrap;
+      gap: 5px;
+      align-items: center;
+      justify-content: center;
+    }
     & .sector__ctnr {
       @extend %typo-standar;
       padding: 8px;

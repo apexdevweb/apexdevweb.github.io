@@ -136,7 +136,7 @@ gsap.from(splitG.words, {
   x: -20,
   transformOrigin: "left",
   scaleX: 0,
-  duration: 8.5,
+  duration: 4.5,
   opacity: 0,
   stagger: 0.3,
   scrollTrigger: {
@@ -146,7 +146,7 @@ gsap.from(splitG.words, {
     scrub: 3,
     // markers: true,
   },
-  ease: "power2.inOut",
+  ease: "expo.inOut",
 });
 const rdvLink = document.querySelectorAll(".rdv__link--item");
 let splitH = new SplitText(rdvLink, {

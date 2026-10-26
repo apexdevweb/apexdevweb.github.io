@@ -16,7 +16,6 @@ const VIDEO_SOURCES = [
   "./assets/video/streaming.mp4",
   "./assets/video/numericash.mp4",
 ];
-
 // Position des 2 titres (h3, h4) de chaque slide quand la vidéo est ouverte.
 // On anime left/top (et pas x/y) pour ne jamais entrer en conflit avec la
 // timeline du slider, qui anime y / scaleY / opacity / filter sur ces titres.
@@ -126,31 +125,58 @@ const getSlideEls = (i) => ({
 
 /* ============================================================
      4. MORPHING (fond)
-     ============================================================ */
+============================================================ */
 
 function initMorph() {
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: DOM.sliderSection,
-        start: "top top",
-        end: "bottom bottom",
-        scrub: 6,
-      },
-    })
-    .from(DOM.morphLosange, {
-      x: 1850,
-      rotation: 180,
-      morphSVG: DOM.morphTriangle,
-      transformOrigin: "center center",
-      ease: "expo.inOut",
-    })
-    .to(DOM.morphLosange, {
-      x: "35%",
-      morphSVG: DOM.morphSquare,
-      transformOrigin: "center center",
-      ease: "expo.inOut",
-    });
+  if (window.matchMedia("(max-width: 600px)").matches) {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: DOM.sliderSection,
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 6,
+        },
+      })
+      .from(DOM.morphLosange, {
+        x: 300,
+        rotation: 180,
+        morphSVG: DOM.morphTriangle,
+        transformOrigin: "center center",
+        ease: "expo.inOut",
+      })
+      .to(DOM.morphLosange, {
+        y: 15,
+        x: "16%",
+        scale: 0.7,
+        morphSVG: DOM.morphSquare,
+        transformOrigin: "center center",
+        ease: "expo.inOut",
+      });
+  } else {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: DOM.sliderSection,
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 6,
+        },
+      })
+      .from(DOM.morphLosange, {
+        x: 1850,
+        rotation: 180,
+        morphSVG: DOM.morphTriangle,
+        transformOrigin: "center center",
+        ease: "expo.inOut",
+      })
+      .to(DOM.morphLosange, {
+        x: "35%",
+        morphSVG: DOM.morphSquare,
+        transformOrigin: "center center",
+        ease: "expo.inOut",
+      });
+  }
 }
 
 /* ============================================================
@@ -284,19 +310,31 @@ function animateIntroText() {
     end: "bottom bottom",
     scrub: 5,
   };
-
-  gsap.to(splitInfo.words, {
-    y: -20,
-    x: -500,
-    transformOrigin: "left",
-    fontSize: "2.1em",
-    duration: 1.5,
-    opacity: 1,
-    stagger: 0.2,
-    ease: "expo.inOut",
-    scrollTrigger,
-  });
-
+  if (window.matchMedia("(max-width: 600px)").matches) {
+    gsap.to(splitInfo.words, {
+      y: 40,
+      x: 0,
+      transformOrigin: "left",
+      fontSize: "1.4em",
+      duration: 1.5,
+      opacity: 1,
+      stagger: 0.2,
+      ease: "expo.inOut",
+      scrollTrigger,
+    });
+  } else {
+    gsap.to(splitInfo.words, {
+      y: -20,
+      x: -500,
+      transformOrigin: "left",
+      fontSize: "2.1em",
+      duration: 1.5,
+      opacity: 1,
+      stagger: 0.2,
+      ease: "expo.inOut",
+      scrollTrigger,
+    });
+  }
   gsap.to(splitTitle.lines, {
     y: 40,
     x: 30,

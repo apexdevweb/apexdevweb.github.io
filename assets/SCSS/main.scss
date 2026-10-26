@@ -11,6 +11,9 @@
 @use "layout/contact";
 @use "layout/sectionPrima";
 @use "abstract/sliderProject";
+html {
+  overflow-x: hidden;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -30,6 +33,11 @@ body {
   background-color: #000;
   &::-webkit-scrollbar {
     display: none;
+  }
+  & .main-content {
+    height: auto;
+    width: 100%;
+    overflow-x: hidden;
   }
   //INDEX //
   & .access__container {
@@ -420,6 +428,9 @@ body {
         text-align: center;
         color: rgba(255, 255, 255, 0.3);
         text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        @include mixins.breakpoint(medium) {
+          font-size: 0.8rem;
+        }
       }
 
       & .project-wrapper {
@@ -439,10 +450,20 @@ body {
           background-color: #000;
           border-radius: 15px;
           box-shadow: 0px 0px 15px #fff;
+          @include mixins.breakpoint(medium) {
+            padding: 5px;
+            left: 0;
+            height: auto;
+            width: 100%;
+          }
           &__slidevid {
             height: 50vh;
             width: auto;
             z-index: 995;
+            @include mixins.breakpoint(medium) {
+              height: auto;
+              width: 100%;
+            }
           }
           &__close {
             margin: 0 0 10px 0;
@@ -476,6 +497,13 @@ body {
           height: auto;
           width: 100%;
           z-index: 995;
+          @include mixins.breakpoint(medium) {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: space-evenly;
+          }
+
           &__details-container {
             display: inline-block;
             position: absolute;
@@ -484,6 +512,12 @@ body {
             height: 15vh;
             width: 45%;
             text-align: right;
+            @include mixins.breakpoint(medium) {
+              display: block;
+              height: auto;
+              width: 100%;
+              text-align: center;
+            }
           }
           &__details-info {
             @extend %typo-standar;
@@ -499,6 +533,12 @@ body {
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
             text-align: center;
             line-height: 0px;
+            @include mixins.breakpoint(medium) {
+              top: -30.5vh;
+              left: 25vw;
+              font-size: 0.5rem;
+              width: 25ch;
+            }
           }
           &__details-mini {
             @extend %typo-standar;
@@ -508,14 +548,38 @@ body {
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
             text-align: right;
             line-height: 180px;
+            @include mixins.breakpoint(medium) {
+            margin-top: 5vh;
+             height: auto;
+             font-size: 0.5rem;
+             text-align: left;
+            }
           }
           &__sub-ctnr {
             @extend %displayed-column-evenly, %globale-size;
+            @include mixins.breakpoint(medium) {
+              display: flex;
+              flex-flow: column nowrap;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+          &__sub-ctnr:nth-of-type(2) {
+            @include mixins.breakpoint(medium) {
+              position: absolute;
+              top: 0;
+            } 
           }
           &__title-container {
             @extend %globale-size;
             margin-top: 0;
             padding-right: 160px;
+            @include mixins.breakpoint(medium) {
+              margin-top: -20vh;
+              font-size: 2rem;
+              padding-right: 0;
+              text-align: center;
+            }
           }
           &__title-el {
             @extend %typo-standar;
@@ -528,6 +592,13 @@ body {
             line-height: 0px;
             text-transform: uppercase;
             text-align: right;
+            @include mixins.breakpoint(medium) {
+              margin-top: 0;
+              font-size: 2rem;
+              letter-spacing: -3px;
+              word-spacing: -4px;
+              text-align: center;
+            }
           }
           &__txt-el {
             @extend %typo-standar;
@@ -555,12 +626,26 @@ body {
             text-transform: uppercase;
             text-align: right;
             display: inline-block; //cruciale pour les animation gsap
+            @include mixins.breakpoint(medium) {
+              top: 100%;
+              left: 25%;
+              font-size: 2rem;
+              letter-spacing: -3px;
+              word-spacing: -4px;
+              text-align: left;
+            }
           }
           &__sticker {
             position: relative;
             height: auto;
             width: 35vw;
             z-index: 995;
+            @include mixins.breakpoint(medium) {
+              position: absolute;
+              top: -11vh;
+              height: auto;
+              width: 100%;
+            }
             &:hover {
               cursor: pointer;
             }
@@ -572,9 +657,12 @@ body {
       @extend %globale-size, %displayed-column-evenly;
       overflow: hidden;
       color: #fff;
-      z-index: 999!important;
+      z-index: 999 !important;
       margin-top: 520vh;
       background-color: #0f1318;
+      @include mixins.breakpoint(medium) {
+        margin-top: 720vh;
+      }
       & .description__ctnr {
         @extend %globale-size, %displayed-column-evenly;
         & .description__title__ctnr {
